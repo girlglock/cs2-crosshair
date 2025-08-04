@@ -1,0 +1,30 @@
+{
+  "name": "cs2-crosshair",
+  "version": "1.0.0",
+  "description": "CS2 crosshair viewer",
+  "main": "crosshair-server.js",
+  "scripts": {
+    "start": "node crosshair-server.js",
+    "dev": "nodemon crosshair-server.js",
+    "pm2:start": "pm2 start crosshair-ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop cs2-crosshair",
+    "pm2:restart": "pm2 restart cs2-crosshair",
+    "pm2:logs": "pm2 logs cs2-crosshair",
+    "pm2:reload": "pm2 reload cs2-crosshair"
+  },
+  "dependencies": {
+    "canvas": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "node-fetch": "latest",
+    "xml2js": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "author": "girlglock.com",
+  "license": "GPL-3.0",
+  "engines": {
+    "node": ">=22.11.0"
+  }
+}

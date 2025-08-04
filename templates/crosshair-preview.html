@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - {{domain}}</title>
+
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content=" {{playerInfo}} \n {{codeValue}} ">
+    <meta property="og:image" content="{{imageUrl}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{domain}}/{{originalInput}}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="{{imageUrl}}">
+    <meta property="twitter:title" content="{{title}}">
+    <meta property="twitter:description" content="{{playerInfo}} {{codeValue}}">
+
+    <meta name="theme-color" content="{{themeColor}}">
+
+    <link rel="icon" href="https://files.catbox.moe/9anhhp.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://files.catbox.moe/likszt.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        * {
+            user-select: text;
+        }
+
+        .cs-dialog {
+            position: relative;
+            display: inline-block;
+            max-width: 90vw;
+        }
+
+        .heading {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-btn {
+            text-decoration: none;
+        }
+
+        .crosshair-image {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            background-image: url('https://files.catbox.moe/45rbkr.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid;
+            border-color: #292c21 #8c9284 #8c9284 #292c21;
+        }
+
+        .crosshair-image img {
+            width: 64px;
+            height: 64px;
+            image-rendering: pixelated;
+        }
+
+        .code-section {
+            margin: 20px 0;
+        }
+
+        .cs-input {
+            width: 100%;
+            max-width: 400px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        .player-info {
+            color: {{colorRGB}};
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .cs-dialog {
+                margin: 20px;
+            }
+
+            .cs-input {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cs-dialog">
+        <div class="heading">
+            <div class="wrapper">
+                <div class="icon"></div>
+                <p class="text">GIRLGLOCK</p>
+            </div>
+            <button class="cs-btn close" onclick="window.location.href='https://girlglock.com'"></button>
+        </div>
+
+        <header id="header">
+            <div class="top" style="width: 500px">
+                <div>
+                    <div class="cs-form-group" style="margin: 35px 0">
+                        <h2>silly crosshair preview</h2>
+                        <div class="player-info">{{playerInfo}}</div>
+                        <br>
+                        <div style="max-width: 80%; display: flex; margin: auto; margin-bottom: 5px;">
+                            <select id="searchType" class="cs-select" style="width: 5%;">
+                                <option value="steamvanity">Steam Vanity</option>
+                                <option value="steamid64">SteamID64</option>
+                                <option value="leetify">Leetify Handle</option>
+                            </select>
+
+                            <input type="text" id="searchInput" class="cs-input" placeholder="search..."
+                                style="width: 100%; margin-left: 1px;" />
+
+                            <button class="cs-btn" style="margin-left: 1px;" onclick="goToSearch()">Search</button>
+                        </div>
+                        <hr class="cs-hr" />
+                        <br>
+                        <div class="crosshair-preview">
+                            <div class="crosshair-image" id="crosshairImage">
+                                <img src="{{imageUrl}}" />
+                            </div>
+                            <div style="display: flex; justify-content: center; gap: 1px; margin-top: 5px">
+                                <button class="cs-btn" onclick="prevBackground()">←</button>
+                                <button class="cs-btn" onclick="nextBackground()">→</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="code-section">
+                            <input type="text" readonly value="{{codeValue}}" class="cs-input" />
+                        </div>
+                        <br>
+                        <p class="text">cache expires every 24h</p>
+                        <menu class="footer-btns" style="position:relative;">
+                            <button class="cs-btn" onclick="copyCode()">Copy</button>
+                            <button class="cs-btn" onclick="downloadImage()">Save</button>
+                        </menu>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <script>
+        const backgrounds = [
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/overpass.png',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/cache.jpg',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/inferno.png',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/nuke.png',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/anubis.jpg'
+        ];
+
+        let currentBackgroundIndex = 0;
+        const crosshairDiv = document.getElementById('crosshairImage');
+
+        function updateBackground() {
+            crosshairDiv.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
+        }
+
+        function prevBackground() {
+            currentBackgroundIndex = (currentBackgroundIndex - 1 + backgrounds.length) % backgrounds.length;
+            updateBackground();
+        }
+
+        function nextBackground() {
+            currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
+            updateBackground();
+        }
+
+        updateBackground();
+
+        function goToSearch() {
+            const input = document.getElementById('searchInput').value.trim();
+            const type = document.getElementById('searchType').value;
+
+            if (!input) {
+                alert('please enter someone to search');
+                return;
+            }
+
+            const steamID64Pattern = /^7656119\d{10}$/;
+            const allowedUsernamePattern = /^[a-zA-Z0-9_-]+$/;
+
+            let path = '';
+
+            if (type === 'steamid64') {
+                if (!steamID64Pattern.test(input)) {
+                    alert('invalid steamid64.');
+                    return;
+                }
+                path = `/profiles/${input}`;
+            } else if (type === 'steamvanity') {
+                if (!allowedUsernamePattern.test(input)) {
+                    alert('invalid steam vanity url.');
+                    return;
+                }
+                path = `/id/${input}`;
+            } else if (type === 'leetify') {
+                if (!allowedUsernamePattern.test(input)) {
+                    alert('invalid leetify handle.');
+                    return;
+                }
+                path = `/${input}`;
+            }
+
+            const baseDomain = window.location.origin;
+            window.location.href = baseDomain + path;
+        }
+
+        function copyCode() {
+            const code = '{{codeValue}}';
+            navigator.clipboard.writeText(code).then(() => {
+                alert('code copied :3c');
+            }).catch(() => {
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('code copied :3c');
+            });
+        }
+
+        function downloadImage() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = document.querySelector('.crosshair-image img');
+
+            canvas.width = 64;
+            canvas.height = 64;
+
+            const tempImg = new Image();
+            tempImg.onload = function () {
+                ctx.drawImage(tempImg, 0, 0);
+
+                const link = document.createElement('a');
+                link.download = '{{codeValue}}.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            };
+            tempImg.src = img.src;
+        }
+    </script>
+</body>
+
+</html>
+</p>

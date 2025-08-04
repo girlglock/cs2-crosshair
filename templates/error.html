@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>player not found - {{domain}}</title>
+
+    <meta property="og:title" content="player not found">
+    <meta property="og:description" content="{{originalInput}}'s {{errorType}}">
+    <meta property="og:image" content="https://files.catbox.moe/e5ec59.png">
+    <meta property="og:type" content="website">
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:image" content="https://files.catbox.moe/e5ec59.png">
+    <meta property="twitter:title" content="player not found">
+
+    <meta name="theme-color" content="#ff0000">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://files.catbox.moe/likszt.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        * {
+            user-select: text;
+            cursor: text;
+        }
+
+        .cs-dialog {
+            position: relative;
+            display: inline-block;
+            max-width: 90vw;
+        }
+
+        .heading {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-btn {
+            text-decoration: none;
+        }
+
+        .error-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .usage-examples {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .usage-examples h4 {
+            margin-top: 0;
+            color: #ffff00;
+            text-align: center;
+        }
+
+        .error-details {
+            color: #ff6666;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .cs-dialog {
+                margin: 20px;
+            }
+            
+            .usage-examples {
+                font-size: 12px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cs-dialog">
+        <div class="heading">
+            <div class="wrapper">
+                <div class="icon"></div>
+                <p class="text">GIRLGLOCK</p>
+            </div>
+            <button class="cs-btn close" onclick="window.location.href='https://girlglock.com'"></button>
+        </div>
+
+        <header id="header">
+            <div class="top" style="width: 500px">
+                <div>
+                    <div class="cs-form-group" style="margin: 35px 0">
+                        <h2>player not found :(</h2>
+                        <br>
+                        <img src="https://files.catbox.moe/e5ec59.png"/>
+                        <div class="error-details">
+                            could not find: <strong>{{originalInput}}</strong>
+                        </div>
+                        
+                        <hr class="cs-hr" />
+                        
+                        <div class="usage-examples">
+                            <h4>try these formats instead</h4>
+                            • {{usageExamples}}
+                        </div>
+
+                        <div class="info">
+                            <p>make sure the player profile is public and has played CS2 recently</p>
+                        </div>
+
+                        <menu class="footer-btns" style="position:relative;">
+                            <button class="cs-btn" onclick="window.location.href='https://girlglock.com'">Back</button>
+                        </menu>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

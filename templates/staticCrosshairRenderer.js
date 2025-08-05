@@ -108,41 +108,49 @@ class CS2CrosshairRenderer {
     generateCode(settings) {
         try {
             const bytes = new Array(18).fill(0);
-            bytes[2] = Math.round((settings.cl_crosshairgap * 10) + 128) & 0xff;
+            bytes[1] = 1;
+            bytes[2] = Math.round(settings.cl_crosshairgap * 10) & 0xff;
+
             bytes[3] = Math.round(settings.cl_crosshair_outlinethickness * 2);
             bytes[4] = Math.round(settings.cl_crosshaircolor_r);
             bytes[5] = Math.round(settings.cl_crosshaircolor_g);
             bytes[6] = Math.round(settings.cl_crosshaircolor_b);
             bytes[7] = Math.round(settings.cl_crosshairalpha);
-            bytes[8] = (Math.round(settings.cl_crosshair_dynamic_splitdist) & 0x7f) | (settings.cl_crosshair_recoil ? 0x80 : 0);
-            bytes[9] = Math.round((settings.cl_fixedcrosshairgap * 10) + 128) & 0xff;
-            bytes[10] = (Math.round(settings.cl_crosshaircolor) & 7) | (settings.cl_crosshair_drawoutline ? 8 : 0) | ((Math.round(settings.cl_crosshair_dynamic_splitalpha_innermod * 10) & 0xf) << 4);
-            bytes[11] = (Math.round(settings.cl_crosshair_dynamic_splitalpha_outermod * 10) & 0xf) | ((Math.round(settings.cl_crosshair_dynamic_maxdist_splitratio * 10) & 0xf) << 4);
+            bytes[8] = (Math.round(settings.cl_crosshair_dynamic_splitdist) & 0x7f) |
+                (settings.cl_crosshair_recoil ? 0x80 : 0);
+
+            bytes[9] = Math.round(settings.cl_fixedcrosshairgap * 10) & 0xff;
+            bytes[10] = (Math.round(settings.cl_crosshaircolor) & 7) |
+                (settings.cl_crosshair_drawoutline ? 8 : 0) |
+                ((Math.round(settings.cl_crosshair_dynamic_splitalpha_innermod * 10) & 0xf) << 4);
+
+            bytes[11] = (Math.round(settings.cl_crosshair_dynamic_splitalpha_outermod * 10) & 0xf) |
+                ((Math.round(settings.cl_crosshair_dynamic_maxdist_splitratio * 10) & 0xf) << 4);
+
             bytes[12] = Math.round(settings.cl_crosshairthickness * 10);
-
-            const sizeValue = Math.round(settings.cl_crosshairsize * 10);
-            bytes[14] = sizeValue & 0xff;
-            bytes[15] = (sizeValue >> 8) & 0x1f;
-
-            bytes[13] = ((Math.round(settings.cl_crosshairstyle) & 7) << 1) |
+            bytes[13] = ((Math.round(settings.cl_crosshairstyle) & 0xf) << 1) |
                 (settings.cl_crosshairdot ? 0x10 : 0) |
                 (settings.cl_crosshairgap_useweaponvalue ? 0x20 : 0) |
                 (settings.cl_crosshairusealpha ? 0x40 : 0) |
                 (settings.cl_crosshair_t ? 0x80 : 0);
 
-            const checksum = bytes.slice(1).reduce((sum, byte) => sum + byte, 0) % 256;
+            const sizeValue = Math.round(settings.cl_crosshairsize * 10);
+            bytes[14] = sizeValue & 0xff;
+            bytes[15] = (sizeValue >> 8) & 0x1f;
+
+            const checksum = bytes.slice(1).reduce((sum, byte) => sum + byte, 0) & 0xff;
             bytes[0] = checksum;
 
             const hexString = bytes.map(b => b.toString(16).padStart(2, '0')).join('');
             let num = BigInt('0x' + hexString);
 
             let result = '';
-            while (num > 0) {
-                result = this.DICTIONARY[Number(num % BigInt(this.DICTIONARY_LENGTH))] + result;
+            for (let i = 0; i < 25; i++) {
+                const remainder = Number(num % BigInt(this.DICTIONARY_LENGTH));
+                result += this.DICTIONARY[remainder];
                 num = num / BigInt(this.DICTIONARY_LENGTH);
             }
 
-            result = result.padStart(25, this.DICTIONARY[0]);
             return `CSGO-${result.slice(0, 5)}-${result.slice(5, 10)}-${result.slice(10, 15)}-${result.slice(15, 20)}-${result.slice(20)}`;
 
         } catch (error) {

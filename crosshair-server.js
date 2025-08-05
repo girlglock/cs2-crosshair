@@ -98,6 +98,7 @@ app.get('/id/:username', (req, res) => {
     if (!username || username.length > config.crosshair.maxCodeLength || /[<>\"'&]/.test(username)) {
         return res.status(400).json({ error: 'invalid format >:(' });
     }
+    // @ts-ignore
     req.params.code = `id/${username}`;
     getCrosshairHandler(req, res);
 });
@@ -109,6 +110,7 @@ app.get('/profiles/:username', (req, res) => {
     if (!username || username.length > config.crosshair.maxCodeLength || /[<>\"'&]/.test(username)) {
         return res.status(400).json({ error: 'invalid format >:(' });
     }
+    // @ts-ignore
     req.params.code = `profiles/${username}`;
     getCrosshairHandler(req, res);
 });

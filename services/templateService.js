@@ -47,7 +47,7 @@ function getColorFromSettings(settings) {
         4: [0, 255, 255]  // cyan
     };
 
-    return presetColors[colorIndex] || [0, 255, 0];
+    return presetColors[colorIndex] || [160, 255, 255];
 }
 
 function generateHTML(crosshairData, settings, imageUrl, errorType = '', originalInput = '', isBot = false) {
@@ -67,6 +67,7 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
     }
 
     const [r, g, b] = settings ? getColorFromSettings(settings) : [0, 255, 0];
+    console.log(`crosshair color: rgb(${r}, ${g}, ${b})`);
     const themeColor = `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 
     const title = crosshairData.crosshairCode === originalInput
@@ -87,7 +88,7 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
         : 'https://steamcommunity.com/favicon.ico';
 
     const playerInfo = crosshairData.nickname
-        ? `<a href="${profileUrl}" style="text-decoration: none; display: inline-flex; align-items: center;">
+        ? `<a href="${profileUrl}" style="text-decoration: none; color: rgb(${r}, ${g}, ${b}); display: inline-flex; align-items: center;">
         <img src="${iconUrl}" style="width: 14px; height: 14px; margin-right: 6px;">
         ${crosshairData.nickname}${crosshairData.cs2Hours ? ` • ${crosshairData.cs2Hours}` : ''}</a>`
         : '';

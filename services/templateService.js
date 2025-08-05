@@ -67,7 +67,6 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
     }
 
     const [r, g, b] = settings ? getColorFromSettings(settings) : [0, 255, 0];
-    console.log(`crosshair color: rgb(${r}, ${g}, ${b})`);
     const themeColor = `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 
     const title = crosshairData.crosshairCode === originalInput

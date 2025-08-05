@@ -91,6 +91,28 @@ const getUsageResponse = () => ({
 
 app.get('/', (req, res) => res.json(getUsageResponse()));
 
+app.get('/id', (req, res) => res.json(getUsageResponse()));
+app.get('/id/', (req, res) => res.json(getUsageResponse()));
+app.get('/id/:username', (req, res) => {
+    const username = req.params.username;
+    if (!username || username.length > config.crosshair.maxCodeLength || /[<>\"'&]/.test(username)) {
+        return res.status(400).json({ error: 'invalid format >:(' });
+    }
+    req.params.code = `id/${username}`;
+    getCrosshairHandler(req, res);
+});
+
+app.get('/profiles', (req, res) => res.json(getUsageResponse()));
+app.get('/profiles/', (req, res) => res.json(getUsageResponse()));
+app.get('/profiles/:username', (req, res) => {
+    const username = req.params.username;
+    if (!username || username.length > config.crosshair.maxCodeLength || /[<>\"'&]/.test(username)) {
+        return res.status(400).json({ error: 'invalid format >:(' });
+    }
+    req.params.code = `profiles/${username}`;
+    getCrosshairHandler(req, res);
+});
+
 app.get(/^\/((?!id\/?$|id\/|profiles\/?$|profiles\/|image\/).+)$/, (req, res) => {
     const code = req.params[0];
     if (!code || code.length > config.crosshair.maxCodeLength) {

@@ -94,6 +94,10 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
                 errorType = 'crosshair not found in any DB';
             }
 
+            if (onlyCode && req.params.code) {
+                return res.type('text/plain').send(req.params.code.substring(3) + "'s " + errorType);
+            }
+
             const html = generateHTML(null, null, '', errorType, originalInput, false);
             return res.set({
                 'Content-Type': 'text/html',

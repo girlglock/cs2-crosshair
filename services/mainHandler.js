@@ -119,7 +119,7 @@ async function getCrosshairHandler(req, res) {
         let imageUrl;
         if (isBot) {
             imageUrl = `https://${config.domain}/image/${crosshairData.crosshairCode}`;
-        } else if (!req.params.code) {
+        } else if (!req.params.code && isBot) {
             imageUrl = `https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/default-embed.png`;
         } 
         else {

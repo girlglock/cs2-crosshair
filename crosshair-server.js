@@ -115,6 +115,20 @@ app.get('/profiles/:username', (req, res) => {
     getCrosshairHandler(req, res);
 });
 
+app.get('/c', (req, res) => res.json(getUsageResponse()));
+app.get('/c/', (req, res) => res.json(getUsageResponse()));
+app.get('/c/id', (req, res) => res.json(getUsageResponse()));
+app.get('/c/id/', (req, res) => res.json(getUsageResponse()));
+app.get('/c/id/:username', (req, res) => {
+    const username = req.params.username;
+    if (!username || username.length > config.crosshair.maxCodeLength || /[<>\"'&]/.test(username)) {
+        return res.status(400).json({ error: 'invalid format >:(' });
+    }
+    // @ts-ignore
+    req.params.code = `id/${username}`;
+    getCrosshairHandler(req, res, true);
+});
+
 app.get(/^\/((?!id\/?$|id\/|profiles\/?$|profiles\/|image\/).+)$/, (req, res) => {
     const code = req.params[0];
     if (!code || code.length > config.crosshair.maxCodeLength) {

@@ -63,7 +63,7 @@ async function processUserInput(input) {
     }
 }
 
-async function getCrosshairHandler(req, res) {
+async function getCrosshairHandler(req, res, onlyCode = false) {
     const code = req.params.code || "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL"; //get some default code
     const originalInput = code;
 
@@ -101,6 +101,10 @@ async function getCrosshairHandler(req, res) {
             }).send(html);
         }
 
+        if (onlyCode && req.params.code) {
+            return res.type('text/plain').send(req.params.code.substring(3) + "'s crosshair code: " + crosshairData.crosshairCode);
+        }
+
         const settings = renderer.parseCode(crosshairData.crosshairCode);
         const cacheFile = path.join(CACHE_DIR, `${crosshairData.crosshairCode}.png`);
 
@@ -121,7 +125,7 @@ async function getCrosshairHandler(req, res) {
             imageUrl = `https://${config.domain}/image/${crosshairData.crosshairCode}`;
         } else if (!req.params.code && isBot) {
             imageUrl = `https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/default-embed.png`;
-        } 
+        }
         else {
             imageUrl = `data:image/png;base64,${imageBuffer.toString('base64')}`;
         }
@@ -140,12 +144,12 @@ async function getCrosshairHandler(req, res) {
 }
 
 function isDiscordUserAgent(userAgent) {
-  return userAgent && (
-    userAgent.includes('Discordbot') ||
-    userAgent.includes('Twitterbot') ||
-    userAgent.includes('facebookexternalhit') ||
-    userAgent.includes('LinkedInBot')
-  );
+    return userAgent && (
+        userAgent.includes('Discordbot') ||
+        userAgent.includes('Twitterbot') ||
+        userAgent.includes('facebookexternalhit') ||
+        userAgent.includes('LinkedInBot')
+    );
 }
 
 module.exports = {

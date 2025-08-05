@@ -64,7 +64,7 @@ async function processUserInput(input) {
 }
 
 async function getCrosshairHandler(req, res) {
-    const code = req.params.code;
+    const code = req.params.code || "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL"; //get some default code
     const originalInput = code;
 
     if (!code) {
@@ -119,7 +119,10 @@ async function getCrosshairHandler(req, res) {
         let imageUrl;
         if (isBot) {
             imageUrl = `https://${config.domain}/image/${crosshairData.crosshairCode}`;
-        } else {
+        } else if (!req.params.code) {
+            imageUrl = `https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/default-embed.png`;
+        } 
+        else {
             imageUrl = `data:image/png;base64,${imageBuffer.toString('base64')}`;
         }
 

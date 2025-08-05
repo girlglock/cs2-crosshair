@@ -89,7 +89,7 @@ const getUsageResponse = () => ({
     ]
 });
 
-app.get('/', (req, res) => res.json(getUsageResponse()));
+app.get('/',  (req, res) => getCrosshairHandler(req, res));
 
 app.get('/id', (req, res) => res.json(getUsageResponse()));
 app.get('/id/', (req, res) => res.json(getUsageResponse()));

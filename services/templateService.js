@@ -70,7 +70,7 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
     const themeColor = `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 
     const title = crosshairData.crosshairCode === originalInput 
-        ? 'crosshair code preview :3' 
+        ? 'cs2-crosshair-viewer' 
         : `${crosshairData.nickname}'s crosshair`;
 
     const playerInfo = crosshairData.nickname && crosshairData.cs2Hours 
@@ -82,7 +82,7 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
     return renderTemplate(templateName, {
         title,
         playerInfo,
-        codeValue: crosshairData.crosshairCode,
+        codeValue: isBot && crosshairData.crosshairCode === "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL" ? 'search and view cs2 player crosshairs' : crosshairData.crosshairCode,
         originalInput,
         imageUrl,
         themeColor,

@@ -1,5 +1,5 @@
 # cs2-crosshair-viewer
-this silly app allows you to preview CS2 crosshairs of players by their steamid64, vanity url or crosshair code.
+this silly app allows you to preview CS2 crosshairs of players by their steamid64, vanity url or crosshair code and make edits to them.
 
 > [!NOTE]  
 > this is my first ever web app, i did my best to make it secure and easy to use, but i'm not a full stack developer so if you find anything critical to improve, please let me know or feel free to contribute :3

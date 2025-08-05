@@ -176,15 +176,27 @@
                         <div class="player-info">{{playerInfo}}</div>
                         <br>
                         <div
-                            style="max-width: 100%; display: flex; margin: auto; margin-bottom: 5px; gap: 1px; flex-wrap: wrap;">
-                            <select id="searchType" class="cs-select" style="min-width: 120px; flex: 0 0 auto;">
+                            style="max-width: 100%; display: flex; margin: auto; margin-bottom: 5px; gap: 1px; flex-wrap: wrap; align-items: center;">
+                            <select id="searchType" class="cs-select" style="min-width: 20%; height: 24px;">
                                 <option value="steamvanity">Steam Vanity</option>
                                 <option value="steamid64">SteamID64</option>
                                 <option value="leetify">Leetify Handle</option>
                             </select>
 
-                            <input type="text" id="searchInput" class="cs-input" placeholder="search..."
-                                style="flex: 1; min-width: 150px;" />
+                            <div style="position: relative; flex: 1; min-width: 150px;">
+                                <span id="inputPrefix" style=" position: absolute;
+                                        left: 1.5%;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        color: gray;
+                                        pointer-events: none;
+                                        user-select: none;">
+                                    https://steamcommunity.com/id/
+                                </span>
+
+                                <input type="text" id="searchInput" class="cs-input" placeholder="<steam_vanity>"
+                                    style="width: 100%; padding-left: 205px; box-sizing: border-box;" />
+                            </div>
 
                             <button class="cs-btn" style="flex: 0 0 auto;" onclick="goToSearch()">Search</button>
                         </div>
@@ -376,7 +388,8 @@
                         </div>
 
                         <div class="code-section">
-                            <input type="text" readonly id="crosshairCode" value="{{codeValue}}" class="cs-input" style="width: 100%;" />
+                            <input type="text" readonly id="crosshairCode" value="{{codeValue}}" class="cs-input"
+                                style="width: 100%;" />
                         </div>
                         <br>
                         <p class="text">modify settings above to generate new codes, player cache expires every 24h</p>
@@ -390,7 +403,9 @@
             </div>
         </header>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/girlglock/cs2-crosshair@main/templates/staticCrosshairRenderer.js"></script> <!-- we do this to cut down on stuff sent from the server to the user :p -->
+    <script
+        src="https://cdn.jsdelivr.net/gh/girlglock/cs2-crosshair@main/templates/staticCrosshairRenderer.js"></script>
+    <!-- we do this to cut down on stuff sent from the server to the user :p -->
     <script>
         let renderer = new CS2CrosshairRenderer();
         let originalSettings = null;
@@ -514,6 +529,47 @@
         }
 
         updateBackground();
+
+        const searchCfg = {
+            steamvanity: {
+                prefix: 'https://steamcommunity.com/id/',
+                placeholder: '<steam_vanity>'
+            },
+            steamid64: {
+                prefix: 'https://steamcommunity.com/profiles/',
+                placeholder: '<steamid64>'
+            },
+            leetify: {
+                prefix: 'https://leetify.com/@',
+                placeholder: '<leetify_handle>'
+            }
+        };
+
+        const select = document.getElementById('searchType');
+        const prefixSpan = document.getElementById('inputPrefix');
+        const input = document.getElementById('searchInput');
+
+        function updatePrefix() {
+            const config = searchCfg[select.value] || { prefix: '', placeholder: 'search...' };
+
+            prefixSpan.textContent = config.prefix;
+            input.placeholder = config.placeholder;
+
+            if (config.prefix) {
+                prefixSpan.style.visibility = 'hidden';
+                prefixSpan.style.display = 'inline-block';
+                const width = prefixSpan.offsetWidth;
+                prefixSpan.style.visibility = '';
+                prefixSpan.style.display = '';
+
+                input.style.paddingLeft = (width + 6) + 'px';
+            } else {
+                input.style.paddingLeft = '10px';
+            }
+        }
+
+        select.addEventListener('change', updatePrefix);
+        window.addEventListener('DOMContentLoaded', updatePrefix);
 
         function goToSearch() {
             const input = document.getElementById('searchInput').value.trim();

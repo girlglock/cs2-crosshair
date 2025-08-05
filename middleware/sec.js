@@ -79,7 +79,13 @@ const blockedPatterns = [
     /\/baseR\d+\/metadata$/i,
     /\/r\d+\/metadata$/i,
     /\/fhir\/metadata$/i,
-    /\/baseDstu[23]\/metadata$/i
+    /\/baseDstu[23]\/metadata$/i,
+    /\?s=33\b/i,
+    /\+CSCOE\+\/logon\.html$/i,
+    /global-protect\/login\.esp$/i,
+    /dana-na\/auth\/url_default\/welcome\.cgi$/i,
+    /\/\.env$/i,
+    /\/robots\.txt$/i,
 ];
 
 const attackPatterns = [
@@ -101,7 +107,7 @@ const sanitizePath = (req, res, next) => {
     const ua = req.get('User-Agent') || '';
     for (const pattern of blockedUserAgents) {
         if (pattern.test(ua)) {
-            console.log(`blocked useragent: ${ua}`);
+            console.error(`[error] blocked useragent: ${ua}`);
             return res.status(403).json({ error: 'sussy' });
         }
     }
@@ -109,14 +115,14 @@ const sanitizePath = (req, res, next) => {
     try {
         decodedUrl = decodeURIComponent(originalUrl);
     } catch (error) {
-        console.log('malformed URI:', originalUrl);
+        console.error('malformed URI:', originalUrl);
         return res.status(400).json({ error: 'malformed url' });
     }
 
     const isImagePath = /^\/image\/CSGO(-[ABCDEFGHJKLMNOPQRSTUVWXYZabcdefhijkmnopqrstuvwxyz23456789]{5}){5}$/.test(decodedUrl);
 
     if (!allowedPathRegex.test(decodedUrl) && decodedUrl !== "/favicon.ico" && !isImagePath) {
-        console.log('invalid chars in URL:', decodedUrl);
+        console.error('[error] invalid chars in URL:', decodedUrl);
         return res.status(400).json({ error: 'sus characters in url' });
     }
 
@@ -132,7 +138,7 @@ const sanitizePath = (req, res, next) => {
     if (!isImagePath) {
         for (const pattern of blockedPatterns) {
             if (pattern.test(decodedUrl)) {
-                console.log('blocked path detected:', decodedUrl);
+                console.error('[error] blocked path detected:', decodedUrl);
                 return res.status(403).json({ error: 'sus' });
             }
         }
@@ -146,7 +152,7 @@ const sanitizePath = (req, res, next) => {
         for (const key in req.query) {
             const val = req.query[key];
             if (attackPatterns.some(p => p.test(val))) {
-                console.log('blocked suspicious query param:', key, val);
+                console.error('[error] blocked suspicious query param:', key, val);
                 return res.status(403).json({ error: 'sus' });
             }
         }
@@ -154,7 +160,7 @@ const sanitizePath = (req, res, next) => {
 
     for (const pattern of attackPatterns) {
         if (pattern.test(decodedUrl)) {
-            console.log('blocked attack pattern in URL:', decodedUrl);
+            console.error('[error] blocked attack pattern in URL:', decodedUrl);
             return res.status(403).json({ error: 'sus' });
         }
     }

@@ -95,7 +95,7 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
             } else if (error.message.includes('crosshair not found')) {
                 errorType = 'crosshair not found in any DB';
             } else if (error.message.includes('used steamid64 instead of leetify vanity')) {
-                errorType = `not found because you used a steamid64, use ${config.domain}/profiles/steamid64 instead`;
+                errorType = `not found because you used a steamid64, use <a href="${config.domain}/profiles/${code}">${config.domain}/profiles/${code}</a> instead`;
             }
 
             console.error(`[error] ${originalInput}'s ${errorType}`);

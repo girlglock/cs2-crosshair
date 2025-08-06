@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 async function loadProPlayersData() {
     try {
-        const response = await fetch('https://cdn.jsdelivr.net/gh/girlglock/cs2-crosshair@main/remote-assets/static/pro-players.json');
+        const response = await fetch('https://cdn.jsdelivr.net/gh/girlglock/cs2-crosshair@latest/remote-assets/static/pro-players.json');
         proPlayersData = await response.json();
     } catch (error) {
         console.error('failed to load pro-players.json:', error);

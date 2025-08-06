@@ -78,19 +78,34 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
         : crosshairData.nickname + "\n" || '';
 
     const isLeetify = !crosshairData.steamId64;
-    const profileUrl = isLeetify
-        ? `https://leetify.com/@${crosshairData.nickname}`
-        : `https://steamcommunity.com/profiles/${crosshairData.steamId64}`;
 
-    const iconUrl = isLeetify
-        ? 'https://leetify.com/assets/images/favicon.svg'
-        : 'https://steamcommunity.com/favicon.ico';
+    const leetifyLink = isLeetify
+        ? `https://leetify.com/@${crosshairData.nickname}`
+        : `https://leetify.com/public/profile/${crosshairData.steamId64}`;
+    const steamLink = `https://steamcommunity.com/profiles/${crosshairData.steamId64}`;
+    const csstatsLink = `https://csstats.gg/player/${crosshairData.steamId64}`;
+
+    const iconStyle = 'width: 14px; height: 14px; margin-right: 1px; margin-top: 8px; filter: brightness(0) saturate(100%) invert(100%);';
+
+    const leetifyIcon = `<a href="${leetifyLink}" target="_blank" style="margin-right: 1px;">
+    <img src="https://leetify.com/assets/images/favicon.svg" style="${iconStyle}"></a>`;
+
+    const steamIcon = !isLeetify
+        ? `<a href="${steamLink}" target="_blank" style="margin-right: 1px;">
+        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/steam-7tmhpbwzco485ew3p66mh.png/steam-ghlhjssxznri21c5tax15n.png" style="${iconStyle}"></a>`
+        : '';
+
+    const csstatsIcon = !isLeetify
+        ? `<a href="${csstatsLink}" target="_blank">
+        <img src="https://static.csstats.gg/images/favicon.svg" style="${iconStyle}"></a>`
+        : '';
 
     const playerInfo = crosshairData.nickname
-        ? `<a href="${profileUrl}" style="text-decoration: none; color: rgb(${r}, ${g}, ${b}); display: inline-flex; align-items: center;">
-        <img src="${iconUrl}" style="width: 14px; height: 14px; margin-right: 6px;">
-        ${crosshairData.nickname}${crosshairData.cs2Hours ? ` • ${crosshairData.cs2Hours}` : ''}</a>`
+        ? `<span style="text-decoration: none; color: rgb(${r}, ${g}, ${b}); display: inline-flex; align-items: center;">
+        ${csstatsIcon}${leetifyIcon}${steamIcon}
+        <span style="margin-left: 1px;">${crosshairData.nickname}${crosshairData.cs2Hours ? ` • ${crosshairData.cs2Hours}` : ''}</span></span>`
         : '';
+
 
     const templateName = isBot ? 'discord-embed' : 'crosshair-preview';
 

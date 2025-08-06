@@ -22,16 +22,138 @@
     <link rel="icon" href="https://files.catbox.moe/9anhhp.ico" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/girlglock/cs2-crosshair@main/remote-assets/static/static-crosshair-preview.css">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://files.catbox.moe/likszt.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        * {
+            user-select: text;
+        }
+
+        .cs-dialog {
+            position: relative;
+            display: inline-block;
+            max-width: 90vw;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        .cs-input__label {
+            margin-right: 10%;
+        }
+
+        .heading {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .crosshair-image {
+            padding: 20px;
+            background-image: url('https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/overpass.png');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid;
+            border-color: #292c21 #8c9284 #8c9284 #292c21;
+        }
+
+        .crosshair-image canvas {
+            width: 64px;
+            height: 64px;
+            image-rendering: pixelated;
+        }
+
+        .crosshair-image img {
+            width: 64px;
+            height: 64px;
+            image-rendering: pixelated;
+        }
+
+        .code-section {
+            margin: 20px 0;
+        }
+
         .player-info {
             color: {{colorRGB}};
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-        .otag {
-            display: none;
+        .control-group {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .controls-column h4 {
+            margin: 0 0 15px 0;
+            color: #ffff00;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px 0;
+            }
+
+            .controls-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .control-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .control-label {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .control-input {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            .control-value {
+                align-self: flex-end;
+            }
+
+            .heading {
+                position: static;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -55,13 +177,12 @@
                         <div
                             style="max-width: 100%; display: flex; margin: auto; gap: 1px; flex-wrap: wrap; align-items: center;">
                             <select id="searchType" class="cs-select" style="min-width: 20%; height: 24px;">
-                                <option value="proplayer">Pro / Streamer</option>
                                 <option value="steamvanity">Steam Vanity</option>
                                 <option value="steamid64">SteamID64</option>
                                 <option value="leetify">Leetify Handle</option>
                             </select>
 
-                            <div id="inputContainer" style="position: relative; flex: 1; min-width: 150px;">
+                            <div style="position: relative; flex: 1; min-width: 150px;">
                                 <span id="inputPrefix" style="position: absolute;
                                         left: 1.5%;
                                         top: 50%;
@@ -69,22 +190,20 @@
                                         color: gray;
                                         pointer-events: none;
                                         user-select: none;">
+                                    https://steamcommunity.com/id/
                                 </span>
 
-                                <div class="autocomplete-container">
-                                    <input type="text" id="searchInput" class="cs-input" placeholder="<pro_player>"
-                                        style="width: 100%; padding-left: 8px; box-sizing: border-box;" />
-                                    <div id="autocompleteResults" class="autocomplete-results"></div>
-                                </div>
+                                <input type="text" id="searchInput" class="cs-input" placeholder="<steam_vanity>"
+                                    style="width: 100%; padding-left: 205px; box-sizing: border-box;" />
                             </div>
 
                             <button class="cs-btn" style="flex: 0 0 auto;" onclick="goToSearch()">Search</button>
                         </div>
-
+                        
                         <br>
-
+                        
                         <hr class="cs-hr" />
-
+                        
                         <br>
 
                         <div class="crosshair-preview">
@@ -276,8 +395,7 @@
                                 style="width: 100%;" />
                         </div>
                         <br>
-                        <p class="text">modify settings above to generate new codes, player cache expires every 3 hours
-                        </p>
+                        <p class="text">modify settings above to generate new codes, player cache expires every 3 hours</p>
                         <menu class="footer-btns" style="position:relative;">
                             <button class="cs-btn" onclick="copyCode()">Copy</button>
                             <button class="cs-btn" onclick="downloadImage()">Save</button>
@@ -288,12 +406,275 @@
             </div>
         </header>
     </div>
-    <script>
-        const originalCode = '{{codeValue}}';
-    </script>
-    <!-- we do this to cut down on stuff sent from the server to the user :p -->
     <script
-        src="https://cdn.jsdelivr.net/gh/girlglock/cs2-crosshair@main/remote-assets/static/static-crosshair-preview.js">
+        src="https://cdn.jsdelivr.net/gh/girlglock/cs2-crosshair@main/templates/staticCrosshairRenderer.js"></script>
+    <!-- we do this to cut down on stuff sent from the server to the user :p -->
+    <script>
+        let renderer = new CS2CrosshairRenderer();
+        let originalSettings = null;
+        let currentSettings = null;
+        let isUsingCustomSettings = false;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const originalCode = '{{codeValue}}';
+            originalSettings = renderer.parseCode(originalCode);
+            currentSettings = { ...originalSettings };
+
+            setupControls();
+            updateControlsFromSettings(currentSettings);
+            updateBackground();
+        });
+
+        function setupControls() {
+            const rangeInputs = document.querySelectorAll('input[type="range"]');
+            rangeInputs.forEach(input => {
+                const valueSpan = document.getElementById(input.id + '_value');
+
+                input.addEventListener('input', function () {
+                    const value = parseFloat(this.value);
+                    valueSpan.textContent = value;
+                    currentSettings[this.id] = value;
+                    updateCrosshair();
+                });
+            });
+
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function () {
+                    currentSettings[this.id] = this.checked;
+                    updateCrosshair();
+                });
+            });
+
+            const selects = document.querySelectorAll('select');
+            selects.forEach(select => {
+                if (select.id.startsWith('cl_')) {
+                    const valueSpan = document.getElementById(select.id + '_value');
+                    select.addEventListener('change', function () {
+                        const value = parseInt(this.value);
+                        if (valueSpan) valueSpan.textContent = value;
+                        currentSettings[this.id] = value;
+                        updateCrosshair();
+                    });
+                }
+            });
+        }
+
+        function updateControlsFromSettings(settings) {
+            Object.keys(settings).forEach(key => {
+                const input = document.getElementById(key);
+                const valueSpan = document.getElementById(key + '_value');
+
+                if (input) {
+                    if (input.type === 'range') {
+                        input.value = settings[key];
+                        if (valueSpan) valueSpan.textContent = settings[key];
+                    } else if (input.type === 'checkbox') {
+                        input.checked = settings[key];
+                    } else if (input.tagName === 'SELECT') {
+                        input.value = settings[key];
+                        const valueSpan = document.getElementById(key + '_value');
+                        if (valueSpan) valueSpan.textContent = settings[key];
+                    }
+                }
+            });
+        }
+
+        function updateCrosshair() {
+            isUsingCustomSettings = true;
+
+            const originalImage = document.getElementById('originalImage');
+            const canvas = document.getElementById('crosshairCanvas');
+            originalImage.style.display = 'none';
+            canvas.style.display = '';
+
+            const newCanvas = renderer.renderCrosshair(currentSettings, 64);
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, 64, 64);
+            ctx.drawImage(newCanvas, 0, 0);
+
+            const newCode = renderer.generateCode(currentSettings);
+            document.getElementById('crosshairCode').value = newCode;
+        }
+
+        const backgrounds = [
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/overpass.png',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/cache.jpg',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/inferno.png',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/nuke.png',
+            'https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/anubis.jpg'
+        ];
+
+        let currentBackgroundIndex = 0;
+        const crosshairDiv = document.getElementById('crosshairImage');
+
+        function updateBackground() {
+            const imageUrl = backgrounds[currentBackgroundIndex];
+            const testImg = new Image();
+            testImg.onload = function () {
+                crosshairDiv.style.backgroundImage = `url('${imageUrl}')`;
+            };
+            testImg.onerror = function () {
+                console.error('Failed to load image:', imageUrl);
+                crosshairDiv.style.backgroundImage = `url('https://files.catbox.moe/45rbkr.jpg')`;
+            };
+            testImg.src = imageUrl;
+        }
+
+        function prevBackground() {
+            currentBackgroundIndex = (currentBackgroundIndex - 1 + backgrounds.length) % backgrounds.length;
+            updateBackground();
+        }
+
+        function nextBackground() {
+            currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
+            updateBackground();
+        }
+
+        updateBackground();
+
+        const searchCfg = {
+            steamvanity: {
+                prefix: 'https://steamcommunity.com/id/',
+                placeholder: '<steam_vanity>'
+            },
+            steamid64: {
+                prefix: 'https://steamcommunity.com/profiles/',
+                placeholder: '<steamid64>'
+            },
+            leetify: {
+                prefix: 'https://leetify.com/@',
+                placeholder: '<leetify_handle>'
+            }
+        };
+
+        const select = document.getElementById('searchType');
+        const prefixSpan = document.getElementById('inputPrefix');
+        const input = document.getElementById('searchInput');
+
+        function updatePrefix() {
+            const config = searchCfg[select.value] || { prefix: '', placeholder: 'search...' };
+
+            prefixSpan.textContent = config.prefix;
+            input.placeholder = config.placeholder;
+
+            if (config.prefix) {
+                prefixSpan.style.visibility = 'hidden';
+                prefixSpan.style.display = 'inline-block';
+                const width = prefixSpan.offsetWidth;
+                prefixSpan.style.visibility = '';
+                prefixSpan.style.display = '';
+
+                input.style.paddingLeft = (width + 6) + 'px';
+            } else {
+                input.style.paddingLeft = '205px';
+            }
+        }
+
+        select.addEventListener('change', updatePrefix);
+
+        function goToSearch() {
+            const input = document.getElementById('searchInput').value.trim();
+            const type = document.getElementById('searchType').value;
+
+            if (!input) {
+                alert('please enter someone to search');
+                return;
+            }
+
+            const steamID64Pattern = /^7656119\d{10}$/;
+            const allowedUsernamePattern = /^[a-zA-Z0-9_-]+$/;
+
+            let path = '';
+
+            if (type === 'steamid64') {
+                if (!steamID64Pattern.test(input)) {
+                    alert('invalid steamid64.');
+                    return;
+                }
+                path = `/profiles/${input}`;
+            } else if (type === 'steamvanity') {
+                if (!allowedUsernamePattern.test(input)) {
+                    alert('invalid steam vanity url.');
+                    return;
+                }
+                path = `/id/${input}`;
+            } else if (type === 'leetify') {
+                if (!allowedUsernamePattern.test(input)) {
+                    alert('invalid leetify handle.');
+                    return;
+                }
+                path = `/${input}`;
+            }
+
+            const baseDomain = window.location.origin;
+            window.location.href = baseDomain + path;
+        }
+
+        function copyCode() {
+            const code = document.getElementById('crosshairCode').value;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('code copied :3c');
+            }).catch(() => {
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('code copied :3c');
+            });
+        }
+
+        function downloadImage() {
+            let canvas;
+
+            if (isUsingCustomSettings) {
+                canvas = document.getElementById('crosshairCanvas');
+            } else {
+                canvas = document.createElement('canvas');
+                canvas.width = 64;
+                canvas.height = 64;
+                const ctx = canvas.getContext('2d');
+                const img = document.getElementById('originalImage');
+
+                const tempImg = new Image();
+                tempImg.onload = function () {
+                    ctx.drawImage(tempImg, 0, 0);
+
+                    const link = document.createElement('a');
+                    link.download = document.getElementById('crosshairCode').value + '.png';
+                    link.href = canvas.toDataURL();
+                    link.click();
+                };
+                tempImg.src = img.src;
+                return;
+            }
+
+            const link = document.createElement('a');
+            link.download = document.getElementById('crosshairCode').value + '.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        function shareCrosshair() {
+            const code = document.getElementById('crosshairCode').value;
+            const url = `${window.location.origin}/${code}`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'cs2-crosshair',
+                    text: 'wowie look at this crosshair',
+                    url: url
+                });
+            } else {
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('share link copied!');
+                }).catch(() => {
+                    prompt('copy this link to share:', url);
+                });
+            }
+        }
     </script>
 </body>
 

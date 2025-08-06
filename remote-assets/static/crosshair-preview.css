@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://files.catbox.moe/likszt.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+* {
+    user-select: text;
+}
+
+.cs-dialog {
+    position: relative;
+    display: inline-block;
+    max-width: 90vw;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.cs-input__label {
+    margin-right: 10%;
+}
+
+.heading {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crosshair-image {
+    padding: 20px;
+    background-image: url('https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/overpass.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid;
+    border-color: #292c21 #8c9284 #8c9284 #292c21;
+}
+
+.crosshair-image canvas {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+.crosshair-image img {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+.code-section {
+    margin: 20px 0;
+}
+
+.control-group {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.controls-column h4 {
+    margin: 0 0 15px 0;
+    color: #ffff00;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Autocomplete styles */
+.autocomplete-container {
+    position: relative;
+    flex: 1;
+    min-width: 150px;
+}
+
+.autocomplete-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #2b2b2b;
+    border: 1px solid #8c9284;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    color: white;
+    font-size: 12px;
+    text-align: left;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.selected {
+    background-color: #4a4a4a;
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-type {
+    color: #ffff00;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.autocomplete-steamid {
+    color: #999;
+    font-size: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px 0;
+    }
+
+    .controls-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .control-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .control-label {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .control-input {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .control-value {
+        align-self: flex-end;
+    }
+
+    .heading {
+        position: static;
+        margin-bottom: 20px;
+    }
+}

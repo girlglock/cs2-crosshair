@@ -639,7 +639,8 @@ select.addEventListener('change', updatePrefix);
 updatePrefix();
 
 function goToSearch() {
-    const input = document.getElementById('searchInput').value.trim();
+    const inputElement = document.getElementById('searchInput'); // Get fresh reference
+    const input = inputElement.value.trim();
     const type = document.getElementById('searchType').value;
 
     if (!input) {
@@ -653,7 +654,7 @@ function goToSearch() {
     let path = '';
 
     if (type === 'proplayer') {
-        const steamid = input.getAttribute('data-steamid');
+        const steamid = inputElement.getAttribute('data-steamid');
         if (steamid) {
             window.location.href = `https://c.girlglock.com/profiles/${steamid}`;
             return;

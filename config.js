@@ -5,7 +5,7 @@ const config = {
     nodeEnv: 'development',
     
     cache: {
-        duration: 24 * 60 * 60 * 1000, // 24 hours
+        duration: 3 * 60 * 60 * 1000, // 3 hours
         directory: './cache'
     },
     

@@ -11,6 +11,10 @@ this silly app allows you to preview CS2 crosshairs of players by their steamid6
 - nginx
 - git
 
+---
+> [!NOTE]  
+> some assets like the staticCrosshairRenderer.js, backdround images and the pro-players.json file are being fetched from this repo to cut down the payload sent to the user. if you want to change them you need to edit the crosshair-preview.html template
+
 ## deploying
 ### 1. clone and install dependencies
 

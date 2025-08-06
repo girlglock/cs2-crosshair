@@ -107,7 +107,7 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
         }
 
         if (onlyCode && req.params.code) {
-            return res.type('text/plain').send(req.params.code.substring(3) + "'s crosshair code: " + crosshairData.crosshairCode);
+            return res.type('text/plain').send(crosshairData.crosshairCode);
         }
 
         const settings = renderer.parseCode(crosshairData.crosshairCode);

@@ -639,7 +639,7 @@ select.addEventListener('change', updatePrefix);
 updatePrefix();
 
 function goToSearch() {
-    const inputElement = document.getElementById('searchInput'); // Get fresh reference
+    const inputElement = document.getElementById('searchInput');
     const input = inputElement.value.trim();
     const type = document.getElementById('searchType').value;
 

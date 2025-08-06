@@ -42,9 +42,11 @@ async function processUserInput(input) {
     } else if (input.startsWith("profiles/") && config.patterns.steamID64Pattern.test(input.substring(9))) {
         username = input.substring(9);
         playerType = 'steam_profile';
-    } else {
-        username = `${input}`;
+    } else if (!config.patterns.steamID64Pattern.test(input)) {
+        username = input.split(/[/\s]/)[0];
         playerType = 'leetify';
+    } else {
+        throw new Error(`used steamid64 instead of leetify vanity`);
     }
 
     try {
@@ -92,6 +94,8 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
                 errorType = 'steam profile not found';
             } else if (error.message.includes('crosshair not found')) {
                 errorType = 'crosshair not found in any DB';
+            } else if (error.message.includes('used steamid64 instead of leetify vanity')) {
+                errorType = `not found because you used a steamid64, use ${config.domain}/profiles/steamid64 instead`;
             }
 
             console.error(`[error] ${originalInput}'s ${errorType}`);

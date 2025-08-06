@@ -103,7 +103,7 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
     const playerInfo = crosshairData.nickname
         ? `<span style="text-decoration: none; color: rgb(${r}, ${g}, ${b}); display: inline-flex; align-items: center;">
         ${csstatsIcon}${leetifyIcon}${steamIcon}
-        <span style="margin-left: 1px;">${crosshairData.nickname}${crosshairData.cs2Hours ? ` • ${crosshairData.cs2Hours}` : ''}</span></span>`
+        <span style="margin-left: 1px;"> • ${crosshairData.nickname}${crosshairData.cs2Hours ? ` • ${crosshairData.cs2Hours}` : ''}</span></span>`
         : '';
 
 

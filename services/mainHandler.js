@@ -51,14 +51,14 @@ async function processUserInput(input) {
         const result = await getCrosshairData(username, playerType);
 
         if (!result.crosshairCode) {
-            throw new Error(`[error] crosshair not found for ${username}`);
+            throw new Error(`crosshair not found for ${username}`);
         }
 
         setCachedEntry(cacheIdentifier, result);
         return result;
 
     } catch (error) {
-        console.error('[error] processing user input:', process.env.NODE_ENV === 'development' ? error : error.message);
+        if (process.env.NODE_ENV === 'development') console.error('[error] processing user input:', error.message);
         throw error;
     }
 }
@@ -94,6 +94,7 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
                 errorType = 'crosshair not found in any DB';
             }
 
+            console.error(`[error] ${originalInput}'s ${errorType}`);
             if (onlyCode && req.params.code) {
                 return res.type('text/plain').send(req.params.code.substring(3) + "'s " + errorType);
             }

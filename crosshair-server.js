@@ -6,22 +6,14 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./config');
 const { getCrosshairHandler } = require('./services/mainHandler');
-const { sanitizePath, hostValidation, securityHeaders } = require('./middleware/sec');
+const { sanitizePath, hostValidation, securityHeaders, checkRateLimit } = require('./middleware/sec');
 const { CS2CrosshairRenderer } = require('./services/crosshairRenderer');
 
 const app = express();
 
 app.set('trust proxy', '127.0.0.1');
 
-const limiter = rateLimit({
-    windowMs: config.rateLimit.windowMs,
-    max: config.rateLimit.max,
-    message: { error: 'too many requests, please try again later :c' },
-    standardHeaders: true,
-    legacyHeaders: false,
-});
-
-app.use(limiter);
+app.use(checkRateLimit);
 app.use(sanitizePath);
 app.use(hostValidation);
 app.use(securityHeaders);
@@ -65,7 +57,7 @@ app.get('/image/:filename', (req, res) => {
         res.send(imageBuffer);
 
     } catch (error) {
-        console.error('error generating crosshair image:', error);
+        console.error('[error] generating crosshair image:', error);
         res.status(500).json({ error: 'failed to generate image' });
     }
 });

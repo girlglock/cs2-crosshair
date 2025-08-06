@@ -8,14 +8,14 @@ async function getLeetifyCrosshair(playerQuery, isSteamId64) {
         const response = await fetch(url);
         
         if (!response.ok) {
-            throw new Error(`[error] HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
         
         const data = await response.json();
         return data.current?.shareCode || null;
         
     } catch (error) {
-        console.error(`[error] failed to get crosshair for ${url}:`, process.env.NODE_ENV === 'development' ? error : error.message);
+        if (process.env.NODE_ENV === 'development') console.error(`[error] failed to get crosshair for ${url}:`, error);
         return null;
     }
 }
@@ -50,7 +50,7 @@ async function fetchSteamProfile(url) {
 
         return { cs2Hours, nickname, steamId64 };
     } catch (error) {
-        console.error("[error] fetching Steam profile:", process.env.NODE_ENV === 'development' ? error : error.message);
+        if (process.env.NODE_ENV === 'development') console.error("[error] fetching Steam profile:", error);
         return null;
     }
 }
@@ -66,7 +66,7 @@ async function getCrosshairData(username, playerType) {
                 const vanityProfile = await fetchSteamProfile(vanityUrl);
                 
                 if (!vanityProfile || !vanityProfile.nickname) {
-                    throw new Error(`[error] steam profile (/id) ${vanityId} not found`);
+                    throw new Error(`steam profile (/id) ${vanityId} not found`);
                 }
                 
                 steamId64 = vanityProfile.steamId64;
@@ -81,7 +81,7 @@ async function getCrosshairData(username, playerType) {
                 const profile = await fetchSteamProfile(profileUrl);
                 
                 if (!profile || !profile.nickname) {
-                    throw new Error(`[error] steam profile (/profiles) ${steamId64} not found`);
+                    throw new Error(`steam profile (/profiles) ${steamId64} not found`);
                 }
                 
                 nickname = profile.nickname;
@@ -94,7 +94,7 @@ async function getCrosshairData(username, playerType) {
                 break;
 
             default:
-                throw new Error(`[error] unknown player type: ${playerType}`);
+                throw new Error(`unknown player type: ${playerType}`);
         }
 
         let crosshairCode;
@@ -103,7 +103,7 @@ async function getCrosshairData(username, playerType) {
             crosshairCode = await getLeetifyCrosshair(lookupId, config.patterns.steamID64Pattern.test(lookupId));
             
             if (!crosshairCode) {
-                throw new Error(`[error] crosshair not found for ${lookupId}`);
+                throw new Error(`crosshair not found for ${lookupId}`);
             }
         }
 
@@ -116,7 +116,7 @@ async function getCrosshairData(username, playerType) {
         };
 
     } catch (error) {
-        console.error('[error] getting crosshair data:', process.env.NODE_ENV === 'development' ? error : error.message);
+        if (process.env.NODE_ENV === 'development') console.error('[error] getting crosshair data:', error);
         throw error;
     }
 }

@@ -1,4 +1,7 @@
 const config = require('../config');
+// @ts-ignore
+const rateLimit = require('express-rate-limit');
+
 const allowedPathRegex = /^[a-zA-Z0-9\-_/]*$/;
 
 const blockedUserAgents = [
@@ -100,6 +103,83 @@ const attackPatterns = [
     /<img/i,
 ];
 
+const isSuspiciousRequest = (req) => {
+    const originalUrl = req.originalUrl;
+    const ua = req.get('User-Agent') || '';
+    
+    let decodedUrl;
+    try {
+        decodedUrl = decodeURIComponent(originalUrl);
+    } catch (error) {
+        return true;
+    }
+
+    if (blockedUserAgents.some(pattern => pattern.test(ua))) {
+        return true;
+    }
+
+    if (decodedUrl.includes('..') || 
+        decodedUrl.includes('\\') || 
+        decodedUrl.includes('%2e%2e') || 
+        decodedUrl.includes('%5c')) {
+        return true;
+    }
+
+    if (decodedUrl.includes('\0') || decodedUrl.includes('%00')) {
+        return true;
+    }
+
+    const isImagePath = /^\/image\/CSGO(-[ABCDEFGHJKLMNOPQRSTUVWXYZabcdefhijkmnopqrstuvwxyz23456789]{5}){5}$/.test(decodedUrl);
+    if (!isImagePath && blockedPatterns.some(pattern => pattern.test(decodedUrl))) {
+        return true;
+    }
+
+    if (attackPatterns.some(pattern => pattern.test(decodedUrl))) {
+        return true;
+    }
+
+    if (req.query) {
+        for (const key in req.query) {
+            const val = req.query[key];
+            if (attackPatterns.some(p => p.test(val))) {
+                return true;
+            }
+        }
+    }
+
+    if (decodedUrl.length > 100) {
+        return true;
+    }
+
+    return false;
+};
+
+const suspiciousLimiter = rateLimit({
+    windowMs: 30 * 60 * 1000,
+    max: 5,
+    message: { error: 'too many sus requests detected' },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => !isSuspiciousRequest(req),
+});
+
+const normalLimiter = rateLimit({
+    windowMs: config.rateLimit.windowMs,
+    max: config.rateLimit.max,
+    message: { error: 'too many requests, please try again later :c' },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => isSuspiciousRequest(req),
+});
+
+const checkRateLimit = (req, res, next) => {
+    if (isSuspiciousRequest(req)) {
+        suspiciousLimiter(req, res, next);
+    } else {
+        normalLimiter(req, res, next);
+    }
+};
+
 const sanitizePath = (req, res, next) => {
     const originalUrl = req.originalUrl;
     let decodedUrl;
@@ -107,7 +187,8 @@ const sanitizePath = (req, res, next) => {
     const ua = req.get('User-Agent') || '';
     for (const pattern of blockedUserAgents) {
         if (pattern.test(ua)) {
-            console.error(`[error] blocked useragent: ${ua}`);
+            const ip = req.ip || req.connection.remoteAddress;
+            console.warn(`[warn] blocked useragent: ${ua} - IP: ${ip}`);
             return res.status(403).json({ error: 'sussy' });
         }
     }
@@ -115,14 +196,18 @@ const sanitizePath = (req, res, next) => {
     try {
         decodedUrl = decodeURIComponent(originalUrl);
     } catch (error) {
-        console.error('malformed URI:', originalUrl);
+        const ip = req.ip || req.connection.remoteAddress;
+        console.error(`[error] malformed URI: ${originalUrl} - IP: ${ip}`);
         return res.status(400).json({ error: 'malformed url' });
     }
 
     const isImagePath = /^\/image\/CSGO(-[ABCDEFGHJKLMNOPQRSTUVWXYZabcdefhijkmnopqrstuvwxyz23456789]{5}){5}$/.test(decodedUrl);
 
     if (!allowedPathRegex.test(decodedUrl) && decodedUrl !== "/favicon.ico" && !isImagePath) {
-        console.error('[error] invalid chars in URL:', decodedUrl);
+        const ip = req.ip || req.connection.remoteAddress;
+        if (isSuspiciousRequest(req)) {
+            console.warn(`[warn] invalid chars in suspicious URL: ${decodedUrl} - IP: ${ip}`);
+        }
         return res.status(400).json({ error: 'sus characters in url' });
     }
 
@@ -132,19 +217,24 @@ const sanitizePath = (req, res, next) => {
         decodedUrl.includes('%2e%2e') ||
         decodedUrl.includes('%5c')
     ) {
+        const ip = req.ip || req.connection.remoteAddress;
+        console.warn(`[warn] path traversal attempt: ${decodedUrl} - IP: ${ip}`);
         return res.status(403).json({ error: 'sus' });
     }
 
     if (!isImagePath) {
         for (const pattern of blockedPatterns) {
             if (pattern.test(decodedUrl)) {
-                console.error('[error] blocked path detected:', decodedUrl);
+                const ip = req.ip || req.connection.remoteAddress;
+                console.warn(`[warn] blocked path detected: ${decodedUrl} - IP: ${ip}`);
                 return res.status(403).json({ error: 'sus' });
             }
         }
     }
 
     if (decodedUrl.includes('\0') || decodedUrl.includes('%00')) {
+        const ip = req.ip || req.connection.remoteAddress;
+        console.warn(`[warn] null byte injection: ${decodedUrl} - IP: ${ip}`);
         return res.status(403).json({ error: 'null byte detected' });
     }
 
@@ -152,7 +242,8 @@ const sanitizePath = (req, res, next) => {
         for (const key in req.query) {
             const val = req.query[key];
             if (attackPatterns.some(p => p.test(val))) {
-                console.error('[error] blocked suspicious query param:', key, val);
+                const ip = req.ip || req.connection.remoteAddress;
+                console.warn(`[warn] blocked suspicious query param: ${key}=${val} - IP: ${ip}`);
                 return res.status(403).json({ error: 'sus' });
             }
         }
@@ -160,12 +251,15 @@ const sanitizePath = (req, res, next) => {
 
     for (const pattern of attackPatterns) {
         if (pattern.test(decodedUrl)) {
-            console.error('[error] blocked attack pattern in URL:', decodedUrl);
+            const ip = req.ip || req.connection.remoteAddress;
+            console.warn(`[warn] blocked attack pattern in URL: ${decodedUrl} - IP: ${ip}`);
             return res.status(403).json({ error: 'sus' });
         }
     }
 
     if (decodedUrl.length > 100) {
+        const ip = req.ip || req.connection.remoteAddress;
+        console.warn(`[warn] URL too long (${decodedUrl.length} chars): ${decodedUrl.substring(0, 50)}... - IP: ${ip}`);
         return res.status(413).json({ error: 'URL too wong' });
     }
 
@@ -175,6 +269,8 @@ const sanitizePath = (req, res, next) => {
 const hostValidation = (req, res, next) => {
     const host = req.get('Host');
     if (host !== config.host) {
+        const ip = req.ip || req.connection.remoteAddress;
+        console.error(`[error] invalid host header: ${host} - IP: ${ip}`);
         return res.status(403).json({ error: 'access denied' });
     }
     next();
@@ -192,4 +288,6 @@ module.exports = {
     sanitizePath,
     hostValidation,
     securityHeaders,
+    checkRateLimit,
+    isSuspiciousRequest,
 };

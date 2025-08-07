@@ -438,7 +438,7 @@ function showAutocomplete(query) {
         return;
     }
 
-    const matches = findMatches(query);
+    const matches = findMatches(query, proPlayersData);
 
     if (matches.length === 0) {
         hideAutocomplete();
@@ -446,13 +446,13 @@ function showAutocomplete(query) {
     }
 
     autocompleteResults.innerHTML = '';
-    selectedAutocompleteIndex = -1;c 
+    selectedAutocompleteIndex = -1; 
 
     matches.slice(0, 10).forEach((match, index) => {
         const item = document.createElement('div');
         item.className = 'autocomplete-item';
 
-        const hasValidImage = match.image && !match.image.includes('NoImage');
+        const hasValidImage = false; //match.image && !match.image.includes('NoImage');
         const imageHtml = hasValidImage
             ? `<img src="${match.image}" class="autocomplete-img">`
             : '';

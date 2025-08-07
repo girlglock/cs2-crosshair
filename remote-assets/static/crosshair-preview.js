@@ -490,16 +490,17 @@ function selectAutocompleteItem(item) {
     hideAutocomplete();
 }
 
-function findMatches(query) {
+function findMatches(query, proPlayersData) {
     const matches = [];
     const queryLower = query.toLowerCase();
 
-    for (const [name, data] of Object.entries(proPlayersData)) {
+    for (const [name, data] of Object.entries(proPlayersData.players)) {
         if (name.toLowerCase().includes(queryLower)) {
             matches.push({
                 name: name,
                 steamid: data.steamid,
                 type: data.type,
+                image: data.image,
                 relevance: calculateRelevance(name.toLowerCase(), queryLower)
             });
         }

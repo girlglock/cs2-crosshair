@@ -446,16 +446,23 @@ function showAutocomplete(query) {
     }
 
     autocompleteResults.innerHTML = '';
-    selectedAutocompleteIndex = -1;
+    selectedAutocompleteIndex = -1;c 
 
     matches.slice(0, 10).forEach((match, index) => {
         const item = document.createElement('div');
         item.className = 'autocomplete-item';
+
+        const hasValidImage = match.image && !match.image.includes('NoImage');
+        const imageHtml = hasValidImage
+            ? `<img src="${match.image}" class="autocomplete-img">`
+            : '';
+
         item.innerHTML = `
-                    <span class="autocomplete-type">${match.type}</span> | 
-                    <span class="autocomplete-name">${match.name}</span> | 
-                    <span class="autocomplete-steamid">${match.steamid}</span>
-                `;
+            ${imageHtml}
+            <span class="autocomplete-type">${match.type}</span> | 
+            <span class="autocomplete-name">${match.name}</span> | 
+            <span class="autocomplete-steamid">${match.steamid}</span>
+        `;
         item.setAttribute('data-name', match.name);
         item.setAttribute('data-steamid', match.steamid);
 

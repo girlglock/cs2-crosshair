@@ -31,10 +31,19 @@ function getCachedEntry(identifier) {
 
     if (cachedEntry) {
         const now = Date.now();
-        const cacheAge = now - cachedEntry.timestamp;
+        const ts = Number(cachedEntry.timestamp);
+        let cacheAge = now - ts;
+
+        if (cacheAge < 0 || isNaN(cacheAge)) {
+            console.warn(`cache timestamp invalid for: ${identifier}`);
+            cacheAge = Infinity;
+        }
 
         if (cacheAge < config.cache.duration) {
-            console.log(`using cached entry for: ${identifier}`);
+            const hours = Math.floor(cacheAge / 3600000);
+            const minutes = Math.floor((cacheAge % 3600000) / 60000);
+            const seconds = Math.floor((cacheAge % 60000) / 1000);
+            console.log(`using cached entry for: ${identifier} (age: ${hours}h ${minutes}m ${seconds}s)`);
             return cachedEntry.data;
         } else {
             console.log(`cache expired for: ${identifier}`);

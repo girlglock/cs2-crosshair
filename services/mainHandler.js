@@ -95,7 +95,7 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
             }
 
             console.error(`[error] ${originalInput}'s ${errorType}`);
-            if (onlyCode && req.params.code) {
+            if (onlyCode && code === "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL") {
                 return res.type('text/plain').send(req.params.code.substring(3) + "'s " + errorType);
             }
 
@@ -111,7 +111,12 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
         }
 
         const settings = renderer.parseCode(crosshairData.crosshairCode);
-        const cacheFile = path.join(CACHE_DIR, `${crosshairData.crosshairCode}.png`);
+
+        let sanitizedCrosshairCode = crosshairData.crosshairCode;
+        sanitizedCrosshairCode = sanitizedCrosshairCode.split('/')[0];
+        sanitizedCrosshairCode = sanitizedCrosshairCode.replace(/[\\:*?"<>|]/g, '');
+
+        const cacheFile = path.join(CACHE_DIR, `${sanitizedCrosshairCode}.png`);
 
         let imageBuffer;
         if (fs.existsSync(cacheFile)) {
@@ -127,8 +132,8 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
         const isBot = isDiscordUserAgent(userAgent);
         let imageUrl;
         if (isBot) {
-            imageUrl = `https://${config.domain}/image/${crosshairData.crosshairCode}`;
-        } else if (!req.params.code && isBot) {
+            imageUrl = `https://${config.domain}/image/${sanitizedCrosshairCode}`;
+        } else if (code === "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL" && isBot) {
             imageUrl = `https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/default-embed.png`;
         }
         else {

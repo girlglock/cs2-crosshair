@@ -23,10 +23,13 @@ app.get(/\.(ico|png|jpg|jpeg|gif|svg|css|js|txt|xml)$/i, (req, res) => res.statu
 // for embed bots
 app.get('/image/:filename', (req, res) => {
     const filename = req.params.filename;
-    const crosshairCode = filename.replace(/\.png$/, '');
+    let crosshairCode = filename.replace(/\.png$/, '');
+
+    crosshairCode = crosshairCode.split('/')[0];
+    crosshairCode = crosshairCode.replace(/[\\:*?"<>|]/g, '');
 
     if (!config.patterns.xcodePattern.test(crosshairCode)) {
-        return res.status(400).json({ error: 'invalid crosshair code format' });
+        return res.status(400).json({ error: 'invalid crosshair code image cache format' });
     }
 
     const cacheFile = path.join(config.cache.directory, `${crosshairCode}.png`);
@@ -81,7 +84,7 @@ const getUsageResponse = () => ({
     ]
 });
 
-app.get('/',  (req, res) => getCrosshairHandler(req, res));
+app.get('/', (req, res) => getCrosshairHandler(req, res));
 
 app.get('/id', (req, res) => res.json(getUsageResponse()));
 app.get('/id/', (req, res) => res.json(getUsageResponse()));

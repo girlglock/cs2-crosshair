@@ -5651,41 +5651,4284 @@
       "steamid": "76561198256368386",
       "type": "pro",
       "image": "https://liquipedia.net/commons/images/thumb/e/ee/Coalesce_Maza_2021.png/600px-Coalesce_Maza_2021.png"
+    },
+    "mezii": {
+      "steamid": "76561197973140692",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/60/Mezii_at_BLAST_Open_Spring_2025.jpg/600px-Mezii_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "MiGHTYMAX": {
+      "steamid": "76561197975788552",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ed/MiGHTYMAX_at_ESL_Premiership_Autumn_2023.jpg/600px-MiGHTYMAX_at_ESL_Premiership_Autumn_2023.jpg"
+    },
+    "MMS": {
+      "steamid": "76561198374401449",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9c/MMS_at_ESL_Premiership_Autumn_2023.jpg/600px-MMS_at_ESL_Premiership_Autumn_2023.jpg"
+    },
+    "Nukeddog": {
+      "steamid": "76561198045030812",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/73/Nukeddog_Harry_Jenkins_epic.LAN_26.jpg/600px-Nukeddog_Harry_Jenkins_epic.LAN_26.jpg"
+    },
+    "papp": {
+      "steamid": "76561197982425103",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/34/Papp_at_ESL_Premiership_Autumn_2023.jpg/600px-Papp_at_ESL_Premiership_Autumn_2023.jpg"
+    },
+    "Ping": {
+      "steamid": "76561198117680294",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4f/Ping_Javier_Griffiths_epic.LAN_26.jpg/600px-Ping_Javier_Griffiths_epic.LAN_26.jpg"
+    },
+    "ReegaN": {
+      "steamid": "76561198102745622",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/67/ReegaN_at_ESL_Premiership_Autumn_2023.jpg/600px-ReegaN_at_ESL_Premiership_Autumn_2023.jpg"
+    },
+    "resu": {
+      "steamid": "76561197995386304",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SHANEY": {
+      "steamid": "76561197985934021",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8f/SHANEY_Shane_Smith_epic.LAN_26.jpg/600px-SHANEY_Shane_Smith_epic.LAN_26.jpg"
+    },
+    "Sheekey": {
+      "steamid": "76561197998291996",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "smooya": {
+      "steamid": "76561198171689321",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2b/Smooya_%40_IEM_Katowice_2022.jpg/600px-Smooya_%40_IEM_Katowice_2022.jpg"
+    },
+    "Surreal": {
+      "steamid": "76561198044840457",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0d/Surreal_at_ESL_Premiership_Autumn_2023.jpg/600px-Surreal_at_ESL_Premiership_Autumn_2023.jpg"
+    },
+    "Swaggy": {
+      "steamid": "76561198190351467",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/ba/Swaggy_playerphoto.png/600px-Swaggy_playerphoto.png"
+    },
+    "Tadpole": {
+      "steamid": "76561198081399667",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a2/Tadpole_ITB_2022.jpg/600px-Tadpole_ITB_2022.jpg"
+    },
+    "Thomas": {
+      "steamid": "76561198025448130",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/73/Thomas_at_BLAST_Premier_Fall_Groups_2024.jpg/600px-Thomas_at_BLAST_Premier_Fall_Groups_2024.jpg"
+    },
+    "Tree60": {
+      "steamid": "76561198165543185",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Vacancy": {
+      "steamid": "76561198190928622",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Whindanski": {
+      "steamid": "76561197964091566",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Whitey": {
+      "steamid": "76561198141741114",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/15/Whitey_at_Elisa_Open_Suomi_S7.jpg/600px-Whitey_at_Elisa_Open_Suomi_S7.jpg"
+    },
+    "Wilksyy": {
+      "steamid": "76561198079568390",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Wolfie": {
+      "steamid": "76561198179278254",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4a/Wolfie_at_ESL_Premiership_Autumn_2023.jpg/600px-Wolfie_at_ESL_Premiership_Autumn_2023.jpg"
+    },
+    "znx": {
+      "steamid": "76561198019767026",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8c/Znx_at_ESL_Premiership_Summer_2019.jpg/600px-Znx_at_ESL_Premiership_Summer_2019.jpg"
+    },
+    "sugaR": {
+      "steamid": "76561198026835980",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d9/SugaR_mar-2024_playerphoto.png/600px-SugaR_mar-2024_playerphoto.png"
+    },
+    "t0rick": {
+      "steamid": "76561198007552635",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b3/T0rick_Berlin_Minor.jpg/600px-T0rick_Berlin_Minor.jpg"
+    },
+    "1eeR": {
+      "steamid": "76561198837117408",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/00/1eeR_at_ESL_Pro_League_S21.jpg/600px-1eeR_at_ESL_Pro_League_S21.jpg"
+    },
+    "boX": {
+      "steamid": "76561198087658989",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ad/BoX_at_ESL_Pro_League_S21.jpg/600px-BoX_at_ESL_Pro_League_S21.jpg"
+    },
+    "Brilliance": {
+      "steamid": "76561197967402670",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Chill": {
+      "steamid": "76561198073395524",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "CyberFocus": {
+      "steamid": "76561198031560284",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e1/CyberFocus_at_CIS_Minor_Championship_Krak%C3%B3w_2017.jpg/600px-CyberFocus_at_CIS_Minor_Championship_Krak%C3%B3w_2017.jpg"
+    },
+    "d1maskin": {
+      "steamid": "76561198056217333",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dERZKIY": {
+      "steamid": "76561198030369129",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "F1n3tw": {
+      "steamid": "76561198136794964",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "FenomeN": {
+      "steamid": "76561198400817766",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Get_Jeka": {
+      "steamid": "76561198245783634",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e7/Get_Jeka_mar-2024_playerphoto.png/600px-Get_Jeka_mar-2024_playerphoto.png"
+    },
+    "gr1ks": {
+      "steamid": "76561198370176682",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/02/Gr1ks_at_IEM_Cologne_2025.jpg/600px-Gr1ks_at_IEM_Cologne_2025.jpg"
+    },
+    "hurtslxrd": {
+      "steamid": "76561198095504459",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "k175un4": {
+      "steamid": "76561199108151019",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/4/4f/K175un4_apr-2025_playerphoto.png"
+    },
+    "keep3r": {
+      "steamid": "76561197992026832",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7a/Keep3r_at_META_%2718_Winter.jpg/600px-Keep3r_at_META_%2718_Winter.jpg"
+    },
+    "lollipop21k": {
+      "steamid": "76561198014818598",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/8/81/Websterz_lollipop21k_2023.png"
+    },
+    "m1QUSE": {
+      "steamid": "76561198832142602",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "MaSvAl": {
+      "steamid": "76561198217410319",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "mds": {
+      "steamid": "76561198074310843",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/2/21/Websterz_mds_2022.png"
+    },
+    "roman": {
+      "steamid": "76561197994189728",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1c/Roman_at_EPS_Germany_Season_15_Finals.jpg/600px-Roman_at_EPS_Germany_Season_15_Finals.jpg"
+    },
+    "sad": {
+      "steamid": "76561197999787971",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/a/a8/FARIS_DreamHack_Tours_2017_BYOC.png"
+    },
+    "sakova": {
+      "steamid": "76561198091912774",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "senka": {
+      "steamid": "76561199036285926",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/3/31/Senka_june-2025_playerphoto.png"
+    },
+    "t4RG3T": {
+      "steamid": "76561198843894201",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tN1R": {
+      "steamid": "76561198872013168",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fe/TN1R_at_ESL_Pro_League_S21.jpg/600px-TN1R_at_ESL_Pro_League_S21.jpg"
+    },
+    "xeedo": {
+      "steamid": "76561199164920397",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/23/Xeedo_oct-2024_playerphoto.png/600px-Xeedo_oct-2024_playerphoto.png"
+    },
+    "znxxX": {
+      "steamid": "76561197983794286",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/06/ZnxxX_at_Games_of_the_Future_2024.png/600px-ZnxxX_at_Games_of_the_Future_2024.png"
+    },
+    "Schwarz": {
+      "steamid": "76561198452820400",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4c/Schwarz_at_Elisa_Nordic_Championship_2025.jpg/600px-Schwarz_at_Elisa_Nordic_Championship_2025.jpg"
+    },
+    "wieenN": {
+      "steamid": "76561198929517493",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "adai": {
+      "steamid": "76561198038678955",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "alkarenn": {
+      "steamid": "76561199079856901",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f0/Alkarenn_2025_Team_Spirit.png/600px-Alkarenn_2025_Team_Spirit.png"
+    },
+    "buster": {
+      "steamid": "76561198173201923",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/20/Buster_at_IEM_Katowice_2023.jpg/600px-Buster_at_IEM_Katowice_2023.jpg"
+    },
+    "cau": {
+      "steamid": "76561198051177616",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7f/Cau_Tengri.jpg/600px-Cau_Tengri.jpg"
+    },
+    "chshekin": {
+      "steamid": "76561198192352118",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/a/aa/La_liga_laser.png"
+    },
+    "D1sastrouS": {
+      "steamid": "76561198365606106",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dako": {
+      "steamid": "76561198340976347",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dastan": {
+      "steamid": "76561197993707993",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5d/Dastan_at_Copenhagen_Major_2024_EU_RMR.jpg/600px-Dastan_at_Copenhagen_Major_2024_EU_RMR.jpg"
+    },
+    "def1zer": {
+      "steamid": "76561198222819764",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "demente": {
+      "steamid": "76561198860321247",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c3/Demente_2025.jpg/600px-Demente_2025.jpg"
+    },
+    "dosikzz": {
+      "steamid": "76561199108853586",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dukefissura": {
+      "steamid": "76561198102158293",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1a/Dukefissura_at_PGL_Astana_2025.jpg/600px-Dukefissura_at_PGL_Astana_2025.jpg"
+    },
+    "ElayDzha": {
+      "steamid": "76561199105876225",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "fitch": {
+      "steamid": "76561197993474578",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1a/Fitch_DHS_19.jpg/600px-Fitch_DHS_19.jpg"
+    },
+    "for2na": {
+      "steamid": "76561199154437466",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "forkyz": {
+      "steamid": "76561198339617378",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Gilzerra": {
+      "steamid": "76561198413583744",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Goodlikee": {
+      "steamid": "76561197962404760",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "her1tage": {
+      "steamid": "76561198981293954",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "hpp": {
+      "steamid": "76561198060560365",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ice": {
+      "steamid": "76561198316213980",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b6/Ice_at_Games_of_the_Future_2024.png/600px-Ice_at_Games_of_the_Future_2024.png"
+    },
+    "ICY": {
+      "steamid": "76561198055109028",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/38/ICY_at_PGL_Cluj-Napoca_2025.jpg/600px-ICY_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "Janewka": {
+      "steamid": "76561198081941572",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "kade0": {
+      "steamid": "76561198303381179",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/29/Kade0_at_PGL_Astana_2025.jpg/600px-Kade0_at_PGL_Astana_2025.jpg"
+    },
+    "kAlash": {
+      "steamid": "76561198357173694",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5a/AMKAL_kAlash_March_2025.png/600px-AMKAL_kAlash_March_2025.png"
+    },
+    "khaN": {
+      "steamid": "76561198951467648",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/07/KhaN_at_ESL_Pro_League_S21.jpg/600px-KhaN_at_ESL_Pro_League_S21.jpg"
+    },
+    "KrizzeN": {
+      "steamid": "76561198067937899",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ec/KrizzeN_at_StarLadder_i-League_StarSeries_S5.jpg/600px-KrizzeN_at_StarLadder_i-League_StarSeries_S5.jpg"
+    },
+    "kumao": {
+      "steamid": "76561199073314096",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/34/Kumao_2025.jpg/600px-Kumao_2025.jpg"
+    },
+    "Lack1": {
+      "steamid": "76561198146202997",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/02/Lack1_at_Skyesports_Grand_Slam_2024.jpg/600px-Lack1_at_Skyesports_Grand_Slam_2024.jpg"
+    },
+    "mag1k3Y": {
+      "steamid": "76561198843372097",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Maison": {
+      "steamid": "76561198199263717",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "mo0N": {
+      "steamid": "76561198243227934",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3b/RUBY_mo0n_2024.png/600px-RUBY_mo0n_2024.png"
+    },
+    "molodoy": {
+      "steamid": "76561198200982290",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/26/Molodoy_at_PGL_Astana_2025.jpg/600px-Molodoy_at_PGL_Astana_2025.jpg"
+    },
+    "mou": {
+      "steamid": "76561198012944495",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0b/Mou_at_Games_of_the_Future_2024.png/600px-Mou_at_Games_of_the_Future_2024.png"
+    },
+    "neaLaN": {
+      "steamid": "76561198054042778",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ac/NeaLaN_at_IEM_Cologne_2023.jpg/600px-NeaLaN_at_IEM_Cologne_2023.jpg"
+    },
+    "NMV": {
+      "steamid": "76561198157261011",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "noni": {
+      "steamid": "76561199044291307",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/07/Noni_2025.jpg/600px-Noni_2025.jpg"
+    },
+    "OxygeN": {
+      "steamid": "76561198085180615",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e6/Oxygen_at_BGE_Stara_Zagora.png/600px-Oxygen_at_BGE_Stara_Zagora.png"
+    },
+    "plushax": {
+      "steamid": "76561198187368403",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Pumpkin66": {
+      "steamid": "76561198199243387",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Qikert": {
+      "steamid": "76561198127236290",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/55/PV_Qikert_2025.png/600px-PV_Qikert_2025.png"
+    },
+    "R3LiFwOw": {
+      "steamid": "76561197965924149",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "rinn": {
+      "steamid": "76561199244575291",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "smiley": {
+      "steamid": "76561198130153710",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/33/Smiley_at_Antwerp_Major_2022_EU_RMR.jpg/600px-Smiley_at_Antwerp_Major_2022_EU_RMR.jpg"
+    },
+    "Solaar": {
+      "steamid": "76561198421481057",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0a/Solaar_StarLadder_Berlin_CIS_Minor_2019.jpg/600px-Solaar_StarLadder_Berlin_CIS_Minor_2019.jpg"
+    },
+    "sorrow": {
+      "steamid": "76561198129793636",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1d/Sorrow_at_Antwerp_Major_2022_EU_RMR.jpg/600px-Sorrow_at_Antwerp_Major_2022_EU_RMR.jpg"
+    },
+    "SYPH0": {
+      "steamid": "76561198409543515",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6a/SYPH0_2025_Team_Spirit.png/600px-SYPH0_2025_Team_Spirit.png"
+    },
+    "tasman": {
+      "steamid": "76561198825802213",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "TNDKingg": {
+      "steamid": "76561198815227883",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "w1nt3r": {
+      "steamid": "76561198018211001",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/56/RUBY_w1nt3r_2024.png/600px-RUBY_w1nt3r_2024.png"
+    },
+    "weaveR": {
+      "steamid": "76561198364714069",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b0/WeaveR_2025.jpg/600px-WeaveR_2025.jpg"
+    },
+    "enzero": {
+      "steamid": "76561198315226461",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/6/67/HYDRA_enzero_2023.png"
+    },
+    "Hezza": {
+      "steamid": "76561198981458663",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Jammie": {
+      "steamid": "76561198294046961",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/48/Jammie_at_ESL_Impact_League_S7.jpg/600px-Jammie_at_ESL_Impact_League_S7.jpg"
+    },
+    "kenz1": {
+      "steamid": "76561198346413715",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "pachanga": {
+      "steamid": "76561198103733563",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0f/Pachanga_Tengri.jpg/600px-Pachanga_Tengri.jpg"
+    },
+    "SNk": {
+      "steamid": "76561198104588639",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3c/SNk_at_CIS_Minor_2017_Krakow.jpg/600px-SNk_at_CIS_Minor_2017_Krakow.jpg"
+    },
+    "Yaqk": {
+      "steamid": "76561198320385323",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tokuzo": {
+      "steamid": "76561198164633137",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2b/Tokuzo_2025.jpg/600px-Tokuzo_2025.jpg"
+    },
+    "1nhuman": {
+      "steamid": "76561198035149563",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "1NVISIBLEE": {
+      "steamid": "76561198347665147",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/92/1NVISIBLEE_mar-2024_playerphoto.png/600px-1NVISIBLEE_mar-2024_playerphoto.png"
+    },
+    "44": {
+      "steamid": "76561198361711625",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/6/6a/44_mar-2025_playerphoto.png"
+    },
+    "abiraju": {
+      "steamid": "76561199082242873",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "AKIMOV": {
+      "steamid": "76561197994032887",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cb/AKIMOV_2025.png/600px-AKIMOV_2025.png"
+    },
+    "almazer": {
+      "steamid": "76561198044048033",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6c/Almazer_DreamHack_Open_Anaheim_2020.jpg/600px-Almazer_DreamHack_Open_Anaheim_2020.jpg"
+    },
+    "Alv": {
+      "steamid": "76561198036066702",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "aNsavage": {
+      "steamid": "76561198056172323",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Ant1ka": {
+      "steamid": "76561197997935311",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/46/Ant1ka_at_WESG_2018_Female.jpg/600px-Ant1ka_at_WESG_2018_Female.jpg"
+    },
+    "anttzz": {
+      "steamid": "76561198095744377",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ArtFr0st": {
+      "steamid": "76561198156778414",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Aunkere": {
+      "steamid": "76561198315239020",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "AverOna": {
+      "steamid": "76561198854576826",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/87/AverOna_at_ESL_Impact_League_S7.jpg/600px-AverOna_at_ESL_Impact_League_S7.jpg"
+    },
+    "balblna": {
+      "steamid": "76561198010470528",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f6/Balblna_at_IEM_Dallas_2023.jpeg/600px-Balblna_at_IEM_Dallas_2023.jpeg"
+    },
+    "BELCHONOKK": {
+      "steamid": "76561198253670517",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0b/PV_BELCHONOKK_2025.png/600px-PV_BELCHONOKK_2025.png"
+    },
+    "bl1x1": {
+      "steamid": "76561199032362645",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "bluewh1te": {
+      "steamid": "76561198976881234",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "bodyaN": {
+      "steamid": "76561198033971605",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "brain": {
+      "steamid": "76561197997642759",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cb/Brain_at_Skyesports_Championship_2024.jpg/600px-Brain_at_Skyesports_Championship_2024.jpg"
+    },
+    "casE": {
+      "steamid": "76561198202811088",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/58/CasE_at_Games_of_the_Future_2024.png/600px-CasE_at_Games_of_the_Future_2024.png"
+    },
+    "Certus": {
+      "steamid": "76561197980242226",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9c/Certus_at_Champions_Cup_Finals.jpg/600px-Certus_at_Champions_Cup_Finals.jpg"
+    },
+    "cheerful": {
+      "steamid": "76561198887182417",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "clife": {
+      "steamid": "76561197996609281",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a7/Clife_Team_Spirit_2025.png/600px-Clife_Team_Spirit_2025.png"
+    },
+    "cronuss": {
+      "steamid": "76561198152411501",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "DavCost": {
+      "steamid": "76561197980539257",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/de/DavCost_at_StarLadder_i-League_Invitational_2.jpg/600px-DavCost_at_StarLadder_i-League_Invitational_2.jpg"
+    },
+    "dea": {
+      "steamid": "76561198839597990",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "degster": {
+      "steamid": "76561198799340122",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/74/Degster_at_IEM_Katowice_2025.jpg/600px-Degster_at_IEM_Katowice_2025.jpg"
+    },
+    "deko": {
+      "steamid": "76561198287546191",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/32/Deko_at_Skyesports_Grand_Slam_2024.jpg/600px-Deko_at_Skyesports_Grand_Slam_2024.jpg"
+    },
+    "dekz": {
+      "steamid": "76561198195034662",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b8/RUBY_dekz_2024.png/600px-RUBY_dekz_2024.png"
+    },
+    "Djon8": {
+      "steamid": "76561198163633612",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dshq": {
+      "steamid": "76561198008377791",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cf/Dshq_at_Copenhagen_Games_2018_Female.jpg/600px-Dshq_at_Copenhagen_Games_2018_Female.jpg"
+    },
+    "dwushka": {
+      "steamid": "76561198803479269",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/2/2c/Dwushka_dec-2024_playerphoto.png"
+    },
+    "easy": {
+      "steamid": "76561198318025977",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "eightz": {
+      "steamid": "eightzxdxd",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e0/Eightz_at_Phygital_Games.jpg/600px-Eightz_at_Phygital_Games.jpg"
+    },
+    "El1an": {
+      "steamid": "76561198210763837",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ef/El1an_%40_PGL_Major_Stockholm_2021.jpg/600px-El1an_%40_PGL_Major_Stockholm_2021.jpg"
+    },
+    "Elizabeth": {
+      "steamid": "76561198037661952",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/45/Elizabeth_at_ESL_Impact_League_S6.jpg/600px-Elizabeth_at_ESL_Impact_League_S6.jpg"
+    },
+    "emberJESUS": {
+      "steamid": "76561198987103794",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/bf/GUN5_emberJESUS_2024.png/600px-GUN5_emberJESUS_2024.png"
+    },
+    "executor": {
+      "steamid": "76561199095171343",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "f6tal": {
+      "steamid": "76561198014914403",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/55/F6tal_at_ESL_Impact_League_S6.jpg/600px-F6tal_at_ESL_Impact_League_S6.jpg"
+    },
+    "F_1N": {
+      "steamid": "76561198364903746",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/73/F_1N_at_PGL_Astana_2025.jpg/600px-F_1N_at_PGL_Astana_2025.jpg"
+    },
+    "facecrack": {
+      "steamid": "76561198076007873",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b2/Facecrack_%40_DHANA20.jpg/600px-Facecrack_%40_DHANA20.jpg"
+    },
+    "faydett": {
+      "steamid": "faydett",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2c/Faydett_mar-2024_playerphoto.png/600px-Faydett_mar-2024_playerphoto.png"
+    },
+    "fenvicious": {
+      "steamid": "76561197960338712",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b3/Fenvicious_Berlin_Minor.jpg/600px-Fenvicious_Berlin_Minor.jpg"
+    },
+    "Fierce": {
+      "steamid": "76561198002489915",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a4/Fierce_at_CCT_Central_Europe_Malta_Finals.jpg/600px-Fierce_at_CCT_Central_Europe_Malta_Finals.jpg"
+    },
+    "fineshine": {
+      "steamid": "76561198138327415",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "FinigaN": {
+      "steamid": "76561198186361079",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d1/FinigaN_may-2024_playerphoto.png/600px-FinigaN_may-2024_playerphoto.png"
+    },
+    "FL4MUS": {
+      "steamid": "76561198014259134",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/25/FL4MUS_at_IEM_Katowice_2025.jpg/600px-FL4MUS_at_IEM_Katowice_2025.jpg"
+    },
+    "flamie": {
+      "steamid": "76561198116523276",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/65/Flamie_%40_IEM_Katowice_2020.jpg/600px-Flamie_%40_IEM_Katowice_2020.jpg"
+    },
+    "Flash_1": {
+      "steamid": "76561198038104735",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e8/Flash_1_VP.Prodigy_2023.png/600px-Flash_1_VP.Prodigy_2023.png"
+    },
+    "Flatra": {
+      "steamid": "76561197973181461",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Florence": {
+      "steamid": "76561198124022613",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Forester": {
+      "steamid": "76561198027348753",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1f/Forester_at_Copenhagen_Major_2024_EU_RMR.jpg/600px-Forester_at_Copenhagen_Major_2024_EU_RMR.jpg"
+    },
+    "fozil": {
+      "steamid": "76561198292471506",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a3/Fozil_may-2024_playerphoto.png/600px-Fozil_may-2024_playerphoto.png"
+    },
+    "FpSSS": {
+      "steamid": "76561198009341865",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/a/a5/FpSSS_mar-2024_playerphoto.png"
+    },
+    "frontales": {
+      "steamid": "76561198802031225",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "gehji": {
+      "steamid": "76561199110078517",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "gokushima": {
+      "steamid": "76561198262313668",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Goody": {
+      "steamid": "76561198125759149",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e5/Goody_at_La_Coupe_2023.jpeg/600px-Goody_at_La_Coupe_2023.jpeg"
+    },
+    "Gospadarov": {
+      "steamid": "76561198255225987",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "GREATEST": {
+      "steamid": "76561198254587690",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "GreK": {
+      "steamid": "12354864732187",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/8/88/GreK.png"
+    },
+    "groove": {
+      "steamid": "76561198353144872",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/25/Groove_at_Copenhagen_Major_2024_EU_RMR.jpg/600px-Groove_at_Copenhagen_Major_2024_EU_RMR.jpg"
+    },
+    "h1ghnesS": {
+      "steamid": "76561198033578279",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "h1te": {
+      "steamid": "76561198204167031",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "H4SAN4TOR": {
+      "steamid": "76561199001109911",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/0/04/HYDRA_H4SAN4TOR_2023.png"
+    },
+    "hally": {
+      "steamid": "76561197987245888",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/39/Hally_at_BLAST_Open_Spring_2025.jpg/600px-Hally_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "hooch": {
+      "steamid": "76561197966075661",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/25/Hooch_at_BLAST_Paris_Major_2023_EU_RMR.jpeg/600px-Hooch_at_BLAST_Paris_Major_2023_EU_RMR.jpeg"
+    },
+    "HorizoN": {
+      "steamid": "76561198101124279",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "HUckLer": {
+      "steamid": "76561198146896894",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "hurtfrisk": {
+      "steamid": "76561198300934672",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "innersh1ne": {
+      "steamid": "76561198061285276",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/66/Innersh1ne_at_Copenhagen_Major_2024_EU_RMR.jpg/600px-Innersh1ne_at_Copenhagen_Major_2024_EU_RMR.jpg"
+    },
+    "interz": {
+      "steamid": "76561198208074320",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b7/Interz_at_BLAST_Premier_Fall_Groups_2024.jpg/600px-Interz_at_BLAST_Premier_Fall_Groups_2024.jpg"
+    },
+    "JACKPOT": {
+      "steamid": "76561198107648113",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4b/JACKPOT_Berlin_Minor.jpg/600px-JACKPOT_Berlin_Minor.jpg"
+    },
+    "Jerry": {
+      "steamid": "76561198026088156",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/50/Jerry_at_BLAST_Open_Spring_2025.jpg/600px-Jerry_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "JIaYm": {
+      "steamid": "76561198077608198",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "jmqa": {
+      "steamid": "76561198075489161",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/6/6a/Jmqa_CIS_Minor.jpg"
+    },
+    "k0s": {
+      "steamid": "76561198193739570",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "k4sl": {
+      "steamid": "76561198133766215",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Kaide": {
+      "steamid": "76561198819796522",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/71/RUBY_Kaide_2024.png/600px-RUBY_Kaide_2024.png"
+    },
+    "KaiR0N": {
+      "steamid": "76561198157151718",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f7/KaiR0N-_jul-2024_playerphoto.png/600px-KaiR0N-_jul-2024_playerphoto.png"
+    },
+    "kashl1d": {
+      "steamid": "76561199167176654",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b5/Kashl1d_oct-2024_playerphoto.png/600px-Kashl1d_oct-2024_playerphoto.png"
+    },
+    "kelieN": {
+      "steamid": "76561198811683421",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "KENSi": {
+      "steamid": "76561198400646282",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/53/KENSI_at_ESL_Challengers_Melbourne_2024.jpg/600px-KENSI_at_ESL_Challengers_Melbourne_2024.jpg"
+    },
+    "kinqie": {
+      "steamid": "76561198002372151",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c2/Kinqie_%40_CCF.jpg/600px-Kinqie_%40_CCF.jpg"
+    },
+    "KIRO": {
+      "steamid": "76561198145768818",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "klydeep": {
+      "steamid": "76561198225632240",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Knopk@": {
+      "steamid": "76561198072530779",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "kr4sy": {
+      "steamid": "76561198196575619",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/25/Kr4sylya_DHVLC19.jpg/600px-Kr4sylya_DHVLC19.jpg"
+    },
+    "Krad": {
+      "steamid": "76561198031908632",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/51/Krad_at_Copenhagen_Major_2024_EU_RMR.jpg/600px-Krad_at_Copenhagen_Major_2024_EU_RMR.jpg"
+    },
+    "Kre1N": {
+      "steamid": "76561198181957697",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "krecker": {
+      "steamid": "76561197961667038",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Ksu": {
+      "steamid": "76561197989010446",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "KusMe": {
+      "steamid": "76561199021962584",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/c/c9/KusMe_dec-2024_playerphoto.png"
+    },
+    "kyousuke": {
+      "steamid": "76561199032006224",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8e/Kyousuke_at_IEM_Cologne_2025.jpg/600px-Kyousuke_at_IEM_Cologne_2025.jpg"
+    },
+    "la3euka": {
+      "steamid": "76561198087510793",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/2/25/La3euka_may-2023_playerphoto.png"
+    },
+    "lampada": {
+      "steamid": "76561198209510325",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/28/Lampada_at_PGL_Astana_2025.jpg/600px-Lampada_at_PGL_Astana_2025.jpg"
+    },
+    "lattykk": {
+      "steamid": "76561198214009861",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/84/Lattykk_at_BLAST_Paris_Major_2023_EU_RMR.jpeg/600px-Lattykk_at_BLAST_Paris_Major_2023_EU_RMR.jpeg"
+    },
+    "Leo": {
+      "steamid": "76561197986410457",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/5/5d/Leo_jan-2024_playerphoto.png"
+    },
+    "lesswill": {
+      "steamid": "lesswill",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/72/Lesswill_at_Phygital_Games.png/600px-Lesswill_at_Phygital_Games.png"
+    },
+    "liTTle": {
+      "steamid": "76561197994517711",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6b/LiTTle_at_IEM_Dallas_2023.jpeg/600px-LiTTle_at_IEM_Dallas_2023.jpeg"
+    },
+    "lom1k": {
+      "steamid": "76561198164337029",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "lov1kus": {
+      "steamid": "76561198239621484",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Magnojez": {
+      "steamid": "76561198372023214",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/bd/Magnojez_at_BLAST_Austin_Major_2025.jpg/600px-Magnojez_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "Maha": {
+      "steamid": "76561198077774193",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Meand": {
+      "steamid": "76561198209432188",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/03/Meand_oct-2024_playerphoto.png/600px-Meand_oct-2024_playerphoto.png"
+    },
+    "mediocrity": {
+      "steamid": "76561198158734121",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/b/bb/Mediocrity.png"
+    },
+    "mizu": {
+      "steamid": "76561198051387296",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/33/Mizu_exile_5.jpeg/600px-Mizu_exile_5.jpeg"
+    },
+    "Mokuj1n": {
+      "steamid": "76561199038958787",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fa/Mokuj1n_2025_Team_Spirit.png/600px-Mokuj1n_2025_Team_Spirit.png"
+    },
+    "MoWeL": {
+      "steamid": "76561198290744008",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "MSE": {
+      "steamid": "76561197967655431",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/59/MSE_at_WESG_2018.jpg/600px-MSE_at_WESG_2018.jpg"
+    },
+    "Muk0s": {
+      "steamid": "76561199074345785",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "N4mb3r5": {
+      "steamid": "76561198190348826",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Nevar": {
+      "steamid": "76561198070735164",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/3/35/ENTERPRISE_Nevar_2022.png"
+    },
+    "NickelBack": {
+      "steamid": "76561197962148507",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/28/NickelBack_at_ESL_Pro_League_S19.jpg/600px-NickelBack_at_ESL_Pro_League_S19.jpg"
+    },
+    "NIGHT666LADE": {
+      "steamid": "76561199040668191",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "nitzie": {
+      "steamid": "76561198203086387",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Norwi": {
+      "steamid": "76561198154904607",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8f/Norwi_at_Skyesports_Grand_Slam_2024.jpg/600px-Norwi_at_Skyesports_Grand_Slam_2024.jpg"
+    },
+    "nota": {
+      "steamid": "76561198975070027",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8e/PV_nota_2025.png/600px-PV_nota_2025.png"
+    },
+    "Ou7bReaK": {
+      "steamid": "76561197996642918",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "OverDrive": {
+      "steamid": "76561197963957707",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "oz1k": {
+      "steamid": "76561198297313625",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "PASHANOJ": {
+      "steamid": "76561198009176907",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e6/PASHANOJ_at_IEM_Rio_2024.jpg/600px-PASHANOJ_at_IEM_Rio_2024.jpg"
+    },
+    "Patsi": {
+      "steamid": "76561198288540801",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f1/Patsi_at_IEM_Cologne_2023.jpg/600px-Patsi_at_IEM_Cologne_2023.jpg"
+    },
+    "Pipw": {
+      "steamid": "76561198343321573",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/eb/Pipw_mar-2024_playerphoto.png/600px-Pipw_mar-2024_playerphoto.png"
+    },
+    "Polt": {
+      "steamid": "76561198046102181",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7d/Polt_mar-2024_playerphoto.png"
+    },
+    "Porya": {
+      "steamid": "76561198033533067",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5a/Porya_at_Copenhagen_Major_2024_EU_RMR.jpg/600px-Porya_at_Copenhagen_Major_2024_EU_RMR.jpg"
+    },
+    "ProbLeM": {
+      "steamid": "76561197963429969",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7b/ProbleM_Berlin_Minor.jpg/600px-ProbleM_Berlin_Minor.jpg"
+    },
+    "qqGOD": {
+      "steamid": "76561197997199027",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9e/QqGod_at_FPSThailand_CSGO_Pro_League_Season_6.jpg/600px-QqGod_at_FPSThailand_CSGO_Pro_League_Season_6.jpg"
+    },
+    "qw1nk1": {
+      "steamid": "76561199439990007",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/63/Qw1nk1_oct-2024_playerphoto.png/600px-Qw1nk1_oct-2024_playerphoto.png"
+    },
+    "r3salt": {
+      "steamid": "76561198350362302",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/87/R3salt_at_ESL_Challenger_Jonkoping_2024.jpg/600px-R3salt_at_ESL_Challenger_Jonkoping_2024.jpg"
+    },
+    "R3x": {
+      "steamid": "76561197997642759",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Raijin": {
+      "steamid": "76561198176456023",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/df/Raijin_at_Rio_Major_2022_EU_RMR.jpg/600px-Raijin_at_Rio_Major_2022_EU_RMR.jpg"
+    },
+    "RAiLWAY": {
+      "steamid": "76561197980936538",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d7/RAiLWAY_at_BLAST_Austin_Major_2025.jpg/600px-RAiLWAY_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "Ravenlot": {
+      "steamid": "76561198282964237",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Re1GN": {
+      "steamid": "76561198946151017",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "redla1N": {
+      "steamid": "76561197965297222",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/41/Redla1N.jpg/600px-Redla1N.jpg"
+    },
+    "relaxxie": {
+      "steamid": "76561199384986887",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/22/Relaxxie_oct-2024_playerphoto.png/600px-Relaxxie_oct-2024_playerphoto.png"
+    },
+    "riskyb0b": {
+      "steamid": "76561198889240025",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c3/Riskyb0b_at_ESL_Pro_League_S21.jpg/600px-Riskyb0b_at_ESL_Pro_League_S21.jpg"
+    },
+    "robo": {
+      "steamid": "76561199120712009",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fb/Robo_2025_Team_Spirit.png/600px-Robo_2025_Team_Spirit.png"
+    },
+    "RuFire": {
+      "steamid": "76561198015208369",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Runnin": {
+      "steamid": "76561199591180118",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/83/Runnin.png/600px-Runnin.png"
+    },
+    "S0ph3R": {
+      "steamid": "76561198034774807",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "S0tF1k": {
+      "steamid": "76561198135123440",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/89/S0tF1k_2025_Team_Spirit.png/600px-S0tF1k_2025_Team_Spirit.png"
+    },
+    "s7xWn": {
+      "steamid": "76561198326106740",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SALO_MUX": {
+      "steamid": "76561198139297306",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/10/SALO_MUX.png/600px-SALO_MUX.png"
+    },
+    "SasukeQO": {
+      "steamid": "76561198041379059",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SELLTER": {
+      "steamid": "76561198119088041",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/bf/SELLTER_may-2024_playerphoto.png/600px-SELLTER_may-2024_playerphoto.png"
+    },
+    "sh1nejezzz": {
+      "steamid": "76561198396570413",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "shady": {
+      "steamid": "76561198096372312",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/8/8b/Shady_dec-2024_playerphoto.png"
+    },
+    "shalfey": {
+      "steamid": "76561198207472632",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ad/Shalfey_at_ESL_Pro_League_S19.jpg/600px-Shalfey_at_ESL_Pro_League_S19.jpg"
+    },
+    "shg": {
+      "steamid": "76561198136042266",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/61/Shg_mar-2024_playerphoto.png/600px-Shg_mar-2024_playerphoto.png"
+    },
+    "slaxejezzz": {
+      "steamid": "76561198356252021",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Smaley": {
+      "steamid": "76561198006699717",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c8/Hijivk.jpg/600px-Hijivk.jpg"
+    },
+    "SoLb": {
+      "steamid": "76561198309457929",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Something": {
+      "steamid": "76561199181968192",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/78/Something_jan-2024_playerphoto.png"
+    },
+    "sosya": {
+      "steamid": "76561198335660845",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6f/Sosya_at_ESL_Impact_League_S7.jpg/600px-Sosya_at_ESL_Impact_League_S7.jpg"
+    },
+    "Sowalio": {
+      "steamid": "76561199034495166",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/01/RUBY_Sowalio_2024.png/600px-RUBY_Sowalio_2024.png"
+    },
+    "SP1NT": {
+      "steamid": "76561198167028008",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4a/SP1NT_at_Phygital_Games.png/600px-SP1NT_at_Phygital_Games.png"
+    },
+    "spaze": {
+      "steamid": "76561198069763254",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ac/Spaze_at_DreamHack_Open_Bucharest_2016.jpg/600px-Spaze_at_DreamHack_Open_Bucharest_2016.jpg"
+    },
+    "speed4k": {
+      "steamid": "76561198040194649",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0f/Speed4k.png/600px-Speed4k.png"
+    },
+    "spiker": {
+      "steamid": "76561197993511749",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2e/Spiker_at_CIS_Minor_Championship_Cologne_2016.jpg/600px-Spiker_at_CIS_Minor_Championship_Cologne_2016.jpg"
+    },
+    "spirit": {
+      "steamid": "76561197999867644",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/1/1c/Spirit_fcdb_esports.jpg"
+    },
+    "sstiNiX": {
+      "steamid": "76561198143856298",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/05/AMKAL_sstiNiX_March_2025.png/600px-AMKAL_sstiNiX_March_2025.png"
+    },
+    "Stormy": {
+      "steamid": "76561198124069649",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "svyat": {
+      "steamid": "76561197995898576",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1e/Svyat_at_PGL_Major_Copenhagen_2024.jpg/600px-Svyat_at_PGL_Major_Copenhagen_2024.jpg"
+    },
+    "swiftsteel": {
+      "steamid": "76561198869335703",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0f/Swiftsteel_at_Games_of_the_Future_2024.png/600px-Swiftsteel_at_Games_of_the_Future_2024.png"
+    },
+    "t4tty": {
+      "steamid": "76561197961799823",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/69/Tatty_at_ESL_Impact_League_Season_4.jpeg/600px-Tatty_at_ESL_Impact_League_Season_4.jpeg"
+    },
+    "takanashi": {
+      "steamid": "takanashi1",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tENZY": {
+      "steamid": "76561198853612047",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tex1y": {
+      "steamid": "76561199173322766",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tonyblack": {
+      "steamid": "76561197976004330",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a8/Tonyblack_at_Antwerp_Major_2022_EU_RMR.jpg/600px-Tonyblack_at_Antwerp_Major_2022_EU_RMR.jpg"
+    },
+    "tory": {
+      "steamid": "76561198047829655",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/57/Tory_at_ESL_Impact_League_S7.jpg/600px-Tory_at_ESL_Impact_League_S7.jpg"
+    },
+    "tr3vl": {
+      "steamid": "76561198837310383",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/54/Tr3vl.jpeg/600px-Tr3vl.jpeg"
+    },
+    "TRAVIS": {
+      "steamid": "76561198362970723",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/13/PV_TRAVIS_2025.png/600px-PV_TRAVIS_2025.png"
+    },
+    "tricky": {
+      "steamid": "76561198251304526",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "TruNiQ": {
+      "steamid": "76561198075676838",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d0/TruNiQ_may-2024_playerphoto.png/600px-TruNiQ_may-2024_playerphoto.png"
+    },
+    "TsaGa": {
+      "steamid": "76561198095237498",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "twenty3": {
+      "steamid": "76561198809859276",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b4/Twenty3_at_IEM_Katowice_2025.jpg/600px-Twenty3_at_IEM_Katowice_2025.jpg"
+    },
+    "Twiksar": {
+      "steamid": "76561198144853368",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "V4D1M": {
+      "steamid": "76561198000674992",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b7/V4D1M_at_StarSeries_%26_i-League_CS-GO_Season_8.jpg/600px-V4D1M_at_StarSeries_%26_i-League_CS-GO_Season_8.jpg"
+    },
+    "VILBy": {
+      "steamid": "76561198235154776",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "vilga": {
+      "steamid": "76561197977845004",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/87/Vilga_at_ESL_Impact_League_S7.jpg/600px-Vilga_at_ESL_Impact_League_S7.jpg"
+    },
+    "VofkiN": {
+      "steamid": "76561197987859377",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8a/VofkiN_at_OMEN_Challenger_Series_2019.JPG/600px-VofkiN_at_OMEN_Challenger_Series_2019.JPG"
+    },
+    "Vopsick": {
+      "steamid": "76561198383300866",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "waterfaLLZ": {
+      "steamid": "76561197972985852",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/38/WaterfaLLZ_at_Antwerp_Major_2022_EU_RMR.jpg/600px-WaterfaLLZ_at_Antwerp_Major_2022_EU_RMR.jpg"
+    },
+    "weqt2": {
+      "steamid": "76561198401910198",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b3/Weqt2.png/600px-Weqt2.png"
+    },
+    "whisper": {
+      "steamid": "76561198957049211",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Wierd_1k": {
+      "steamid": "76561197987575199",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "WorldEdit": {
+      "steamid": "76561197996997916",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4a/WorldEdit_at_DH_DELHI_2019.jpg/600px-WorldEdit_at_DH_DELHI_2019.jpg"
+    },
+    "X5G7V": {
+      "steamid": "76561198197951546",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2f/X5G7V_may-2024_playerphoto.png/600px-X5G7V_may-2024_playerphoto.png"
+    },
+    "Xant3r": {
+      "steamid": "76561198839305865",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e6/Xant3r_at_ESL_Pro_League_S21.jpg/600px-Xant3r_at_ESL_Pro_League_S21.jpg"
+    },
+    "xdENiSZERA": {
+      "steamid": "76561198131682954",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/8/8c/XdENiSZERA_dec-2024_playerphoto.png"
+    },
+    "xiELO": {
+      "steamid": "76561198141272052",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/3/3f/XiELO_may-2024_playerphoto.png"
+    },
+    "XomA": {
+      "steamid": "76561198003077842",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/96/XomA_at_Esports_World_Cup_2024.jpg/600px-XomA_at_Esports_World_Cup_2024.jpg"
+    },
+    "xsepower": {
+      "steamid": "76561198072279954",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/73/Xsepower_at_IEM_Rio_Major_2022_EU_RMR.png/600px-Xsepower_at_IEM_Rio_Major_2022_EU_RMR.png"
+    },
+    "YumsaN": {
+      "steamid": "76561198149085633",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "yuramyata": {
+      "steamid": "76561199238748352",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "z1k4": {
+      "steamid": "76561198156774221",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "z1Nny": {
+      "steamid": "76561198237043662",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "zoneR": {
+      "steamid": "76561198020163390",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f4/ZoneR_Champion_Cup_Finals.jpg/600px-ZoneR_Champion_Cup_Finals.jpg"
+    },
+    "zweih": {
+      "steamid": "76561198210626739",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ad/Zweih_at_ESL_Pro_League_S21.jpg/600px-Zweih_at_ESL_Pro_League_S21.jpg"
+    },
+    "BEASTOFEAST": {
+      "steamid": "76561198225600956",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "botirshoT": {
+      "steamid": "76561199100473747",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "CEKKA": {
+      "steamid": "76561198040108198",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/02/CEKKA_ON_LAN.jpg/600px-CEKKA_ON_LAN.jpg"
+    },
+    "DSSj": {
+      "steamid": "76561198860030314",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cf/DSSj_mar-2024_playerphoto.png/600px-DSSj_mar-2024_playerphoto.png"
+    },
+    "fr0k": {
+      "steamid": "76561198256188589",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "hitori": {
+      "steamid": "76561199059559714",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "icyvlone": {
+      "steamid": "76561198881713495",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "kanshineF": {
+      "steamid": "76561199026226346",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Ryujin": {
+      "steamid": "76561198116280987",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f5/ARCRED_Ryujin_2023.png/600px-ARCRED_Ryujin_2023.png"
+    },
+    "SANJI": {
+      "steamid": "76561198317627284",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/52/SANJI_%40_IEM_Cologne_2021.jpg/600px-SANJI_%40_IEM_Cologne_2021.jpg"
+    },
+    "wetfy": {
+      "steamid": "76561198851578993",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "yngtrxpstxr": {
+      "steamid": "76561199032141334",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "1962": {
+      "steamid": "76561198281767680",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/09/1962_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-1962_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "abizz": {
+      "steamid": "76561198361613212",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f1/Abizz_2025_playerphoto.png/600px-Abizz_2025_playerphoto.png"
+    },
+    "ABM": {
+      "steamid": "76561198081710274",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/16/Furious_Gaming_ABM_2022.jpg/600px-Furious_Gaming_ABM_2022.jpg"
+    },
+    "arieldidi": {
+      "steamid": "76561198069870256",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/0/09/Arieldidi.png"
+    },
+    "armk4m": {
+      "steamid": "76561198810748582",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a5/InSanity_Female_armk4m_2024.png/600px-InSanity_Female_armk4m_2024.png"
+    },
+    "atarax1a": {
+      "steamid": "76561198192191289",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fd/Boca_Juniors_Gaming_atarax1a_2023.png/600px-Boca_Juniors_Gaming_atarax1a_2023.png"
+    },
+    "bichop": {
+      "steamid": "76561198420647763",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "BIG": {
+      "steamid": "big",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/45/BIG_2020_full_darkmode.png/600px-BIG_2020_full_darkmode.png"
+    },
+    "BK1": {
+      "steamid": "76561198182135462",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2d/BK1_2025_playerphoto.png/600px-BK1_2025_playerphoto.png"
+    },
+    "buda": {
+      "steamid": "76561198199343350",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/51/Buda_at_IEM_Cologne_2024.jpg/600px-Buda_at_IEM_Cologne_2024.jpg"
+    },
+    "BunnyAzul": {
+      "steamid": "76561198827409384",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "chjna4Q": {
+      "steamid": "76561198055923921",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/3/33/MIBR_Female_chjna4Q_2023.png"
+    },
+    "deco": {
+      "steamid": "76561198272032394",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e8/Deco_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Deco_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "EmaDlz": {
+      "steamid": "76561198265095395",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a7/Furious_Gaming_EmaDlz_2021.jpeg/600px-Furious_Gaming_EmaDlz_2021.jpeg"
+    },
+    "fakzwall": {
+      "steamid": "76561198060367354",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3a/Fakzwall_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Fakzwall_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "gAtito": {
+      "steamid": "76561198035370212",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/02/MVG_gAtito.jpg/600px-MVG_gAtito.jpg"
+    },
+    "Gooden": {
+      "steamid": "76561198284507358",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "guidimon": {
+      "steamid": "76561198848738130",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/3/30/River_Plate_m0nster.png"
+    },
+    "gusihx": {
+      "steamid": "76561198263778215",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5c/Gusihx_july-2024_playerphoto.png/600px-Gusihx_july-2024_playerphoto.png"
+    },
+    "Hellpa": {
+      "steamid": "76561198198894773",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/67/Hellpa_at_ESL_LA_League_S4.jpg/600px-Hellpa_at_ESL_LA_League_S4.jpg"
+    },
+    "Hezz": {
+      "steamid": "76561198376378272",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ivz": {
+      "steamid": "76561198997188511",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/34/Ivz_2025_playerphoto.png/600px-Ivz_2025_playerphoto.png"
+    },
+    "KAISER": {
+      "steamid": "76561198127570649",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/20/KAISER_at_FiReLEAGUE_2022.jpg/600px-KAISER_at_FiReLEAGUE_2022.jpg"
+    },
+    "khizha": {
+      "steamid": "76561198197207470",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/24/MIBR_Female_khizha_2023.jpg/600px-MIBR_Female_khizha_2023.jpg"
+    },
+    "killermachine": {
+      "steamid": "76561198037376327",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "kissmyaug": {
+      "steamid": "76561198024224286",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/00/Kissmyass_at_Musimundo_GW_2018.jpg/600px-Kissmyass_at_Musimundo_GW_2018.jpg"
+    },
+    "KUN": {
+      "steamid": "76561198848891688",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/a/a3/Kun1.png"
+    },
+    "lenci": {
+      "steamid": "76561198094466886",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/94/Boca_Juniors_Gaming_Lenci_2023.png/600px-Boca_Juniors_Gaming_Lenci_2023.png"
+    },
+    "Limi7": {
+      "steamid": "76561198040075678",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0a/Limi7_at_Desafio_CSGO.jpg/600px-Limi7_at_Desafio_CSGO.jpg"
+    },
+    "lokomotioN": {
+      "steamid": "76561198170744038",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/84/LokomotioN_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-LokomotioN_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "luchov": {
+      "steamid": "76561198067722198",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9a/Luchov_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Luchov_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Luken": {
+      "steamid": "76561198006379986",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f4/Luken_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Luken_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "lulitenz": {
+      "steamid": "76561198063270179",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6b/Lulitenz_at_ESL_Impact_League_S7.jpg/600px-Lulitenz_at_ESL_Impact_League_S7.jpg"
+    },
+    "meyern": {
+      "steamid": "76561198195642865",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1f/Meyern_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Meyern_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "minimal": {
+      "steamid": "76561198041731855",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/05/Minimal_at_Meet_%26_Greet_Doral_Flamingos_2018.jpg/600px-Minimal_at_Meet_%26_Greet_Doral_Flamingos_2018.jpg"
+    },
+    "MRN1": {
+      "steamid": "76561198136638580",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/db/Boca_Juniors_Gaming_MRN1_2022.jpeg/600px-Boca_Juniors_Gaming_MRN1_2022.jpeg"
+    },
+    "nacho": {
+      "steamid": "76561198939861318",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/41/Nacho_2025_playerphoto.png/600px-Nacho_2025_playerphoto.png"
+    },
+    "naz": {
+      "steamid": "76561198077857805",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "nbl": {
+      "steamid": "76561198092722707",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/aa/Nbl_at_ESL_LA_League_S3.jpg/600px-Nbl_at_ESL_LA_League_S3.jpg"
+    },
+    "NCH": {
+      "steamid": "76561198838239944",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/50/NCH_Major_Tdj.jpg/600px-NCH_Major_Tdj.jpg"
+    },
+    "NikoM": {
+      "steamid": "76561198389435855",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/08/NikoM_at_IEM_Katowice_Americas_Minor_2019.jpg/600px-NikoM_at_IEM_Katowice_Americas_Minor_2019.jpg"
+    },
+    "Noktse": {
+      "steamid": "76561198014498951",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/25/Noktse_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Noktse_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Owen$inhoM": {
+      "steamid": "76561198358309513",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/9/95/FG_Owen.png"
+    },
+    "pavv+": {
+      "steamid": "76561198072143352",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/26/Boca_Juniors_Gaming_pavv%2B_2023.png/600px-Boca_Juniors_Gaming_pavv%2B_2023.png"
+    },
+    "peqexino": {
+      "steamid": "76561198063215298",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/72/Peqexino_2025_playerphoto.png/600px-Peqexino_2025_playerphoto.png"
+    },
+    "PREDI": {
+      "steamid": "76561198049522054",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "relentless": {
+      "steamid": "76561198152794801",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "restik": {
+      "steamid": "76561198035657319",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b9/Restik_at_Musimundo_GW_2018.jpg/600px-Restik_at_Musimundo_GW_2018.jpg"
+    },
+    "reversive": {
+      "steamid": "76561198189600467",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/83/Reversive_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Reversive_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "Rew4z": {
+      "steamid": "76561198037331690",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/f/f4/River_Rew4z.png"
+    },
+    "righi": {
+      "steamid": "76561198030305992",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/62/Righi_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Righi_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "rox": {
+      "steamid": "76561198857331174",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/88/Rox_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Rox_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "RUGO": {
+      "steamid": "76561198392416164",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/71/RUGO_2025_playerphoto.png/600px-RUGO_2025_playerphoto.png"
+    },
+    "rushardo": {
+      "steamid": "76561198246363120",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "sheep": {
+      "steamid": "76561198283530132",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tom1jed": {
+      "steamid": "76561198981301404",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/6/64/FG_tom1.png"
+    },
+    "tomaszin": {
+      "steamid": "76561198422434044",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e2/Tomaszin_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Tomaszin_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "try": {
+      "steamid": "76561198365118288",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ef/Try_at_BLAST_Open_Spring_2025.jpg/600px-Try_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "tutehen": {
+      "steamid": "76561198035445770",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4a/Tute_dhackmontreal.jpg/600px-Tute_dhackmontreal.jpg"
+    },
+    "vlad": {
+      "steamid": "76561198294311122",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9e/XVlaD_Aorus_League.jpg/600px-XVlaD_Aorus_League.jpg"
+    },
+    "Xiguinilster": {
+      "steamid": "76561198163550625",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/41/Xiguinilster_at_FiReLEAGUE_2020.jpg/600px-Xiguinilster_at_FiReLEAGUE_2020.jpg"
+    },
+    "Zote": {
+      "steamid": "76561198218557387",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/6/68/Zote_at_WESG_2017.jpg"
+    },
+    "abr": {
+      "steamid": "76561197979428085",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/02/Abrcsgo.jpg/600px-Abrcsgo.jpg"
+    },
+    "adr": {
+      "steamid": "76561198053219981",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4b/Adr_at_StarSeries_%26_i-League_CS-GO_Season_8.jpg/600px-Adr_at_StarSeries_%26_i-League_CS-GO_Season_8.jpg"
+    },
+    "Alisson": {
+      "steamid": "76561198145599897",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ALLE": {
+      "steamid": "76561197961460718",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8c/ALLE_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-ALLE_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "annaEX": {
+      "steamid": "76561198001380335",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1c/AnnaEX_at_ESL_Impact_League_S5.jpg/600px-AnnaEX_at_ESL_Impact_League_S5.jpg"
+    },
+    "Arkynha": {
+      "steamid": "76561198076526576",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "b4rtiN": {
+      "steamid": "76561198130084582",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/61/B4rtiN_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-B4rtiN_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Babs": {
+      "steamid": "76561198438415430",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b9/Black_Dragons_Babs_2023.png/600px-Black_Dragons_Babs_2023.png"
+    },
+    "betinho": {
+      "steamid": "76561198169541370",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8e/Case_Esports_betinho_2023.png/600px-Case_Esports_betinho_2023.png"
+    },
+    "BIANNCHI": {
+      "steamid": "76561198423423861",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "biguzera": {
+      "steamid": "76561198015308884",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e5/Biguzera_at_PGL_Cluj-Napoca_2025.jpg/600px-Biguzera_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "BIT": {
+      "steamid": "76561197969490124",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/90/BIT_at_PGL_Cluj-Napoca_2025.jpg/600px-BIT_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "bizinha": {
+      "steamid": "76561198002775202",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f6/Bizinha_at_ESL_Impact_League_S7.jpg/600px-Bizinha_at_ESL_Impact_League_S7.jpg"
+    },
+    "bnc": {
+      "steamid": "76561198155673341",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/38/Bnc_at_CLUTCH_Season_2.jpg/600px-Bnc_at_CLUTCH_Season_2.jpg"
+    },
+    "bobz": {
+      "steamid": "76561198131356591",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/97/Bobz_At_BLAST_Austin_Major_2025.jpg/600px-Bobz_At_BLAST_Austin_Major_2025.jpg"
+    },
+    "bokor": {
+      "steamid": "76561198255623269",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c3/Bokor_mar-2024_playerphoto.png/600px-Bokor_mar-2024_playerphoto.png"
+    },
+    "boltz": {
+      "steamid": "76561198018379400",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c5/Boltz_at_ESL_Pro_League_S18.jpg/600px-Boltz_at_ESL_Pro_League_S18.jpg"
+    },
+    "brA": {
+      "steamid": "76561197968926849",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a6/BrA.jpg/600px-BrA.jpg"
+    },
+    "Brnz1k": {
+      "steamid": "76561198043882667",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Bruninho": {
+      "steamid": "76561199183134659",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "bsd": {
+      "steamid": "76561198174005827",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "bt0": {
+      "steamid": "76561197983270591",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/65/Bt0_at_WESG_2016_Americas_Finals.jpg/600px-Bt0_at_WESG_2016_Americas_Finals.jpg"
+    },
+    "caike": {
+      "steamid": "76561197988396483",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5f/Caikett_at_ESL_Brasil_Premier_League_Finals_S1.jpg/600px-Caikett_at_ESL_Brasil_Premier_League_Finals_S1.jpg"
+    },
+    "cAmyy": {
+      "steamid": "76561198078618475",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4b/Black_Dragons_cAmyy_2023.png/600px-Black_Dragons_cAmyy_2023.png"
+    },
+    "cass1n": {
+      "steamid": "76561198148561509",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/4/4a/PaiN_Gaming_Academy_cass1n_2022.png"
+    },
+    "cellax": {
+      "steamid": "76561198083878516",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/89/MIBR_Cellax_2022.jpg/600px-MIBR_Cellax_2022.jpg"
+    },
+    "cerolzin": {
+      "steamid": "76561198178592795",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "chayJESUS": {
+      "steamid": "76561198251931752",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/05/ChayJESUS_at_BLAST_Open_Spring_2025.jpg/600px-ChayJESUS_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "chucky": {
+      "steamid": "76561197962991522",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3c/Chucky_at_PGL_Bucharest_2025.jpg/600px-Chucky_at_PGL_Bucharest_2025.jpg"
+    },
+    "ckzao": {
+      "steamid": "76561198016806284",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8d/Ckzao_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Ckzao_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "coldzera": {
+      "steamid": "76561198039986599",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/08/Coldzera_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Coldzera_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "CSO": {
+      "steamid": "76561198332320607",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "CutzMeretz": {
+      "steamid": "76561199241953370",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cb/CutzMeretz_Meta_Gaming.png/600px-CutzMeretz_Meta_Gaming.png"
+    },
+    "cx1": {
+      "steamid": "76561198308346611",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dani": {
+      "steamid": "76561198401990860",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8a/Dani_at_ESL_Impact_League_S7.jpg/600px-Dani_at_ESL_Impact_League_S7.jpg"
+    },
+    "danoco": {
+      "steamid": "76561197994888003",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ec/Danoco_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Danoco_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "DANVIET": {
+      "steamid": "76561198078729750",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b0/DANVIET_at_Phygital_Games_6.jpg/600px-DANVIET_at_Phygital_Games_6.jpg"
+    },
+    "darkpsy": {
+      "steamid": "76561197987019101",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6f/Darkpsy_at_ESL_Impact_League_S6.jpg/600px-Darkpsy_at_ESL_Impact_League_S6.jpg"
+    },
+    "decenty": {
+      "steamid": "76561198307171910",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5a/Decenty_at_BLAST_Austin_Major_2025.jpg/600px-Decenty_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "delboNi": {
+      "steamid": "76561198009411160",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8f/DelboNi_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-DelboNi_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "deM0": {
+      "steamid": "76561198099844954",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Demonos": {
+      "steamid": "76561198132948107",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fc/Demonos_%40_Master_Cup_Portugal_II.jpg/600px-Demonos_%40_Master_Cup_Portugal_II.jpg"
+    },
+    "desh": {
+      "steamid": "76561198950367286",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "destiny": {
+      "steamid": "76561198049794434",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0b/DeStiNy_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-DeStiNy_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "detr0ittJ": {
+      "steamid": "76561198242601266",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/8/86/Galorys_detr0ittJ_2024.png"
+    },
+    "dinha": {
+      "steamid": "76561197993107404",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fa/Dinha_mar-2020_playerphoto.jpg/600px-Dinha_mar-2020_playerphoto.jpg"
+    },
+    "disturbed": {
+      "steamid": "76561197971492093",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ae/HAVU_diSTURBED_2021.png/600px-HAVU_diSTURBED_2021.png"
+    },
+    "doc": {
+      "steamid": "76561198095896540",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7e/Doc_at_ESL_Pro_League_S19.jpg/600px-Doc_at_ESL_Pro_League_S19.jpg"
+    },
+    "dok": {
+      "steamid": "76561198103622736",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/25/Dok_at_Phygital_Games_6.jpg/600px-Dok_at_Phygital_Games_6.jpg"
+    },
+    "drg": {
+      "steamid": "76561198154095163",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0f/Drg_at_ESL_Pro_League_19.jpg/600px-Drg_at_ESL_Pro_League_19.jpg"
+    },
+    "dumau": {
+      "steamid": "76561198194325317",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7b/Dumau_at_PGL_Bucharest_2025.jpg/600px-Dumau_at_PGL_Bucharest_2025.jpg"
+    },
+    "DUZ": {
+      "steamid": "76561198138831668",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dzt": {
+      "steamid": "76561198048221584",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9d/Dzt_at_CLUTCH_BR_Season_1.jpg/600px-Dzt_at_CLUTCH_BR_Season_1.jpg"
+    },
+    "exp": {
+      "steamid": "76561198044752264",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0c/Arctic_eSports_exp_2022.png/600px-Arctic_eSports_exp_2022.png"
+    },
+    "f4stzin": {
+      "steamid": "76561198436609466",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d7/F4stzin_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-F4stzin_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "Fara\u00f3": {
+      "steamid": "76561199027720389",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/42/RED_Canids_Fara%C3%B3_2024.png/600px-RED_Canids_Fara%C3%B3_2024.png"
+    },
+    "FATAL": {
+      "steamid": "76561198147754738",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/29/FATAL_at_GC_Masters_2017.jpg/600px-FATAL_at_GC_Masters_2017.jpg"
+    },
+    "felps": {
+      "steamid": "76561197983031494",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1b/Felps_at_PGL_Major_Copenhagen_2024.jpg/600px-Felps_at_PGL_Major_Copenhagen_2024.jpg"
+    },
+    "fer": {
+      "steamid": "76561197999186947",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/ba/Fer_%40_PGL_Antwerp_2022_AME_RMR.jpg/600px-Fer_%40_PGL_Antwerp_2022_AME_RMR.jpg"
+    },
+    "ferzy": {
+      "steamid": "76561198870239178",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/6/64/MIBR_Female_ferzy_2023.png"
+    },
+    "Flasky": {
+      "steamid": "76561198432522852",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "fokiu": {
+      "steamid": "76561198131969898",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "fP1": {
+      "steamid": "76561198007131317",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ac/FP1_at_Intel_Gaming_Challenge_2016.jpg/600px-FP1_at_Intel_Gaming_Challenge_2016.jpg"
+    },
+    "fREQ": {
+      "steamid": "76561198130114333",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "frostezor": {
+      "steamid": "76561199385633592",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/19/FrostezorGCMasters.jpg/600px-FrostezorGCMasters.jpg"
+    },
+    "gabee": {
+      "steamid": "76561198208479788",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/eb/Gabee_at_GIRLGAMER_Esports_Festival_2019_S%C3%A3o_Paulo.jpg/600px-Gabee_at_GIRLGAMER_Esports_Festival_2019_S%C3%A3o_Paulo.jpg"
+    },
+    "GaBi": {
+      "steamid": "76561198095922337",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/16/GaBi_at_ESL_Impact_League_S7.jpg/600px-GaBi_at_ESL_Impact_League_S7.jpg"
+    },
+    "gabs": {
+      "steamid": "76561197990793708",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a6/Gabs_at_ESL_Impact_League_S7.jpg/600px-Gabs_at_ESL_Impact_League_S7.jpg"
+    },
+    "gafolo": {
+      "steamid": "76561198135228658",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/10/Gafolo_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Gafolo_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "gbb": {
+      "steamid": "76561199016517194",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/62/Gbb_at_Phygital_Games_6.jpg/600px-Gbb_at_Phygital_Games_6.jpg"
+    },
+    "gut0": {
+      "steamid": "76561198236964676",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a4/Gut0_Fragadelphia_11.jpg/600px-Gut0_Fragadelphia_11.jpg"
+    },
+    "GYZER": {
+      "steamid": "76561198027501814",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "happ": {
+      "steamid": "76561198834672886",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/3/36/Galorys_happ_2024.png"
+    },
+    "hardzao": {
+      "steamid": "76561198249302730",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/36/Hardzao_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Hardzao_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "HEN1": {
+      "steamid": "76561198018027263",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cc/HEN1_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-HEN1_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "hera": {
+      "steamid": "76561198256363967",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "history": {
+      "steamid": "76561198885430317",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/54/History_at_BLAST_Paris_Major_2023.jpeg/600px-History_at_BLAST_Paris_Major_2023.jpeg"
+    },
+    "hoax": {
+      "steamid": "76561198014833657",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4f/Galorys_hoax_2024.png/600px-Galorys_hoax_2024.png"
+    },
+    "honda": {
+      "steamid": "76561198988083423",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7e/Honda_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Honda_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "horvy": {
+      "steamid": "76561197971316261",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/dc/Horvy_at_PLG_Grand_Slam_2018.jpg/600px-Horvy_at_PLG_Grand_Slam_2018.jpg"
+    },
+    "iDk": {
+      "steamid": "76561198066701530",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1f/IDk_Fragadelphia_17.jpg/600px-IDk_Fragadelphia_17.jpg"
+    },
+    "izaa": {
+      "steamid": "76561198264908815",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/53/Izaa_at_ESL_Impact_League_S7.jpg/600px-Izaa_at_ESL_Impact_League_S7.jpg"
+    },
+    "jnt": {
+      "steamid": "76561198003591747",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f5/Jnt_at_PGL_Astana_2025.jpg/600px-Jnt_at_PGL_Astana_2025.jpg"
+    },
+    "josi": {
+      "steamid": "76561198139033231",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/71/Josi_at_ESL_Impact_League_S6.jpg/600px-Josi_at_ESL_Impact_League_S6.jpg"
+    },
+    "JOTA": {
+      "steamid": "76561198054820484",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/df/JOTA_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-JOTA_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "julih": {
+      "steamid": "76561198123381402",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3e/Julih_at_ESL_Impact_League_S5.jpg/600px-Julih_at_ESL_Impact_League_S5.jpg"
+    },
+    "jz": {
+      "steamid": "76561198370794239",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "kaahSENSEI": {
+      "steamid": "76561197983772557",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/15/KaahSENSEI_at_ESL_Impact_League_S7.jpg/600px-KaahSENSEI_at_ESL_Impact_League_S7.jpg"
+    },
+    "Kaos": {
+      "steamid": "76561198077360481",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ef/Kaos_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Kaos_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "kauez": {
+      "steamid": "76561198385657675",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3f/Kauez_at_PGL_Cluj-Napoca_2025.jpg/600px-Kauez_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "KHTEX": {
+      "steamid": "76561198042462102",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3d/KHTEX_StarSeries_%26_i-League_CS-GO_Season_8.jpg/600px-KHTEX_StarSeries_%26_i-League_CS-GO_Season_8.jpg"
+    },
+    "koala": {
+      "steamid": "76561198809462276",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/67/Galorys_koala_2024.png/600px-Galorys_koala_2024.png"
+    },
+    "ksloks": {
+      "steamid": "76561198257770857",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9d/Ksloks_at_PGL_Astana_2025.jpg/600px-Ksloks_at_PGL_Astana_2025.jpg"
+    },
+    "kurg4n": {
+      "steamid": "76561197998992058",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/54/Kurgan_at_CLUTCH_Season_2.jpg/600px-Kurgan_at_CLUTCH_Season_2.jpg"
+    },
+    "kye": {
+      "steamid": "76561199096031141",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/84/Kye_at_BLAST_Austin_Major_2025.jpg/600px-Kye_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "land1n": {
+      "steamid": "76561198139312718",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a4/Land1n_StarSeries_i-League_S_7.jpg/600px-Land1n_StarSeries_i-League_S_7.jpg"
+    },
+    "latto": {
+      "steamid": "76561198850020186",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/78/Latto_at_PGL_Bucharest_2025.jpg/600px-Latto_at_PGL_Bucharest_2025.jpg"
+    },
+    "Lcm": {
+      "steamid": "76561198045403016",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/06/Lcm_at_Phygital_Games_6.jpg/600px-Lcm_at_Phygital_Games_6.jpg"
+    },
+    "lealziNho": {
+      "steamid": "76561198034241132",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "LEARSI": {
+      "steamid": "76561198193827359",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "leo_drk": {
+      "steamid": "76561198018557005",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/15/Leo_drk_%40_PGL_Antwerp_2022_AME_RMR.jpg/600px-Leo_drk_%40_PGL_Antwerp_2022_AME_RMR.jpg"
+    },
+    "Leomonster": {
+      "steamid": "76561198278441856",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/78/Bravos_Leomonster.png/600px-Bravos_Leomonster.png"
+    },
+    "levi": {
+      "steamid": "76561198024500837",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/9/9e/Levi_at_EEF_European_Championship_2022.png"
+    },
+    "Lineko": {
+      "steamid": "76561198011127007",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Lucaozy": {
+      "steamid": "76561198157388473",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e4/Lucaozy_at_PGL_Cluj-Napoca_2025.jpg/600px-Lucaozy_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "LUCAS1": {
+      "steamid": "76561197965046352",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cb/LUCAS1_ESL_One_Cologne_2019.jpg/600px-LUCAS1_ESL_One_Cologne_2019.jpg"
+    },
+    "lukiz": {
+      "steamid": "76561198922682627",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "luq": {
+      "steamid": "76561198064339839",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "lux": {
+      "steamid": "76561198074017668",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7f/Lux_at_PGL_Bucharest_2025.jpg/600px-Lux_at_PGL_Bucharest_2025.jpg"
+    },
+    "LyttleZ": {
+      "steamid": "76561198175894982",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c7/LyttleZ_mar-2024_playerphoto.png/600px-LyttleZ_mar-2024_playerphoto.png"
+    },
+    "MaLLby": {
+      "steamid": "76561198169934019",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d6/Arctic_eSports_MaLLby_2022.png/600px-Arctic_eSports_MaLLby_2022.png"
+    },
+    "Maluk3": {
+      "steamid": "76561197996321741",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d2/Maluk3_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Maluk3_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "mari": {
+      "steamid": "76561198408361534",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/27/Mari_mar-2024_playerphoto.png/600px-Mari_mar-2024_playerphoto.png"
+    },
+    "matios": {
+      "steamid": "76561197963277583",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/20/Matios_at_PGL_Astana_2025.jpg/600px-Matios_at_PGL_Astana_2025.jpg"
+    },
+    "mawth": {
+      "steamid": "76561197961339879",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b4/Mawth_at_Phygital_Games_6.jpg/600px-Mawth_at_Phygital_Games_6.jpg"
+    },
+    "mello": {
+      "steamid": "76561198240876808",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Misfit": {
+      "steamid": "76561198298653857",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/06/Misfit_at_DBE_2024.jpg/600px-Misfit_at_DBE_2024.jpg"
+    },
+    "mlhzin": {
+      "steamid": "76561198399486207",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/22/Mlhzin_at_BLAST_Austin_Major_2025.jpg/600px-Mlhzin_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "msr": {
+      "steamid": "76561197993299683",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "muSh": {
+      "steamid": "76561198175310490",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "n1cks": {
+      "steamid": "76561198872209907",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "n1ssim": {
+      "steamid": "76561198061763596",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/de/N1ssim_at_PGL_Bucharest_2025.jpg/600px-N1ssim_at_PGL_Bucharest_2025.jpg"
+    },
+    "n9xtz": {
+      "steamid": "76561198326537861",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "naitte": {
+      "steamid": "76561198029203966",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/61/Naitte_at_PGL_Astana_2025.jpg/600px-Naitte_at_PGL_Astana_2025.jpg"
+    },
+    "nak": {
+      "steamid": "76561197960448329",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fa/Nak_at_ESL_Challenger_Jonkoping_2024.jpg/600px-Nak_at_ESL_Challenger_Jonkoping_2024.jpg"
+    },
+    "NEKIZ": {
+      "steamid": "76561198036884160",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4d/NEKIZ_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-NEKIZ_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "nicks": {
+      "steamid": "76561198254423843",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/ce/Nicks_at_DBE_2024.jpg/600px-Nicks_at_DBE_2024.jpg"
+    },
+    "ninjaZ": {
+      "steamid": "76561198091947107",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a7/Galorys_ninjaZ_2024.png/600px-Galorys_ninjaZ_2024.png"
+    },
+    "nolkz": {
+      "steamid": "76561198800332820",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/bf/Nolkz_at_Phygital_Games_6.jpg/600px-Nolkz_at_Phygital_Games_6.jpg"
+    },
+    "noway": {
+      "steamid": "76561198800209567",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/88/Noway_at_BLAST_Austin_Major_2025.jpg/600px-Noway_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "nqz": {
+      "steamid": "76561198350342505",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4f/Nqz_at_BLAST_Bounty_Spring_2025.jpg/600px-Nqz_at_BLAST_Bounty_Spring_2025.jpg"
+    },
+    "nyezin": {
+      "steamid": "76561198266023853",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "nython": {
+      "steamid": "76561198130490651",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c8/Nython_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Nython_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "olga": {
+      "steamid": "76561198891125045",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fe/Olga_at_ESL_Impact_League_S5.jpg/600px-Olga_at_ESL_Impact_League_S5.jpg"
+    },
+    "pancc": {
+      "steamid": "76561198045722458",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8a/Pancc_at_PGL_Astana_2025.jpg/600px-Pancc_at_PGL_Astana_2025.jpg"
+    },
+    "Patoz1k": {
+      "steamid": "76561198264024745",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/53/Black_Dragons_Patoz1k_2023.png/600px-Black_Dragons_Patoz1k_2023.png"
+    },
+    "peacemaker": {
+      "steamid": "76561197988628603",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/e/e0/Peacemaker_%40_PGL_Antwerp_2022_AME_RMR.jpg"
+    },
+    "pepe": {
+      "steamid": "76561198858681422",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "pesadelo": {
+      "steamid": "76561198255981498",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fe/Pesadelo_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Pesadelo_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "phx": {
+      "steamid": "76561198051070311",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/59/Phx_at_Brasil_College_League_S1.jpg/600px-Phx_at_Brasil_College_League_S1.jpg"
+    },
+    "piriajr": {
+      "steamid": "76561198396338183",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/48/Piriajr_at_BLAST_Austin_Major_2025.jpg/600px-Piriajr_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "PKL": {
+      "steamid": "76561198025578864",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ee/PKL_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-PKL_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "ponter": {
+      "steamid": "76561198161674889",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/45/Ponter_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Ponter_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "poppins": {
+      "steamid": "76561198846819011",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/41/Poppins_at_ESL_Impact_League_S7.jpg/600px-Poppins_at_ESL_Impact_League_S7.jpg"
+    },
+    "proSHOW": {
+      "steamid": "76561197992382988",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "prt": {
+      "steamid": "76561198052570371",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9b/Prt_%40_IEM_Cologne_2021.jpg/600px-Prt_%40_IEM_Cologne_2021.jpg"
+    },
+    "r1see": {
+      "steamid": "76561198124543269",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "r4ul": {
+      "steamid": "76561198027229236",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "RCF": {
+      "steamid": "76561198166526925",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7f/RCF_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-RCF_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "rdnzao": {
+      "steamid": "76561198307734468",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b2/Rdnzao_at_esl_pro_league_19.jpg/600px-Rdnzao_at_esl_pro_league_19.jpg"
+    },
+    "REGIANE": {
+      "steamid": "76561198283992188",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/e/e0/MIBR_Female_REGIANE_2023.png"
+    },
+    "Reix": {
+      "steamid": "76561197996179051",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ac/Reix_july-2024_playerphoto.png/600px-Reix_july-2024_playerphoto.png"
+    },
+    "rem1x": {
+      "steamid": "76561197993759963",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5c/Remix_at_CBCS_Season_2.jpg/600px-Remix_at_CBCS_Season_2.jpg"
+    },
+    "RICIOLI": {
+      "steamid": "76561198061789000",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/28/SWS_RICIOLI.png/600px-SWS_RICIOLI.png"
+    },
+    "rikz": {
+      "steamid": "76561197993370569",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b2/Rikz_at_BLAST_Bounty_Spring_2025.jpg/600px-Rikz_at_BLAST_Bounty_Spring_2025.jpg"
+    },
+    "RMN": {
+      "steamid": "76561198307578590",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7a/FURIA_RMN_2023.png"
+    },
+    "rock": {
+      "steamid": "76561198028930677",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Roz": {
+      "steamid": "76561198210531413",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/18/Roz_at_Phygital_Games_6.jpg/600px-Roz_at_Phygital_Games_6.jpg"
+    },
+    "s1non": {
+      "steamid": "76561198121195709",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/7e/S1non_mar-2024_playerphoto.png/600px-S1non_mar-2024_playerphoto.png"
+    },
+    "saadzin": {
+      "steamid": "76561198100494962",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d2/Saadzin_at_PGL_Bucharest_2025.jpg/600px-Saadzin_at_PGL_Bucharest_2025.jpg"
+    },
+    "segalla": {
+      "steamid": "76561198191907419",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/eb/Segalla_mar-2024_playerphoto.png/600px-Segalla_mar-2024_playerphoto.png"
+    },
+    "SHOOWTiME": {
+      "steamid": "76561198058204642",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/59/SHOOWTiME_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-SHOOWTiME_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "short": {
+      "steamid": "76561198098166757",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/87/Arctic_eSports_short_2022.png/600px-Arctic_eSports_short_2022.png"
+    },
+    "shz": {
+      "steamid": "76561198138460341",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/05/Shz_%40_IEM_Cologne_2021.jpg/600px-Shz_%40_IEM_Cologne_2021.jpg"
+    },
+    "sidde": {
+      "steamid": "76561198409606393",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ed/Sidde_at_PGL_Bucharest_2025.jpg/600px-Sidde_at_PGL_Bucharest_2025.jpg"
+    },
+    "slip": {
+      "steamid": "76561197972947500",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "snow": {
+      "steamid": "76561198377335846",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b3/Snow_at_PGL_Cluj-Napoca_2025.jpg/600px-Snow_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "sofiaxyz": {
+      "steamid": "76561198338726993",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "souz4h": {
+      "steamid": "76561198362812806",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b5/Case_Esports_souz4h_2023.png/600px-Case_Esports_souz4h_2023.png"
+    },
+    "stormzyn": {
+      "steamid": "76561198881446690",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "supLexN1": {
+      "steamid": "76561198137348442",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/bb/SupLex_at_CLUTCH_BR_Season_1.jpg/600px-SupLex_at_CLUTCH_BR_Season_1.jpg"
+    },
+    "t9rnay": {
+      "steamid": "76561198324810333",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tacitus": {
+      "steamid": "76561198034900778",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/43/Tacitus_%40_PGL_Antwerp_2022_AME_RMR.jpg/600px-Tacitus_%40_PGL_Antwerp_2022_AME_RMR.jpg"
+    },
+    "TACO": {
+      "steamid": "76561198013142296",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d2/TACO_%40_PGL_Major_Stockholm_2021.jpg/600px-TACO_%40_PGL_Major_Stockholm_2021.jpg"
+    },
+    "tatazin": {
+      "steamid": "76561197995102212",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/ca/Tatazin_paiN.jpg/600px-Tatazin_paiN.jpg"
+    },
+    "TEKO": {
+      "steamid": "76561198116222443",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/0/00/TEKO_2023_INTZ.png"
+    },
+    "texxas": {
+      "steamid": "76561198159238101",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d8/MIBR_Texxas_2022.png/600px-MIBR_Texxas_2022.png"
+    },
+    "tge": {
+      "steamid": "76561198062481830",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0a/Tge_at_IEM_Cologne_2024.jpg/600px-Tge_at_IEM_Cologne_2024.jpg"
+    },
+    "togs": {
+      "steamid": "76561198453919902",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/99/Togs_at_esl_pro_league_19.jpg/600px-Togs_at_esl_pro_league_19.jpg"
+    },
+    "tomate": {
+      "steamid": "76561198160550112",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "trk": {
+      "steamid": "76561198034379704",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f2/Trk_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Trk_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "Tuurtle": {
+      "steamid": "76561197994380596",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c1/Tuurtle_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Tuurtle_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "ujliana": {
+      "steamid": "76561198078476466",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "urban0": {
+      "steamid": "76561198837142292",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "v$m": {
+      "steamid": "76561198011732823",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4a/V%24m_at_BLAST_Paris_Major_2023.jpeg/600px-V%24m_at_BLAST_Paris_Major_2023.jpeg"
+    },
+    "venomzera": {
+      "steamid": "76561198218265253",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8f/Venomzera_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Venomzera_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "vhz": {
+      "steamid": "76561198027921821",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/53/Vhz_at_GC_Masters_2017.jpg/600px-Vhz_at_GC_Masters_2017.jpg"
+    },
+    "vinaabEAST": {
+      "steamid": "76561198813233208",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "VINI": {
+      "steamid": "76561197996370184",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/4b/VINI_at_BLAST_Open_Spring_2025.jpg/600px-VINI_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "vLa": {
+      "steamid": "76561198169760281",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "voltera": {
+      "steamid": "76561198128804839",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "w1": {
+      "steamid": "76561198416814570",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d8/Jaguares_w1.png/600px-Jaguares_w1.png"
+    },
+    "walck": {
+      "steamid": "76561198162119956",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c2/MIBR_walck.jpg/600px-MIBR_walck.jpg"
+    },
+    "WOOD7": {
+      "steamid": "76561198003142163",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/96/WOOD7_at_PGL_Astana_2025.jpg/600px-WOOD7_at_PGL_Astana_2025.jpg"
+    },
+    "Xamp": {
+      "steamid": "76561198058952748",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/89/Bravos_Xamp.png/600px-Bravos_Xamp.png"
+    },
+    "xns": {
+      "steamid": "76561198098407000",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/39/Xns_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Xns_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "xureba": {
+      "steamid": "76561198201457085",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "yel": {
+      "steamid": "76561198050335184",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f2/YeL_%40_IEM_Cologne_2021.jpg/600px-YeL_%40_IEM_Cologne_2021.jpg"
+    },
+    "yepz": {
+      "steamid": "76561198014798263",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9f/Yepz_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Yepz_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "YJ": {
+      "steamid": "76561198000840879",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cd/YJ_at_GC_Masters_2018.jpg/600px-YJ_at_GC_Masters_2018.jpg"
+    },
+    "yungher": {
+      "steamid": "76561198354940030",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/96/Yungher_at_ESL_Impact_League_S7.jpg/600px-Yungher_at_ESL_Impact_League_S7.jpg"
+    },
+    "zakk": {
+      "steamid": "76561197993533482",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2e/Zakk_at_BLAST_Austin_Major_2025.jpg/600px-Zakk_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "zede": {
+      "steamid": "76561198313107897",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "zevy": {
+      "steamid": "76561199422519262",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6a/Zevy_at_BLAST_Austin_Major_2025.jpg/600px-Zevy_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "zews": {
+      "steamid": "76561198069224981",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fc/Zews_at_ESL_Pro_League_S19.jpg/600px-Zews_at_ESL_Pro_League_S19.jpg"
+    },
+    "zmb": {
+      "steamid": "76561198026011807",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6a/Case_Esports_zmb_2023.png/600px-Case_Esports_zmb_2023.png"
+    },
+    "zqk": {
+      "steamid": "76561197964297736",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e9/Zqk_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Zqk_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "AGN": {
+      "steamid": "76561198159437577",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ayy": {
+      "steamid": "76561198208036101",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "BeaKie": {
+      "steamid": "76561198055631941",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Bouchard": {
+      "steamid": "76561198018966621",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6b/Bouchard_DreamHack_Showdown.jpg/600px-Bouchard_DreamHack_Showdown.jpg"
+    },
+    "calamity": {
+      "steamid": "76561198882807602",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "chew": {
+      "steamid": "76561198219515772",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "daps": {
+      "steamid": "76561197980158081",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/71/Daps_at_ESL_Pro_League_S21.jpg/600px-Daps_at_ESL_Pro_League_S21.jpg"
+    },
+    "DAVEY": {
+      "steamid": "76561198060800025",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c0/DAVEY_at_CEVO_Pro_League_Season_9.jpg/600px-DAVEY_at_CEVO_Pro_League_Season_9.jpg"
+    },
+    "djay": {
+      "steamid": "76561197964201626",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b0/Djay_%40_PGL_Antwerp_2022_AME_RMR.jpg/600px-Djay_%40_PGL_Antwerp_2022_AME_RMR.jpg"
+    },
+    "FaNg": {
+      "steamid": "76561198272723319",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0e/FaNg_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-FaNg_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "freshie": {
+      "steamid": "76561198336814871",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6f/Freshie_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Freshie_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Gabie": {
+      "steamid": "76561198070639477",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d9/Gabie_at_IESF_2024.png/600px-Gabie_at_IESF_2024.png"
+    },
+    "gloRinsz": {
+      "steamid": "76561197962113920",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/3/3a/GloRinsz.jpg"
+    },
+    "GooseBreeder": {
+      "steamid": "76561198044610489",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ab/GooseBreeder_at_ESL_Impact_League_S7.jpg/600px-GooseBreeder_at_ESL_Impact_League_S7.jpg"
+    },
+    "HexT": {
+      "steamid": "76561198210934463",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d6/HexT_at_ESL_Pro_League_S21.jpg/600px-HexT_at_ESL_Pro_League_S21.jpg"
+    },
+    "J0LZ": {
+      "steamid": "76561198124141035",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/13/J0LZ_at_IESF_2024.png/600px-J0LZ_at_IESF_2024.png"
+    },
+    "jesscas": {
+      "steamid": "76561198179373566",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Jonji": {
+      "steamid": "76561198074941114",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5e/Jonji_Fragadelphia_17.jpg/600px-Jonji_Fragadelphia_17.jpg"
+    },
+    "KayJay": {
+      "steamid": "76561198063558203",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "KOLER": {
+      "steamid": "76561197972531734",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "MagiC": {
+      "steamid": "76561198055958028",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Melio": {
+      "steamid": "76561198105918250",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/62/Melio_at_IESF_2024.png/600px-Melio_at_IESF_2024.png"
+    },
+    "PNDLM": {
+      "steamid": "76561198885963183",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SEMPHIS": {
+      "steamid": "76561197971062498",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2c/SEMPHIS_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-SEMPHIS_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "stanislaw": {
+      "steamid": "76561197981849043",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a8/Stanislaw_at_PGL_Cluj-Napoca_2025.jpg/600px-Stanislaw_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "TENSKEE": {
+      "steamid": "76561198318019772",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Walco": {
+      "steamid": "76561198089905186",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5a/Walco_Fragadelphia_17.jpg/600px-Walco_Fragadelphia_17.jpg"
+    },
+    "YuZ": {
+      "steamid": "76561198875211838",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b2/YuZ_at_IESF_2024.png/600px-YuZ_at_IESF_2024.png"
+    },
+    "alexer": {
+      "steamid": "76561198086420170",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dav1deuS": {
+      "steamid": "76561198120491311",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2f/Dav1deuS_at_BLAST_Bounty_Spring_2025.jpg/600px-Dav1deuS_at_BLAST_Bounty_Spring_2025.jpg"
+    },
+    "elemeNt": {
+      "steamid": "76561197960686669",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f7/ElementIO.jpg/600px-ElementIO.jpg"
+    },
+    "HUASOPEEK": {
+      "steamid": "76561198319723208",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5f/HUASOPEEK_at_IEM_Cologne_2024.jpg/600px-HUASOPEEK_at_IEM_Cologne_2024.jpg"
+    },
+    "points": {
+      "steamid": "76561198040144415",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a8/FS_Points.png/600px-FS_Points.png"
+    },
+    "spamzzy": {
+      "steamid": "76561198003724030",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c4/Spamzzy_EPL10.jpg/600px-Spamzzy_EPL10.jpg"
+    },
+    "malbsMd": {
+      "steamid": "76561198080703143",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/25/MalbsMd_at_BLAST_Open_Spring_2025.jpg/600px-MalbsMd_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "chuti": {
+      "steamid": "76561197987777682",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1e/Chuti_at_DH_Montreal_2017.jpg/600px-Chuti_at_DH_Montreal_2017.jpg"
+    },
+    "MarKE": {
+      "steamid": "76561197962903163",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/44/MarKE_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-MarKE_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Marro": {
+      "steamid": "76561198131895208",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "MERL": {
+      "steamid": "76561198242053918",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SecretAgent": {
+      "steamid": "76561197960269994",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "alone": {
+      "steamid": "76561198146908316",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cb/Alone_EPLS9.jpg/600px-Alone_EPLS9.jpg"
+    },
+    "GuepaRd": {
+      "steamid": "76561197981552128",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d5/GuepaRd_at_Aorus_League_Finals.jpg/600px-GuepaRd_at_Aorus_League_Finals.jpg"
+    },
+    "LKN": {
+      "steamid": "76561198980994446",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "pacmanN": {
+      "steamid": "76561198446908874",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/6/69/Supremacy_Pacman.png"
+    },
+    "tor1towOw": {
+      "steamid": "76561198072509790",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/21/Tor1towOw_at_Aorus_League_Finals_2018.jpg/600px-Tor1towOw_at_Aorus_League_Finals_2018.jpg"
+    },
+    "zockie": {
+      "steamid": "76561198067615374",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6f/Zockie_at_Aorus_League.jpg/600px-Zockie_at_Aorus_League.jpg"
+    },
+    "AAustiN": {
+      "steamid": "76561198121509225",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "abby": {
+      "steamid": "76561198125960766",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "aleph": {
+      "steamid": "76561198355822873",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Andrew": {
+      "steamid": "76561198012174501",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/71/Andrew_at_Musimundo_GW_2018.jpg/600px-Andrew_at_Musimundo_GW_2018.jpg"
+    },
+    "artStar": {
+      "steamid": "76561197996792565",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/43/ArtStar_%40_IEM_Katowice_2018.JPG/600px-ArtStar_%40_IEM_Katowice_2018.JPG"
+    },
+    "Austin": {
+      "steamid": "76561198352930772",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c6/Austin_Fragadelphia_CS-DO.jpg/600px-Austin_Fragadelphia_CS-DO.jpg"
+    },
+    "autimatic": {
+      "steamid": "76561198054870849",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/ff/Autimatic_at_ESL_Pro_League_S18.jpg/600px-Autimatic_at_ESL_Pro_League_S18.jpg"
+    },
+    "Axed": {
+      "steamid": "76561198094514426",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/76/Axed_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Axed_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "BeBO": {
+      "steamid": "76561198123082603",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ben1337": {
+      "steamid": "76561198091727390",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6a/Ben1337_at_ESL_Challenger_Melbourne_2024.jpg/600px-Ben1337_at_ESL_Challenger_Melbourne_2024.jpg"
+    },
+    "bew": {
+      "steamid": "76561197963516673",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Bibby": {
+      "steamid": "76561198054783983",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Brehze": {
+      "steamid": "76561198054861139",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/31/Brehze_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Brehze_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "brett": {
+      "steamid": "76561198140337447",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/42/Brett_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Brett_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Bwills": {
+      "steamid": "76561198079574545",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/95/Triumph_Bwills.png/600px-Triumph_Bwills.png"
+    },
+    "Chet": {
+      "steamid": "76561198027858729",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ea/Chet_%40_IEM_Katowice_2020.jpg/600px-Chet_%40_IEM_Katowice_2020.jpg"
+    },
+    "chop": {
+      "steamid": "76561198203239207",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "cJ": {
+      "steamid": "76561198000828093",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d7/CJ_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-CJ_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "CLASIA": {
+      "steamid": "76561198376077082",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1f/CLASIA_Fragadelphia_16.jpg/600px-CLASIA_Fragadelphia_16.jpg"
+    },
+    "CoJoMo": {
+      "steamid": "76561198199767289",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/17/CoJoMo_Davenport_photoshoot.png/600px-CoJoMo_Davenport_photoshoot.png"
+    },
+    "consti": {
+      "steamid": "76561198258800768",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Cooper": {
+      "steamid": "76561197967516987",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d9/Triumph_Cooper.png/600px-Triumph_Cooper.png"
+    },
+    "corn": {
+      "steamid": "76561198087858058",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cf/Corn_Davenport_photoshoot.png/600px-Corn_Davenport_photoshoot.png"
+    },
+    "Cryptic": {
+      "steamid": "76561198029235071",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d7/Cryptic_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Cryptic_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Cxzi": {
+      "steamid": "76561198171719689",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/30/Cxzi_at_PGL_Cluj-Napoca_2025.jpg/600px-Cxzi_at_PGL_Cluj-Napoca_2025.jpg"
+    },
+    "Cyrix": {
+      "steamid": "76561198272012791",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "d4rty": {
+      "steamid": "76561198162408395",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/96/D4rty_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-D4rty_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Danejoris": {
+      "steamid": "76561198076595434",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dare": {
+      "steamid": "76561198132881614",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/67/Dare_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Dare_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Drew": {
+      "steamid": "76561198147414643",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/e/e3/Drew_Fragadelphia_17_North_Brunswick.jpg"
+    },
+    "Elk": {
+      "steamid": "76561198017973195",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "empathy": {
+      "steamid": "76561197996934983",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/33/Empathy_at_ESL_Impact_League_S7.jpg/600px-Empathy_at_ESL_Impact_League_S7.jpg"
+    },
+    "EMUHLEET": {
+      "steamid": "76561197962511667",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/40/EMUHLEET_CPH_2018.jpg/600px-EMUHLEET_CPH_2018.jpg"
+    },
+    "emy": {
+      "steamid": "76561198231405440",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e1/Emy_at_ESL_Impact_League_S7.jpg/600px-Emy_at_ESL_Impact_League_S7.jpg"
+    },
+    "Fawx": {
+      "steamid": "76561198001782167",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/58/Fawx_at_ESL_Impact_League_S7.jpg/600px-Fawx_at_ESL_Impact_League_S7.jpg"
+    },
+    "fl0m": {
+      "steamid": "76561197992220633",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/00/Fl0m_ROG_Masters_2019.jpg/600px-Fl0m_ROG_Masters_2019.jpg"
+    },
+    "FMPONE": {
+      "steamid": "76561197971971436",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "freakazoid": {
+      "steamid": "76561197977148799",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6e/Freakazoid_%40_cs_summit_4.jpg/600px-Freakazoid_%40_cs_summit_4.jpg"
+    },
+    "Fruitcupx": {
+      "steamid": "76561198339361458",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Gabe": {
+      "steamid": "76561198124204178",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/46/Gabe_Chicken_Coop.png/600px-Gabe_Chicken_Coop.png"
+    },
+    "grape": {
+      "steamid": "76561198090430405",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Grave": {
+      "steamid": "76561198028072511",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/4/43/Grave_Take_Flyte_2024.png"
+    },
+    "Grizz": {
+      "steamid": "76561198210447689",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "hate": {
+      "steamid": "76561198148130529",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "HudzM": {
+      "steamid": "76561197988916412",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Infinite": {
+      "steamid": "76561198109759225",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b7/ParAst_Infinite_2021.png/600px-ParAst_Infinite_2021.png"
+    },
+    "intra": {
+      "steamid": "76561198216516945",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "JamezIRL": {
+      "steamid": "76561197967434927",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/64/JamezIRL_ESLONEBH.jpg/600px-JamezIRL_ESLONEBH.jpg"
+    },
+    "jason": {
+      "steamid": "76561198375621909",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "JazzPimp": {
+      "steamid": "76561198061971891",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "JBa": {
+      "steamid": "76561198184153575",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c3/JBa_at_IEM_Katowice_2025.jpg/600px-JBa_at_IEM_Katowice_2025.jpg"
+    },
+    "jchancE": {
+      "steamid": "76561198077179211",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c1/Jchance_Chicken_Coop.png/600px-Jchance_Chicken_Coop.png"
+    },
+    "Jeorge": {
+      "steamid": "76561198353869335",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f4/Jeorge_at_ESL_Pro_League_S21.jpg/600px-Jeorge_at_ESL_Pro_League_S21.jpg"
+    },
+    "jitter": {
+      "steamid": "76561198835935201",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "JoJo": {
+      "steamid": "76561198145536583",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fa/JoJo_player.jpg/600px-JoJo_player.jpg"
+    },
+    "Juli": {
+      "steamid": "76561198097560538",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/b/ba/Juli_at_IESF_2023.png"
+    },
+    "juna": {
+      "steamid": "76561198366358433",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "junior": {
+      "steamid": "76561198064058958",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d4/Junior_at_BLAST_Austin_Major_2025.jpg/600px-Junior_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "Just2EZ": {
+      "steamid": "76561197986522194",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Keiti": {
+      "steamid": "76561198274568743",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "KEL": {
+      "steamid": "76561198127436039",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "kmrn": {
+      "steamid": "76561198260998400",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "KmZ": {
+      "steamid": "76561198213555703",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "kobruh": {
+      "steamid": "76561197979927243",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Lake": {
+      "steamid": "76561198337484196",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/16/Lake_at_BLAST_Open_Spring_2025.jpg/600px-Lake_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "Lucid": {
+      "steamid": "76561198093777004",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Lx": {
+      "steamid": "76561198979041143",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "m1cks": {
+      "steamid": "76561198093129073",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "m1lky": {
+      "steamid": "76561197968964298",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/e/e2/EG_m1lky_2023.png"
+    },
+    "madcow": {
+      "steamid": "76561197960324528",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "madss": {
+      "steamid": "76561198174431453",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/29/Madss_at_ESL_Impact_Katowice_2023.jpg/600px-Madss_at_ESL_Impact_Katowice_2023.jpg"
+    },
+    "Makzwell": {
+      "steamid": "76561198107371885",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "mason": {
+      "steamid": "76561198334380443",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "micro": {
+      "steamid": "76561198072040762",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "motm": {
+      "steamid": "76561198020474058",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a6/Motm_at_Rio_Major_2022_AME_RMR.jpg/600px-Motm_at_Rio_Major_2022_AME_RMR.jpg"
+    },
+    "muenster": {
+      "steamid": "76561198097312893",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f4/Muenster_at_Fragadelphia_17.jpg/600px-Muenster_at_Fragadelphia_17.jpg"
+    },
+    "nbgee12": {
+      "steamid": "76561198179928535",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/60/Nbgee12_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Nbgee12_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "nero": {
+      "steamid": "76561198839562122",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "nicx": {
+      "steamid": "76561198410085211",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f8/Nicx_at_IEM_Katowice_2025.jpg/600px-Nicx_at_IEM_Katowice_2025.jpg"
+    },
+    "nitr0": {
+      "steamid": "76561197995889730",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/04/Nitr0_at_ESL_Pro_League_S21.jpg/600px-Nitr0_at_ESL_Pro_League_S21.jpg"
+    },
+    "nosraC": {
+      "steamid": "76561198061787931",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c5/NosraC_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-NosraC_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "oBo": {
+      "steamid": "76561198098421988",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c4/OBo_%40_IEM_Cologne_2021.jpg/600px-OBo_%40_IEM_Cologne_2021.jpg"
+    },
+    "onter": {
+      "steamid": "76561198107345266",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "oSee": {
+      "steamid": "76561198047472534",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b7/OSee_at_ESL_Pro_League_S21.jpg/600px-OSee_at_ESL_Pro_League_S21.jpg"
+    },
+    "Peeping": {
+      "steamid": "76561198452804081",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Pol0": {
+      "steamid": "76561198167738896",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ptr": {
+      "steamid": "76561197974113556",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e2/Ptr_%40_IEM_Cologne_2021.jpg/600px-Ptr_%40_IEM_Cologne_2021.jpg"
+    },
+    "Pugg": {
+      "steamid": "76561198175689253",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f5/Pugg_Davenport_photoshoot.png/600px-Pugg_Davenport_photoshoot.png"
+    },
+    "PwnAlone": {
+      "steamid": "76561197984266377",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/da/PwnAlone_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-PwnAlone_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "reck": {
+      "steamid": "76561198334814829",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b7/Reck_at_BLAST_Open_Spring_2025.jpg/600px-Reck_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "RIKO": {
+      "steamid": "76561197985179327",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "roca": {
+      "steamid": "76561197966107627",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b0/Roca_Fragadelphia.jpg/600px-Roca_Fragadelphia.jpg"
+    },
+    "RUSH": {
+      "steamid": "76561198023592320",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5e/RUSH_%40_PGL_Major_Antwerp_2022_Americas_RMR.jpg/600px-RUSH_%40_PGL_Major_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "RZU": {
+      "steamid": "76561198131134848",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "sacrifice": {
+      "steamid": "76561198211035861",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Sandman": {
+      "steamid": "76561198089723858",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SATURN": {
+      "steamid": "76561198188443759",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/15/SATURN_%40_Fragadelphia_15.jpg/600px-SATURN_%40_Fragadelphia_15.jpg"
+    },
+    "Scottiyio": {
+      "steamid": "76561197988911399",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Seb": {
+      "steamid": "76561197967761460",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/a2/Seb_Team_Singularity.png/600px-Seb_Team_Singularity.png"
+    },
+    "Shakezullah": {
+      "steamid": "76561198028514655",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3d/Shakezullah_%40_PGL_Major_Antwerp_2022_Americas_RMR.jpg/600px-Shakezullah_%40_PGL_Major_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "shane": {
+      "steamid": "76561198370264168",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3f/Shane_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Shane_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "silas": {
+      "steamid": "76561198232522208",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Skadoodle": {
+      "steamid": "76561197981341453",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b6/Skadoodle_at_BLAST_Austin_Major_2025.jpg/600px-Skadoodle_at_BLAST_Austin_Major_2025.jpg"
+    },
+    "Slash": {
+      "steamid": "76561198062577441",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SLIGHT": {
+      "steamid": "76561198153580037",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/28/SLIGHT_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-SLIGHT_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Snakes": {
+      "steamid": "76561198037147296",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/46/Snakes_Fragadelphia.jpeg/600px-Snakes_Fragadelphia.jpeg"
+    },
+    "snav": {
+      "steamid": "76561198238642986",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/78/Snav_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Snav_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "SolGoat": {
+      "steamid": "76561198076324571",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/a/ab/SolGoat_sep-2022_playerphoto.png"
+    },
+    "Spongey": {
+      "steamid": "76561198045482283",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/0b/Spongey_%40_IEM_Cologne_2021.jpg/600px-Spongey_%40_IEM_Cologne_2021.jpg"
+    },
+    "stamina": {
+      "steamid": "76561198233075160",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f3/Stamina_Limitless.png/600px-Stamina_Limitless.png"
+    },
+    "Stewie2K": {
+      "steamid": "76561197999004010",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3a/Stewie2K_at_IEM_Dallas_2024.jpg/600px-Stewie2K_at_IEM_Dallas_2024.jpg"
+    },
+    "swag": {
+      "steamid": "76561197960284752",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/46/Swag_%40_EPL_S10_Americas.jpg/600px-Swag_%40_EPL_S10_Americas.jpg"
+    },
+    "Swahn": {
+      "steamid": "76561198043014311",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3e/Swahn_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Swahn_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "Swisher": {
+      "steamid": "76561198183003671",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/ed/Swisher_at_BLAST_Open_Spring_2025.jpg/600px-Swisher_at_BLAST_Open_Spring_2025.jpg"
+    },
+    "tatm": {
+      "steamid": "76561198273434890",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Tender": {
+      "steamid": "76561197993724724",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "tweiss": {
+      "steamid": "76561198017094694",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Umar": {
+      "steamid": "76561198306993981",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "vanessa": {
+      "steamid": "76561198366108712",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/22/Vanessa_at_ESL_Impact_League_S7.jpg/600px-Vanessa_at_ESL_Impact_League_S7.jpg"
+    },
+    "Viathan": {
+      "steamid": "76561198207394411",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8e/Viathan_at_ESL_Challenger_Jonkoping_2024.jpg/600px-Viathan_at_ESL_Challenger_Jonkoping_2024.jpg"
+    },
+    "viz": {
+      "steamid": "76561198394158362",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ab/Viz_%40_PGL_Antwerp_2022_Americas_RMR.jpg/600px-Viz_%40_PGL_Antwerp_2022_Americas_RMR.jpg"
+    },
+    "Voltage": {
+      "steamid": "76561198047129384",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1b/Voltage_DreamHack_Open_Atlanta_2019.jpg/600px-Voltage_DreamHack_Open_Atlanta_2019.jpg"
+    },
+    "VulcaN": {
+      "steamid": "76561198241032908",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Warden": {
+      "steamid": "76561197960269931",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/67/Warden_at_Copenhagen_Major_2024_AME_RMR.jpg/600px-Warden_at_Copenhagen_Major_2024_AME_RMR.jpg"
+    },
+    "Wilky": {
+      "steamid": "76561198102906760",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "wiz": {
+      "steamid": "76561198132385509",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/c9/Wiz_Fragadelphia_17.jpg/600px-Wiz_Fragadelphia_17.jpg"
+    },
+    "Wolffe": {
+      "steamid": "76561198122668381",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "WolfY": {
+      "steamid": "76561198007789991",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f6/WolfY_at_ESL_Challenger_Jonkoping_2024.jpg/600px-WolfY_at_ESL_Challenger_Jonkoping_2024.jpg"
+    },
+    "xCeeD": {
+      "steamid": "76561198140790159",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/e/e7/XCeeD_DreamHack_Open_Atlanta_2019.jpg/600px-XCeeD_DreamHack_Open_Atlanta_2019.jpg"
+    },
+    "XotiC": {
+      "steamid": "76561198976995212",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "zanz": {
+      "steamid": "76561198129842977",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "cbass": {
+      "steamid": "76561198240077506",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/52/Cbass_Chicken_Coop.png/600px-Cbass_Chicken_Coop.png"
+    },
+    "dgt": {
+      "steamid": "76561198216891576",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d5/Dgt_at_BLAST_Rivals_Spring_2025.jpg/600px-Dgt_at_BLAST_Rivals_Spring_2025.jpg"
+    },
+    "DILLION1": {
+      "steamid": "76561198869922486",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/1/1a/DILLION1_at_Musimundo_GW_2018.jpg/600px-DILLION1_at_Musimundo_GW_2018.jpg"
+    },
+    "max": {
+      "steamid": "76561198242950384",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fd/Max_at_IEM_Cologne_2024.jpg/600px-Max_at_IEM_Cologne_2024.jpg"
+    },
+    "timo": {
+      "steamid": "76561198364207482",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "zock": {
+      "steamid": "76561198067615374",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/6f/Zockie_at_Aorus_League.jpg/600px-Zockie_at_Aorus_League.jpg"
+    },
+    "nooz": {
+      "steamid": "76561198288749793",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "alecc": {
+      "steamid": "76561198221547316",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "apoc": {
+      "steamid": "76561198006179810",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b1/Ap0c_%40_EPL_S15.jpg/600px-Ap0c_%40_EPL_S15.jpg"
+    },
+    "apocdud": {
+      "steamid": "76561198018591028",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "ARTeMis": {
+      "steamid": "76561199024898321",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "asap": {
+      "steamid": "76561198028656944",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ad/Asap_at_ESL_Challenger_Melbourne_2024.jpg/600px-Asap_at_ESL_Challenger_Melbourne_2024.jpg"
+    },
+    "AZR": {
+      "steamid": "76561197985097994",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d8/AZR_at_BLAST_Paris_Major_2023_EU_RMR.jpeg/600px-AZR_at_BLAST_Paris_Major_2023_EU_RMR.jpeg"
+    },
+    "BiBiAhn": {
+      "steamid": "76561198365018206",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/00/BiBiAhn_at_ESL_Impact_League_S7.jpg/600px-BiBiAhn_at_ESL_Impact_League_S7.jpg"
+    },
+    "BRACE": {
+      "steamid": "76561198086803740",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b5/BRACE_at_Skyesports_Grand_Slam_2024.jpg/600px-BRACE_at_Skyesports_Grand_Slam_2024.jpg"
+    },
+    "chickenloaf": {
+      "steamid": "76561198183939702",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "damyo": {
+      "steamid": "76561198048350311",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "dangeR": {
+      "steamid": "76561198267298363",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "DannyG": {
+      "steamid": "76561198153678139",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "DANZ": {
+      "steamid": "76561197960567532",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "foggers": {
+      "steamid": "76561198065830177",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Forleks": {
+      "steamid": "76561198068485596",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "guag": {
+      "steamid": "76561198051199585",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/cb/Guag_at_ESL_Challengers_Melbourne_2024.jpg/600px-Guag_at_ESL_Challengers_Melbourne_2024.jpg"
+    },
+    "gump": {
+      "steamid": "76561198326172243",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/7/70/Revenant_Esports_gump_2023.png/600px-Revenant_Esports_gump_2023.png"
+    },
+    "Hatz": {
+      "steamid": "76561198024927786",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/be/Hatz_at_Antwerp_Major_2022_APAC_RMR.jpg/600px-Hatz_at_Antwerp_Major_2022_APAC_RMR.jpg"
+    },
+    "HaZR": {
+      "steamid": "76561198024347602",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/df/HaZR_at_ESL_Pro_League_S19.jpg/600px-HaZR_at_ESL_Pro_League_S19.jpg"
+    },
+    "HUGHMUNGUS": {
+      "steamid": "76561198065008765",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b6/Stat_%40_IEM_Sydney_2018.jpg/600px-Stat_%40_IEM_Sydney_2018.jpg"
+    },
+    "InfrequeNt": {
+      "steamid": "76561197989810175",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/af/InfrequeNt_at_eXTREMESLAND_2018.JPG/600px-InfrequeNt_at_eXTREMESLAND_2018.JPG"
+    },
+    "James": {
+      "steamid": "76561197995601734",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "jokes": {
+      "steamid": "76561197997825733",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Jynx": {
+      "steamid": "76561198203090521",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Kingfisher": {
+      "steamid": "76561198028731515",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8e/Kingfisher_at_Antwerp_Major_2022_APAC_RMR.jpg/600px-Kingfisher_at_Antwerp_Major_2022_APAC_RMR.jpg"
+    },
+    "konii": {
+      "steamid": "76561198055683485",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Liki": {
+      "steamid": "76561198156758030",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/d0/Liki_at_Antwerp_Major_2022_APAC_RMR.jpg/600px-Liki_at_Antwerp_Major_2022_APAC_RMR.jpg"
+    },
+    "mizzy": {
+      "steamid": "76561197997773713",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "MoeycQ": {
+      "steamid": "76561197972775076",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/3e/MoeycQ_at_eXTREMESLAND_2018.JPG/600px-MoeycQ_at_eXTREMESLAND_2018.JPG"
+    },
+    "NikkeZ": {
+      "steamid": "76561197972284771",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/3/37/NikkeZ.jpg/600px-NikkeZ.jpg"
+    },
+    "Noisia": {
+      "steamid": "76561198121225975",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "PeetyG": {
+      "steamid": "76561197960810261",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/9/91/PeetyG_ACL_Sydney_2015.jpg"
+    },
+    "phoebe": {
+      "steamid": "76561198226777692",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "prakM": {
+      "steamid": "76561197962325400",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/d/d4/PrakM_ACL_Melbourne_2015.jpg"
+    },
+    "pz": {
+      "steamid": "76561198068506849",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/27/Pz_at_Skyesports_Grand_Slam_2024.jpg/600px-Pz_at_Skyesports_Grand_Slam_2024.jpg"
+    },
+    "Rackem": {
+      "steamid": "76561199473233164",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "rbz": {
+      "steamid": "76561197966776579",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "rekonz": {
+      "steamid": "76561198050779850",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Rickeh": {
+      "steamid": "76561197963481649",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/c/c7/ORDER_Rickeh.png"
+    },
+    "Roflko": {
+      "steamid": "76561198068168375",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "SaVage": {
+      "steamid": "76561198163665188",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/9/9d/SaVage_at_Antwerp_Major_2022_APAC_RMR.jpg/600px-SaVage_at_Antwerp_Major_2022_APAC_RMR.jpg"
+    },
+    "SkulL": {
+      "steamid": "76561198093162249",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "sliimey": {
+      "steamid": "76561198273089705",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Texta": {
+      "steamid": "76561198122266195",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/2f/Texta_at_ESL_Pro_League_S21.jpg/600px-Texta_at_ESL_Pro_League_S21.jpg"
+    },
+    "TjP": {
+      "steamid": "76561198163780030",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/69/TjP_at_IEM_Katowice_2024.jpg/600px-TjP_at_IEM_Katowice_2024.jpg"
+    },
+    "tucks": {
+      "steamid": "76561198156063307",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ad/Tucks_%40_IEM_Sydney_2019.jpg/600px-Tucks_%40_IEM_Sydney_2019.jpg"
+    },
+    "versa": {
+      "steamid": "76561198288837772",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "viridian": {
+      "steamid": "76561197972045728",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/0/05/Viridian_at_Asian_Champions_League_2025.jpg/600px-Viridian_at_Asian_Champions_League_2025.jpg"
+    },
+    "void": {
+      "steamid": "76561198044112269",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/a/ac/Void_at_eXTREMESLAND_2019.JPG/600px-Void_at_eXTREMESLAND_2019.JPG"
+    },
+    "xertz": {
+      "steamid": "76561198037381684",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "yellow": {
+      "steamid": "76561197991047689",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/5c/Yellow_Avant_Garde.jpg/600px-Yellow_Avant_Garde.jpg"
+    },
+    "yourwombat": {
+      "steamid": "76561198034537139",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/d/de/Yourwombat_at_Skyesports_Grand_Slam_2024.jpg/600px-Yourwombat_at_Skyesports_Grand_Slam_2024.jpg"
+    },
+    "ADDICT": {
+      "steamid": "76561198067762481",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/2/21/ADDICT_at_Skyesports_Grand_Slam_2024.jpg/600px-ADDICT_at_Skyesports_Grand_Slam_2024.jpg"
+    },
+    "chelleos": {
+      "steamid": "76561198158971650",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8b/Chelleos_at_IEM_Katowice_2024.jpg/600px-Chelleos_at_IEM_Katowice_2024.jpg"
+    },
+    "Feral": {
+      "steamid": "76561198054213712",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "Gratisfaction": {
+      "steamid": "76561197965809411",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/4/43/Gratisfaction_EXTREMUM.png/600px-Gratisfaction_EXTREMUM.png"
+    },
+    "nettik": {
+      "steamid": "76561198332845251",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/5/53/Nettik_at_BLAST_Rivals_Spring_2025.jpg/600px-Nettik_at_BLAST_Rivals_Spring_2025.jpg"
+    },
+    "Sico": {
+      "steamid": "76561197999532274",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/f6/Sico_at_BLAST_Paris_Major_2023.jpeg/600px-Sico_at_BLAST_Paris_Major_2023.jpeg"
+    },
+    "sterling": {
+      "steamid": "76561198060490349",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/f/fb/Sterling_at_Antwerp_Major_2022_APAC_RMR.jpg/600px-Sterling_at_Antwerp_Major_2022_APAC_RMR.jpg"
+    },
+    "129": {
+      "steamid": "76561198012173958",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/c/ca/129_in_WESG_2018_Female.jpg/600px-129_in_WESG_2018_Female.jpg"
+    },
+    "1337x9": {
+      "steamid": "76561198414356119",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/69/1337x9_as_Lord_Rabbit%27s_player.jpg/600px-1337x9_as_Lord_Rabbit%27s_player.jpg"
+    },
+    "18yM": {
+      "steamid": "76561198317806758",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/c/cd/18yM.jpg"
+    },
+    "2X2X": {
+      "steamid": "76561198818826491",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/b/b7/2X2X_at_XSE_Pro_League_2023.jpg/600px-2X2X_at_XSE_Pro_League_2023.jpg"
+    },
+    "3gl": {
+      "steamid": "76561199447136068",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "957": {
+      "steamid": "76561198962416664",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/7/7c/Infobox_player_NoImage_darkmode.png"
+    },
+    "AE": {
+      "steamid": "76561198148008942",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/6/67/AE_at_XSE_Pro_League_S2.jpg/600px-AE_at_XSE_Pro_League_S2.jpg"
+    },
+    "afufu": {
+      "steamid": "76561199543652487",
+      "type": "pro",
+      "image": "https://liquipedia.net/commons/images/thumb/8/8e/Afufu_at_ESL_Pro_League_S21.jpg/600px-Afufu_at_ESL_Pro_League_S21.jpg"
     }
   },
   "skipped_players": [
     "Q",
+    "victoria",
     "minet",
     "Kevve",
+    "WIDOW",
     "mini",
     "draken",
     "aragornN",
     "towb",
+    "Vert",
+    "adreN",
     "Lunedi",
+    "DeMarsDeRover",
     "K1",
+    "JonYBoY",
+    "AdreN",
     "niko",
     "Lucky",
     "fox",
+    "keiz",
     "gobb",
     "YuRk0",
     "aiM",
+    "Senna",
+    "Pohmel",
+    "sky",
+    "LeX",
     "red",
     "JAEGARN",
+    "Adrenaline",
     "Patrick",
+    "koi",
     "ScreaM",
     "MonkeyD.Julie",
+    "bullet",
     "bulletgirl",
     "osku",
     "enkayJ",
+    "bruno",
+    "Valiance",
     "ALEX",
     "KiTTy",
     "RashiiiE",
+    "chrizm",
     "TheeLiVe",
     "stikle",
+    "pixel",
     "nutnut",
     "Orbit",
     "noLA",
     "Emerald",
-    "s"
+    "kNgV",
+    "5TRYK#R",
+    "s",
+    "steel",
+    "fly"
   ]
 }

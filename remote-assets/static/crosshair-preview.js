@@ -452,7 +452,7 @@ function showAutocomplete(query) {
         const item = document.createElement('div');
         item.className = 'autocomplete-item';
 
-        const hasValidImage = false; //match.image && !match.image.includes('NoImage');
+        const hasValidImage = match.image && !match.image.includes('none');
         const imageHtml = hasValidImage
             ? `<img src="${match.image}" class="autocomplete-img">`
             : '';

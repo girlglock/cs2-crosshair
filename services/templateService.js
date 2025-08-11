@@ -135,9 +135,12 @@ function generateHTML(player, settings, imageUrl, errorType = '', originalInput 
         if (!stats) return '';
 
         const statIconStyle = 'width: 12px; height: 12px; margin-right: 2px; filter: brightness(0) saturate(100%) invert(100%);';
+        const matchCount = stats.wins + stats.losses;
 
-        return `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/wr-icon.png" style="${statIconStyle}"> ${(stats.winRate * 100).toFixed(0)}% • ` + `<span title="K/D Ratio">${stats.kdRatio} K/D</span> • ` +
-        `<span title="Average Damage per Round">${stats.adr} ADR</span> • ` +
+        return `<div style="font-size: 0.8em;">${player.nickname}'s stats with this crosshair:</div>` +
+        `<span title="Games Played">${matchCount} Match${matchCount === 1 ? '' : 'es'}</span> • ` +
+        `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/wr-icon.png" style="${statIconStyle}"> ${(stats.winRate * 100).toFixed(0)}% • ` + `<span title="K/D Ratio">K/D ${stats.kdRatio}</span> • ` +
+        `<span title="Average Damage per Round">ADR ${stats.adr}</span> • ` +
         `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/hs-icon.png" style="${statIconStyle}"> ${(stats. headshotPercentage * 100).toFixed(0)}%`;
     };
 

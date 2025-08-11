@@ -49,6 +49,11 @@
                             </select>
 
                             <div id="inputContainer" style="position: relative; flex: 1; min-width: 150px;">
+                                <div class="autocomplete-container">
+                                    <input type="text" id="searchInput" class="cs-input" placeholder="<pro_player>"
+                                        style="width: 100%; padding-left: 8px; box-sizing: border-box;" />
+                                    <div id="autocompleteResults" class="autocomplete-results"></div>
+                                </div>
                                 <span id="inputPrefix" style="position: absolute;
                                         left: 1.5%;
                                         top: 50%;
@@ -57,12 +62,6 @@
                                         pointer-events: none;
                                         user-select: none;">
                                 </span>
-
-                                <div class="autocomplete-container">
-                                    <input type="text" id="searchInput" class="cs-input" placeholder="<pro_player>"
-                                        style="width: 100%; padding-left: 8px; box-sizing: border-box;" />
-                                    <div id="autocompleteResults" class="autocomplete-results"></div>
-                                </div>
                             </div>
 
                             <button class="cs-btn" style="flex: 0 0 auto;" onclick="goToSearch()">Search</button>

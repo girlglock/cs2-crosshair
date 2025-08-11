@@ -136,9 +136,9 @@ function generateHTML(player, settings, imageUrl, errorType = '', originalInput 
 
         const statIconStyle = 'width: 12px; height: 12px; margin-right: 2px; filter: brightness(0) saturate(100%) invert(100%);';
 
-        return `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/wr-icon.png" style="${statIconStyle}">${(stats.winRate * 100).toFixed(0)}% • ` + `<span title="K/D Ratio">${stats.kdRatio} K/D</span> • ` +
+        return `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/wr-icon.png" style="${statIconStyle}"> ${(stats.winRate * 100).toFixed(0)}% • ` + `<span title="K/D Ratio">${stats.kdRatio} K/D</span> • ` +
         `<span title="Average Damage per Round">${stats.adr} ADR</span> • ` +
-        `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/hs-icon.png" style="${statIconStyle}">${(stats. headshotPercentage * 100).toFixed(0)}%`;
+        `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/hs-icon.png" style="${statIconStyle}"> ${(stats. headshotPercentage * 100).toFixed(0)}%`;
     };
 
     const formatPrevious = (previous) => {

@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} - {{domain}}</title>
 
-    <meta property="og:title" content="{{title}}">
-    <meta property="og:description" content=" {{playerEmbedInfo}} \n {{codeValue}} ">
-    <meta property="og:image" content="{{imageUrl}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://{{domain}}/{{originalInput}}">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:image" content="{{imageUrl}}">
-    <meta property="twitter:title" content="{{title}}">
-    <meta property="twitter:description" content="{{playerEmbedInfo}} {{codeValue}}">
-
-    <meta name="theme-color" content="{{themeColor}}">
-
     <link rel="icon" href="https://files.catbox.moe/9anhhp.ico" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
@@ -26,8 +13,6 @@
     <style>
         .player-info {
             color: {{colorRGB}};
-            font-weight: bold;
-            margin-bottom: 10px;
         }
 
         .otag {
@@ -51,6 +36,8 @@
                 <div>
                     <div class="cs-form-group" style="margin: 50px 0">
                         <div class="player-info" style="scale: 1.5; margin-bottom: -7px;">{{playerInfo}}</div>
+                        <div style="font-size: 1.3em; margin-top: 10px; margin-bottom: -7px;">{{stats}}</div>
+                        <div style="font-size: 0.8em; margin-top: 10px; margin-bottom: -7px;">{{lastUsed}}</div>
                         <br>
                         <div
                             style="max-width: 100%; display: flex; margin: auto; gap: 1px; flex-wrap: wrap; align-items: center;">

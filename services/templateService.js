@@ -50,7 +50,45 @@ function getColorFromSettings(settings) {
     return presetColors[colorIndex] || [160, 255, 255];
 }
 
-function generateHTML(crosshairData, settings, imageUrl, errorType = '', originalInput = '', isBot = false) {
+function getTimeAgo(dateString, forceDays = false) {
+    if (!dateString) return '';
+
+    try {
+        const now = new Date();
+        const past = new Date(dateString);
+        const diffMs = now - past;
+
+        const diffSeconds = Math.floor(diffMs / 1000);
+        const diffMinutes = Math.floor(diffSeconds / 60);
+        const diffHours = Math.floor(diffMinutes / 60);
+        const diffDays = Math.floor(diffHours / 24);
+        const diffMonths = Math.floor(diffDays / 30);
+        const diffYears = Math.floor(diffDays / 365);
+
+        if (forceDays && diffDays >= 1) {
+            return diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
+        }
+
+        if (diffSeconds < 60) {
+            return diffSeconds <= 1 ? 'just now' : `${diffSeconds} seconds ago`;
+        } else if (diffMinutes < 60) {
+            return diffMinutes === 1 ? '1 minute ago' : `${diffMinutes} minutes ago`;
+        } else if (diffHours < 24) {
+            return diffHours === 1 ? '1 hour ago' : `${diffHours} hours ago`;
+        } else if (diffDays < 30) {
+            return diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
+        } else if (diffMonths < 12) {
+            return diffMonths === 1 ? '1 month ago' : `${diffMonths} months ago`;
+        } else {
+            return diffYears === 1 ? '1 year ago' : `${diffYears} years ago`;
+        }
+    } catch (error) {
+        console.error('Error parsing date:', error);
+        return '';
+    }
+}
+
+function generateHTML(player, settings, imageUrl, errorType = '', originalInput = '', isBot = false) {
     if (errorType !== '') {
         return renderTemplate('error', {
             originalInput,
@@ -69,43 +107,51 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
     const [r, g, b] = settings ? getColorFromSettings(settings) : [0, 255, 0];
     const themeColor = `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 
-    const title = crosshairData.crosshairCode === originalInput
+    const title = player.crosshairData.current?.shareCode === originalInput
         ? 'cs2-crosshair-viewer'
-        : `${crosshairData.nickname}'s crosshair`;
+        : `${player.nickname}'s crosshair`;
 
-    const playerEmbedInfo = crosshairData.nickname && crosshairData.cs2Hours
-        ? `${crosshairData.nickname} • ${crosshairData.cs2Hours} \n`
-        : crosshairData.nickname + "\n" || '';
+    const playerEmbedInfo = player.nickname && player.cs2Hours
+        ? `${player.nickname} • ${player.cs2Hours} \n`
+        : (player.nickname + "\n") || '';
 
-    const isLeetify = !crosshairData.steamId64;
-
-    const leetifyLink = isLeetify
-        ? `https://leetify.com/@${crosshairData.nickname}`
-        : `https://leetify.com/public/profile/${crosshairData.steamId64}`;
-    const steamLink = `https://steamcommunity.com/profiles/${crosshairData.steamId64}`;
-    const csstatsLink = `https://csstats.gg/player/${crosshairData.steamId64}`;
-
+    const isLeetify = !player.steamId64;
     const iconStyle = 'width: 14px; height: 14px; margin-right: 1px; margin-top: 8px; filter: brightness(0) saturate(100%) invert(100%);';
 
-    const leetifyIcon = `<a href="${leetifyLink}" target="_blank" style="margin-right: 1px;">
-    <img src="https://leetify.com/assets/images/favicon.svg" style="${iconStyle}"></a>`;
+    const links = {
+        leetify: `<a href="${isLeetify ? `https://leetify.com/@${player.nickname}` : `https://leetify.com/public/profile/${player.steamId64}`}" target="_blank" style="margin-right: 1px;"><img src="https://leetify.com/assets/images/favicon.svg" style="${iconStyle}"></a>`,
+        steam: !isLeetify ? `<a href="https://steamcommunity.com/profiles/${player.steamId64}" target="_blank" style="margin-right: 1px;"><img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/steam-7tmhpbwzco485ew3p66mh.png/steam-ghlhjssxznri21c5tax15n.png" style="${iconStyle}"></a>` : '',
+        csstats: !isLeetify ? `<a href="https://csstats.gg/player/${player.steamId64}" target="_blank"><img src="https://static.csstats.gg/images/favicon.svg" style="${iconStyle}"></a>` : ''
+    };
 
-    const steamIcon = !isLeetify
-        ? `<a href="${steamLink}" target="_blank" style="margin-right: 1px;">
-        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/steam-7tmhpbwzco485ew3p66mh.png/steam-ghlhjssxznri21c5tax15n.png" style="${iconStyle}"></a>`
-        : '';
-
-    const csstatsIcon = !isLeetify
-        ? `<a href="${csstatsLink}" target="_blank">
-        <img src="https://static.csstats.gg/images/favicon.svg" style="${iconStyle}"></a>`
-        : '';
-
-    const playerInfo = crosshairData.nickname
+    const playerInfo = player.nickname
         ? `<span style="text-decoration: none; color: rgb(${r}, ${g}, ${b}); display: inline-flex; align-items: center;">
-        ${csstatsIcon}${leetifyIcon}${steamIcon}
-        <span style="margin-left: 1px;"> • ${crosshairData.nickname}${crosshairData.cs2Hours ? ` • ${crosshairData.cs2Hours}` : ''}</span></span>`
+            ${links.csstats}${links.leetify}${links.steam}
+            <span style="margin-left: 1px;"> • ${player.nickname}${player.cs2Hours ? ` • ${player.cs2Hours}` : ''}</span>
+           </span>`
         : '';
 
+    const formatStats = (stats) => {
+        if (!stats) return '';
+
+        const statIconStyle = 'width: 12px; height: 12px; margin-right: 2px; filter: brightness(0) saturate(100%) invert(100%);';
+
+        return `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/wr-icon.png" style="${statIconStyle}">${(stats.winRate * 100).toFixed(0)}% • ` + `<span title="K/D Ratio">${stats.kdRatio} K/D</span> • ` +
+        `<span title="Average Damage per Round">${stats.adr} ADR</span> • ` +
+        `<img src="https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/icons/hs-icon.png" style="${statIconStyle}">${(stats. headshotPercentage * 100).toFixed(0)}%`;
+    };
+
+    const formatPrevious = (previous) => {
+        if (!previous || previous.length === 0) return '';
+
+        const uniquePrevious = previous
+            .map(ch => ({ ...ch, timeAgo: getTimeAgo(ch.lastUsedAt, true) }))
+            .filter((ch, index, arr) => arr.findIndex(item => item.timeAgo === ch.timeAgo) === index);
+
+        return `<br>Previous: ${uniquePrevious.map(ch =>
+            `<a href="https://${config.domain}/${ch.shareCode}" style="color: inherit; text-decoration: underline;" title="${ch.timeAgo}">${ch.timeAgo}</a>`
+        ).join(' • ')}`;
+    };
 
     const templateName = isBot ? 'discord-embed' : 'crosshair-preview';
 
@@ -113,7 +159,13 @@ function generateHTML(crosshairData, settings, imageUrl, errorType = '', origina
         title,
         playerEmbedInfo,
         playerInfo,
-        codeValue: isBot && crosshairData.crosshairCode === "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL" ? 'search and view cs2 player crosshairs' : crosshairData.crosshairCode,
+        codeValue: isBot && player.crosshairData.current?.shareCode === "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL"
+            ? 'search and view cs2 player crosshairs'
+            : player.crosshairData.current?.shareCode,
+        lastUsed: player.crosshairData.current?.lastUsedAt
+            ? `Last used: ${getTimeAgo(player.crosshairData.current.lastUsedAt)}${formatPrevious(player.crosshairData.previous)}`
+            : '',
+        stats: formatStats(player.crosshairData.current?.stats),
         originalInput,
         imageUrl,
         themeColor,

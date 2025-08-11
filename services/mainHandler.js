@@ -14,11 +14,15 @@ if (!fs.existsSync(CACHE_DIR)) {
 }
 
 async function processUserInput(input) {
-    const cacheIdentifier = input.endsWith('/') ? input.slice(0, -1) : input;
+    const cacheIdentifier = (input.endsWith('/') ? input.slice(0, -1) : input).replace(/^profiles\//, '');
 
     if (input.startsWith("CSGO-")) {
         return {
-            crosshairCode: input,
+            crosshairData: {
+                current: {
+                    shareCode: input
+                },
+            },
             nickname: '',
             cs2Hours: '',
             playerType: 'code'
@@ -50,7 +54,7 @@ async function processUserInput(input) {
     try {
         const result = await getCrosshairData(username, playerType);
 
-        if (!result.crosshairCode) {
+        if (!result.crosshairData.current.shareCode) {
             throw new Error(`crosshair not found for ${username}`);
         }
 
@@ -80,10 +84,10 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
     }
 
     try {
-        let crosshairData;
+        let player;
 
         try {
-            crosshairData = await processUserInput(code);
+            player = await processUserInput(code);
         } catch (error) {
             console.error('[error] processing input:', process.env.NODE_ENV === 'development' ? error : error.message);
 
@@ -107,12 +111,12 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
         }
 
         if (onlyCode && req.params.code) {
-            return res.type('text/plain').send(crosshairData.crosshairCode);
+            return res.type('text/plain').send(player.crosshairData.current?.shareCode);
         }
 
-        const settings = renderer.parseCode(crosshairData.crosshairCode);
+        const settings = renderer.parseCode(player.crosshairData.current?.shareCode);
 
-        let sanitizedCrosshairCode = crosshairData.crosshairCode;
+        let sanitizedCrosshairCode = player.crosshairData.current?.shareCode;
         sanitizedCrosshairCode = sanitizedCrosshairCode.split('/')[0];
         sanitizedCrosshairCode = sanitizedCrosshairCode.replace(/[\\:*?"<>|]/g, '');
 
@@ -140,7 +144,7 @@ async function getCrosshairHandler(req, res, onlyCode = false) {
             imageUrl = `data:image/png;base64,${imageBuffer.toString('base64')}`;
         }
 
-        const html = generateHTML(crosshairData, settings, imageUrl, '', originalInput, isBot);
+        const html = generateHTML(player, settings, imageUrl, '', originalInput, isBot);
 
         res.set({
             'Content-Type': 'text/html',

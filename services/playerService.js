@@ -1,7 +1,7 @@
 const xml2js = require('xml2js');
 const config = require('../config');
 
-async function getLeetifyCrosshair(playerQuery, isSteamId64) {
+/* async function getLeetifyCrosshair(playerQuery, isSteamId64) {
     const url = `https://api.cs-prod.leetify.com/api/profile/${isSteamId64 ? 'id/' + playerQuery : 'vanity-url/' + playerQuery}/crosshair`;
 
     try {
@@ -18,7 +18,41 @@ async function getLeetifyCrosshair(playerQuery, isSteamId64) {
         if (process.env.NODE_ENV === 'development') console.error(`[error] failed to get crosshair for ${url}:`, error);
         return null;
     }
+} */
+
+async function getLeetifyCrosshair(playerQuery, isSteamId64) {
+    const url = `https://api.cs-prod.leetify.com/api/profile/${isSteamId64 ? 'id/' + playerQuery : 'vanity-url/' + playerQuery}/crosshair`;
+
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        return {
+            current: {
+                shareCode: data.current?.shareCode || null,
+                lastUsedAt: data.current?.lastUsedAt || null,
+                stats: data.current?.stats || null,
+            },
+            previous: (data.previous || [])
+                .slice(0, 3) // get only the last one
+                .map(crosshair => ({
+                    shareCode: crosshair.shareCode,
+                    lastUsedAt: crosshair.lastUsedAt,
+                    stats: crosshair.stats,
+                })),
+        };
+
+    } catch (error) {
+        if (process.env.NODE_ENV === 'development') console.error(`[error] failed to get crosshair for ${url}:`, error);
+        return null;
+    }
 }
+
 
 async function fetchSteamProfile(url) {
     try {
@@ -64,11 +98,11 @@ async function getCrosshairData(username, playerType) {
                 const vanityId = username.substring(3);
                 const vanityUrl = `https://steamcommunity.com/id/${vanityId}/?xml=1`;
                 const vanityProfile = await fetchSteamProfile(vanityUrl);
-                
+
                 if (!vanityProfile || !vanityProfile.nickname) {
                     throw new Error(`steam profile (/id) ${vanityId} not found`);
                 }
-                
+
                 steamId64 = vanityProfile.steamId64;
                 nickname = vanityProfile.nickname;
                 cs2Hours = vanityProfile.cs2Hours;
@@ -79,11 +113,11 @@ async function getCrosshairData(username, playerType) {
                 steamId64 = username.replace('profiles/', '');
                 const profileUrl = `https://steamcommunity.com/profiles/${steamId64}/?xml=1`;
                 const profile = await fetchSteamProfile(profileUrl);
-                
+
                 if (!profile || !profile.nickname) {
                     throw new Error(`steam profile (/profiles) ${steamId64} not found`);
                 }
-                
+
                 nickname = profile.nickname;
                 cs2Hours = profile.cs2Hours;
                 break;
@@ -97,18 +131,18 @@ async function getCrosshairData(username, playerType) {
                 throw new Error(`unknown player type: ${playerType}`);
         }
 
-        let crosshairCode;
+        let crosshairData;
         if (playerType !== 'code') {
             const lookupId = steamId64 || username;
-            crosshairCode = await getLeetifyCrosshair(lookupId, config.patterns.steamID64Pattern.test(lookupId));
-            
-            if (!crosshairCode) {
+            crosshairData = await getLeetifyCrosshair(lookupId, config.patterns.steamID64Pattern.test(lookupId));
+
+            if (!crosshairData || !crosshairData.current?.shareCode) {
                 throw new Error(`crosshair not found for ${lookupId}`);
             }
         }
 
         return {
-            crosshairCode,
+            crosshairData,
             nickname,
             cs2Hours,
             playerType,
@@ -121,7 +155,7 @@ async function getCrosshairData(username, playerType) {
     }
 }
 
-module.exports = { 
+module.exports = {
     getCrosshairData,
-    getLeetifyCrosshair 
+    getLeetifyCrosshair
 };

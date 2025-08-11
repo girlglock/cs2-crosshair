@@ -1,4 +1,4 @@
-jsconfig.json
+jsconfig.d.ts
 package-lock.json
 node_modules/
 cache/

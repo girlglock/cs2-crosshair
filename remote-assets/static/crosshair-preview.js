@@ -666,7 +666,7 @@ function goToSearch() {
             window.location.href = `https://c.girlglock.com/profiles/${steamid}`;
             return;
         } else if (proPlayersData && proPlayersData.players && proPlayersData.players[input]) {
-            const playerSteamId = proPlayersData[input].steamid;
+            const playerSteamId = proPlayersData.players[input].steamid;
             window.location.href = `https://c.girlglock.com/profiles/${playerSteamId}`;
             return;
         } else {

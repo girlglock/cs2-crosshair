@@ -130,8 +130,13 @@
       "type": "social",
       "image": "https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/player_images/none.png"
     },
-    "kenoah": {
+    "kanoah": {
       "steamid": "76561199445177200",
+      "type": "social",
+      "image": "https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/player_images/none.png"
+    },
+    "devPoland": {
+      "steamid": "76561199100940019",
       "type": "social",
       "image": "https://raw.githubusercontent.com/girlglock/cs2-crosshair/refs/heads/main/remote-assets/static/player_images/none.png"
     },

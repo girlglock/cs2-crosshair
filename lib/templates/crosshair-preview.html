@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - {{domain}}</title>
+
+    <link rel="icon" href="/static/assets/icons/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="/static/xpcss/XP.css">
+    <link rel="stylesheet" type="text/css" href="/static/xpcss/XP-ZUNE.css" media="not all" id="darkThemeLink">
+    <script>
+        (function () {
+            var isDark = localStorage.getItem("theme") === "dark";
+            document.getElementById("darkThemeLink").media = isDark ? "all" : "not all";
+            if (isDark) document.documentElement.classList.add("dark-mode");
+        })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="/static/crosshair-preview.css">
+</head>
+
+<body class="surface">
+    <div class="window" id="mainWindow">
+        <div class="title-bar">
+            <div class="title-bar-text"><img src="/static/assets/icons/favicon.ico" alt="" /> silly crosshair editor</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="window.location.href='https://girlglock.com'"></button>
+            </div>
+        </div>
+
+        <div class="ribbon-menu">
+            <div class="layout-header">
+                <div class="field-row search-row">
+                    <select id="searchType">
+                        <option value="proplayer">Pro / Streamer</option>
+                        <option value="steamvanity">Steam Vanity</option>
+                        <option value="steamid64">SteamID64</option>
+                        <option value="leetify">Leetify Handle</option>
+                    </select>
+
+                    <div id="inputContainer" class="autocomplete-container">
+                        <input type="text" id="searchInput" placeholder="<pro_player>" />
+                        <span id="inputPrefix"></span>
+                        <div id="autocompleteResults" class="autocomplete-results"></div>
+                    </div>
+
+                    <button onclick="goToSearch()">Search</button>
+                </div>
+                <div class="field-row code-row">
+                    <input type="text" readonly id="crosshairCode" value="" />
+                    <button onclick="copyCode()">Copy</button>
+                    <button onclick="downloadImage(event)">Save</button>
+                    <button onclick="shareCrosshair()">Share</button>
+                </div>
+                <div class="player-stats-row"  style="margin-top: 18px;">
+                    <div class="player-info" id="playerInfo"></div>
+                    <div id="statsInfo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window-body">
+            <div class="layout-grid" id="layoutGrid">
+                <div class="layout-preview-group">
+                    <div class="layout-preview">
+                        <div class="crosshair-preview">
+                            <div class="crosshair-image sunken-panel" id="crosshairImage">
+                                <div class="crosshair-bg" id="crosshairBg"></div>
+                                <canvas id="crosshairCanvas" width="64" height="64"></canvas>
+                            </div>
+                            <div id="movementStateLabel" class="movement-state-label"></div>
+                        </div>
+
+                        <div class="field-row preview-controls-row">
+                            <select id="aspectRatioSelect" title="Preview stretched aspect ratio"></select>
+                            <select id="weaponSelect" title="Weapon assumed for the Classic style's movement/spread simulation"></select>
+                            <button onclick="prevBackground()">&larr;</button>
+                            <button onclick="nextBackground()">&rarr;</button>
+                        </div>
+                    </div>
+
+                    <div class="layout-history-frame sunken-panel">
+                        <div class="layout-history-scroll">
+                            <div class="layout-history" id="versionHistory"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layout-settings" id="settingsPanel">
+                    <fieldset>
+                        <legend>Shape</legend>
+
+                        <div class="control-group">
+                            <label for="cl_crosshairstyle">Style</label>
+                            <select id="cl_crosshairstyle">
+                                <option value="2">Classic</option>
+                                <option value="4" selected>Classic Static</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshairsize">Size</label>
+                            <input id="cl_crosshairsize" type="range" min="0" max="30" step="0.1" value="2" />
+                            <span class="range-value" id="cl_crosshairsize_value">2</span>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshairthickness">Thickness</label>
+                            <input id="cl_crosshairthickness" type="range" min="0.5" max="5" step="0.1" value="1" />
+                            <span class="range-value" id="cl_crosshairthickness_value">1</span>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshairgap">Gap</label>
+                            <input id="cl_crosshairgap" type="range" min="-10" max="10" step="0.1" value="-2" />
+                            <span class="range-value" id="cl_crosshairgap_value">-2</span>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="checkbox" id="cl_crosshairdot">
+                            <label for="cl_crosshairdot">Center Dot</label>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="checkbox" id="cl_crosshair_t">
+                            <label for="cl_crosshair_t">T Style</label>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="checkbox" id="cl_crosshairgap_useweaponvalue">
+                            <label for="cl_crosshairgap_useweaponvalue">Deployed Weapon Gap</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Color</legend>
+
+                        <div class="control-group">
+                            <label for="cl_crosshaircolor">Color</label>
+                            <select id="cl_crosshaircolor">
+                                <option value="0">Red</option>
+                                <option value="1">Green</option>
+                                <option value="2">Yellow</option>
+                                <option value="3">Blue</option>
+                                <option value="4">Cyan</option>
+                                <option value="5" selected>Custom Color</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group" id="colorPickerGroup">
+                            <label for="cl_crosshaircolor_picker">Custom Color</label>
+                            <input type="color" id="cl_crosshaircolor_picker" class="cs-color-picker" value="#32fa32" />
+                        </div>
+
+                        <div class="control-group">
+                            <input type="checkbox" id="cl_crosshairusealpha" checked>
+                            <label for="cl_crosshairusealpha">Use Alpha</label>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshairalpha">Alpha</label>
+                            <input id="cl_crosshairalpha" type="range" min="0" max="255" step="1" value="255" />
+                            <span class="range-value" id="cl_crosshairalpha_value">255</span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Outline</legend>
+
+                        <div class="control-group">
+                            <input type="checkbox" id="cl_crosshair_drawoutline" checked>
+                            <label for="cl_crosshair_drawoutline">Draw Outline</label>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshair_outlinethickness">Outline Thickness</label>
+                            <input id="cl_crosshair_outlinethickness" type="range" min="0" max="3" step="0.5" value="1" />
+                            <span class="range-value" id="cl_crosshair_outlinethickness_value">1</span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dynamic</legend>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshair_dynamic_splitdist">Split Distance</label>
+                            <input id="cl_crosshair_dynamic_splitdist" type="range" min="0" max="127" step="1" value="7" />
+                            <span class="range-value" id="cl_crosshair_dynamic_splitdist_value">7</span>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshair_dynamic_splitalpha_innermod">Inner Split Alpha</label>
+                            <input id="cl_crosshair_dynamic_splitalpha_innermod" type="range" min="0" max="1.5" step="0.1" value="1" />
+                            <span class="range-value" id="cl_crosshair_dynamic_splitalpha_innermod_value">1</span>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshair_dynamic_splitalpha_outermod">Outer Split Alpha</label>
+                            <input id="cl_crosshair_dynamic_splitalpha_outermod" type="range" min="0" max="1.5" step="0.1" value="0.5" />
+                            <span class="range-value" id="cl_crosshair_dynamic_splitalpha_outermod_value">0.5</span>
+                        </div>
+
+                        <div class="control-group slider-row">
+                            <label for="cl_crosshair_dynamic_maxdist_splitratio">Split Size Ratio</label>
+                            <input id="cl_crosshair_dynamic_maxdist_splitratio" type="range" min="0" max="1.5" step="0.1" value="0.35" />
+                            <span class="range-value" id="cl_crosshair_dynamic_maxdist_splitratio_value">0.35</span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <p class="status-bar-field">girlglock.com</p>
+            <p class="status-bar-field">modify settings above to generate new codes, player cache expires every 3 hours</p>
+            <p class="status-bar-field" style="max-width: 40px; text-decoration: none"><span id="themeToggle" role="button" tabindex="0"></span></p>
+        </div>
+    </div>
+
+    <script type="application/json" id="crosshair-data">{{dataJson}}</script>
+    <script src="/static/vendor/gifenc.js"></script>
+    <script src="/static/crosshairRenderer.js"></script>
+    <script src="/static/crosshair-preview.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>player not found - {{domain}}</title>
+
+    <meta property="og:title" content="player not found">
+    <meta property="og:description" content="{{originalInput}}'s {{errorType}}">
+    <meta property="og:image" content="https://{{domain}}/static/assets/icons/error-icon.png">
+    <meta property="og:type" content="website">
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:image" content="https://{{domain}}/static/assets/icons/error-icon.png">
+    <meta property="twitter:title" content="player not found">
+
+    <meta name="theme-color" content="#ff0000">
+
+    <link rel="stylesheet" type="text/css" href="/static/xpcss/XP.css">
+    <link rel="stylesheet" type="text/css" href="/static/xpcss/XP-ZUNE.css" media="not all" id="darkThemeLink">
+    <script>
+        (function () {
+            var isDark = localStorage.getItem("theme") === "dark";
+            document.getElementById("darkThemeLink").media = isDark ? "all" : "not all";
+        })();
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-image: url("/static/assets/icons/wallpaper.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .window {
+            width: 100%;
+            max-width: 500px;
+            background: var(--surface, #ece9d8);
+        }
+
+        .window-body {
+            text-align: center;
+        }
+
+        .error-icon {
+            width: 96px;
+            margin: 10px 0;
+        }
+
+        .usage-examples {
+            text-align: left;
+            background: #fff;
+            border: 1px solid #7f9db9;
+            padding: 12px 16px;
+            margin: 16px 0;
+            font-family: monospace;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .usage-examples h4 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .error-details {
+            color: #a00;
+            margin: 12px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">GIRLGLOCK</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="window.location.href='//{{domain}}'"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+            <h2>player not found :(</h2>
+            <img class="error-icon" src="/static/assets/icons/error-icon.png" />
+            <div class="error-details">
+                <strong>{{originalInput}}'s</strong> {{errorType}}
+            </div>
+
+            <p>make sure the player profile is public and has played CS2 recently</p>
+
+            <div class="usage-examples">
+                <h4>try these formats instead</h4>
+                &bull; {{usageExamples}}
+            </div>
+
+            <button onclick="window.location.href='//{{domain}}'">Back</button>
+        </div>
+    </div>
+</body>
+</html>

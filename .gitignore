@@ -1,6 +1,11 @@
-jsconfig.d.ts
-package-lock.json
 node_modules/
-cache/
-_old-stuff/
-remote-assets/static/liquipedia-scraper.py
+.env
+.env.local
+.env.*.local
+.vercel
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+*.log

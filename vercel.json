@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "handle": "filesystem" },
     { "source": "/(.*)", "destination": "/api/index" }
   ]
 }

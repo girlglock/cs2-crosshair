@@ -51,6 +51,10 @@ body.surface {
     box-sizing: content-box;
 }
 
+.title-bar {
+    cursor: move;
+}
+
 .window-body {
     text-align: left;
 }
@@ -221,9 +225,9 @@ body.surface {
     min-width: 150px;
 }
 
-.layout-history-frame {
+.history-group {
     margin-top: 8px;
-    padding: 3px;
+    margin-bottom: 0;
 }
 
 .layout-history-scroll {
@@ -395,19 +399,9 @@ body.surface {
     cursor: none;
 }
 
-.sunken-panel {
-    border: 1px solid #7f9db9;
-    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
-}
-
-:root.dark-mode .sunken-panel {
-    border: 1px solid #3a3840;
-    box-shadow: inset -1px -1px #1e1e1e, inset 1px 1px #717171, inset -2px -2px grey, inset 2px 2px #666;
-}
-
 .crosshair-bg {
     position: absolute;
-    inset: 3px;
+    inset: 0;
     background-image: url("/static/assets/maps/overpass.png");
     background-size: cover;
     background-position: center;

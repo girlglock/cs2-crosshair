@@ -63,28 +63,32 @@
         <div class="window-body">
             <div class="layout-grid" id="layoutGrid">
                 <div class="layout-preview-group">
-                    <div class="layout-preview">
-                        <div class="crosshair-preview">
-                            <div class="crosshair-image sunken-panel" id="crosshairImage">
-                                <div class="crosshair-bg" id="crosshairBg"></div>
-                                <canvas id="crosshairCanvas" width="64" height="64"></canvas>
+                    <fieldset class="preview-group">
+                        <legend>Preview</legend>
+                        <div class="layout-preview">
+                            <div class="crosshair-preview">
+                                <div class="crosshair-image" id="crosshairImage">
+                                    <div class="crosshair-bg" id="crosshairBg"></div>
+                                    <canvas id="crosshairCanvas" width="64" height="64"></canvas>
+                                </div>
+                                <div id="movementStateLabel" class="movement-state-label"></div>
                             </div>
-                            <div id="movementStateLabel" class="movement-state-label"></div>
-                        </div>
 
-                        <div class="field-row preview-controls-row">
-                            <select id="aspectRatioSelect" title="Preview stretched aspect ratio"></select>
-                            <select id="weaponSelect" title="Weapon assumed for the Classic style's movement/spread simulation"></select>
-                            <button onclick="prevBackground()">&larr;</button>
-                            <button onclick="nextBackground()">&rarr;</button>
+                            <div class="field-row preview-controls-row">
+                                <select id="aspectRatioSelect" title="Preview stretched aspect ratio"></select>
+                                <select id="weaponSelect" title="Weapon assumed for the Classic style's movement/spread simulation"></select>
+                                <button onclick="prevBackground()">&larr;</button>
+                                <button onclick="nextBackground()">&rarr;</button>
+                            </div>
                         </div>
-                    </div>
+                    </fieldset>
 
-                    <div class="layout-history-frame sunken-panel">
+                    <fieldset class="history-group">
+                        <legend>Crosshair History</legend>
                         <div class="layout-history-scroll">
                             <div class="layout-history" id="versionHistory"></div>
                         </div>
-                    </div>
+                    </fieldset>
                 </div>
 
                 <div class="layout-settings" id="settingsPanel">

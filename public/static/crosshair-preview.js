@@ -1,4 +1,4 @@
-const DEFAULT_SHARE_CODE = "CSGO-PfaBQ-tbEjf-aeQtY-fF6hh-kESyL";
+const DEFAULT_SHARE_CODE = "CSGO-cXRt7-URURp-wo2kd-n4VTi-oTc3K";
 
 let renderer = new CS2CrosshairRenderer();
 let originalCode = DEFAULT_SHARE_CODE;
@@ -255,6 +255,7 @@ function renderVersionHistory() {
         const bg = document.createElement("div");
         bg.className = "history-thumb-bg";
         bg.style.backgroundImage = `url("${backgrounds[hashString(version.shareCode) % backgrounds.length]}")`;
+        bg.style.filter = "blur(2px) brightness(75%)";
         thumbBox.appendChild(bg);
 
         const canvas = document.createElement("canvas");
@@ -322,7 +323,57 @@ document.addEventListener("DOMContentLoaded", function () {
     syncSettingsPanelHeight();
     loadProPlayersData();
     initThemeToggle();
+    initWindowDrag();
 });
+
+function initWindowDrag() {
+    const win = document.getElementById("mainWindow");
+    const titleBar = win.querySelector(".title-bar");
+    if (!win || !titleBar) return;
+
+    let dragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    const startDrag = (clientX, clientY) => {
+        const rect = win.getBoundingClientRect();
+        if (win.style.position !== "fixed") {
+            win.style.position = "fixed";
+            win.style.margin = "0";
+            win.style.left = rect.left + "px";
+            win.style.top = rect.top + "px";
+        }
+        offsetX = clientX - rect.left;
+        offsetY = clientY - rect.top;
+        dragging = true;
+        document.body.style.userSelect = "none";
+    };
+
+    const moveDrag = (clientX, clientY) => {
+        if (!dragging) return;
+        const minVisible = 60;
+        const maxLeft = window.innerWidth - minVisible;
+        const maxTop = window.innerHeight - 30;
+        const newLeft = Math.min(Math.max(clientX - offsetX, minVisible - win.offsetWidth), maxLeft);
+        const newTop = Math.min(Math.max(clientY - offsetY, 0), maxTop);
+        win.style.left = newLeft + "px";
+        win.style.top = newTop + "px";
+    };
+
+    const endDrag = () => {
+        dragging = false;
+        document.body.style.userSelect = "";
+    };
+
+    titleBar.addEventListener("mousedown", (e) => {
+        if (e.target.closest(".title-bar-controls")) return;
+        startDrag(e.clientX, e.clientY);
+        e.preventDefault();
+    });
+
+    window.addEventListener("mousemove", (e) => moveDrag(e.clientX, e.clientY));
+    window.addEventListener("mouseup", endDrag);
+}
 
 function initThemeToggle() {
     const toggle = document.getElementById("themeToggle");

@@ -10,6 +10,9 @@ const { renderCrosshairGif, resolveEmbedWeapon, resolveHorizontalScale, EMBED_MI
 
 const app = express();
 
+let activeGifRequests = 0;
+const MAX_CONCURRENT_GIFS = 3;
+
 app.set("trust proxy", true);
 
 app.use(express.static(path.join(__dirname, "..", "public"), {

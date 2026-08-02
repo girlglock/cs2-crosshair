@@ -346,11 +346,14 @@ document.addEventListener("DOMContentLoaded", function () {
     setupControls();
     setupAspectRatioSelect();
     setupWeaponSelect();
+    setupFireTest();
+    setupBackgroundCycle();
     renderVersionHistory();
     updateControlsFromSettings(currentSettings);
     renderForCurrentStyle();
     updateBackground();
     updateBackgroundStretch();
+    startBackgroundCycle();
     syncSettingsPanelHeight();
     loadProPlayersData();
     initThemeToggle();
@@ -980,7 +983,7 @@ function setupWeaponSelect() {
     });
 }
 
-function computeSpreadPixels(weapon, speed, referenceHeight, splitDistCvar) {
+function computeSpreadPixels(weapon, speed, referenceHeight, splitDistCvar, baselineOverride = null) {
     if (!weapon) {
         return { distancePixels: 0, isSplit: false, cappedDistancePixels: null };
     }
@@ -991,7 +994,8 @@ function computeSpreadPixels(weapon, speed, referenceHeight, splitDistCvar) {
     scale = Math.max(0, Math.min(1, scale));
     scale = Math.pow(scale, MOVEMENT_CURVE_EXPONENT);
 
-    const accuracy = Math.min(1, weapon.standInaccuracy + scale * weapon.moveInaccuracy);
+    const baseline = baselineOverride !== null ? baselineOverride : weapon.standInaccuracy;
+    const accuracy = Math.min(1, baseline + scale * weapon.moveInaccuracy);
 
     const halfFovRad = (CROSSHAIR_FOV_DEGREES * Math.PI / 180) / 2;
     const rawSpread = (accuracy * 320) / Math.tan(halfFovRad);
@@ -1013,6 +1017,14 @@ const MOVEMENT_CYCLE_MS = MOVEMENT_STANDING_MS + MOVEMENT_ACCEL_MS + MOVEMENT_MO
 
 let movementAnimationHandle = null;
 let movementAnimationStart = null;
+
+let previewHoverActive = false;
+let previewMouseHeld = false;
+let fireTestHandle = null;
+let firePenaltyValue = 0;
+let firePausedSpeed = 0;
+let lastShotTime = -Infinity;
+let resumeElapsedMs = 0;
 
 function isAnimatedCrosshairStyle(settings) {
     return parseInt(settings.cl_crosshairstyle) === 2;
@@ -1079,24 +1091,18 @@ function stopMovementAnimation() {
     setMovementSpeed(0);
 }
 
-function renderForCurrentStyle() {
-    updateSplitControlsAvailability();
-    updateColorControlsAvailability();
-
-    if (!isAnimatedCrosshairStyle(currentSettings)) {
-        stopMovementAnimation();
-        renderCrosshairToCanvas(currentSettings);
-        return;
-    }
-
-    if (movementAnimationHandle !== null) return;
-
-    movementAnimationStart = performance.now();
+function startMovementAnimation(elapsedOffsetMs = 0) {
+    movementAnimationStart = performance.now() - elapsedOffsetMs;
 
     const tick = (now) => {
         if (!isAnimatedCrosshairStyle(currentSettings)) {
             stopMovementAnimation();
             renderCrosshairToCanvas(currentSettings);
+            return;
+        }
+
+        if (previewHoverActive) {
+            movementAnimationHandle = null;
             return;
         }
 
@@ -1114,6 +1120,126 @@ function renderForCurrentStyle() {
     movementAnimationHandle = requestAnimationFrame(tick);
 }
 
+function renderForCurrentStyle() {
+    updateSplitControlsAvailability();
+    updateColorControlsAvailability();
+
+    if (!isAnimatedCrosshairStyle(currentSettings)) {
+        stopMovementAnimation();
+        renderCrosshairToCanvas(currentSettings);
+        return;
+    }
+
+    if (previewHoverActive) return;
+    if (movementAnimationHandle !== null) return;
+
+    startMovementAnimation(0);
+}
+
+function canFireWeapon(weapon) {
+    return !!weapon && weapon.cycleTime > 0;
+}
+
+function attemptFire(now) {
+    const weapon = selectedWeapon;
+    if (!canFireWeapon(weapon)) return;
+    if (now - lastShotTime < weapon.cycleTime * 1000) return;
+
+    lastShotTime = now;
+    firePenaltyValue += weapon.fireInaccuracy;
+}
+
+function stopFireTestMode() {
+    previewHoverActive = false;
+    previewMouseHeld = false;
+    if (fireTestHandle !== null) {
+        cancelAnimationFrame(fireTestHandle);
+        fireTestHandle = null;
+    }
+}
+
+function startFireTestLoop() {
+    let lastFrameTime = performance.now();
+
+    const tick = (now) => {
+        if (!previewHoverActive) return;
+
+        if (!isAnimatedCrosshairStyle(currentSettings)) {
+            stopFireTestMode();
+            renderCrosshairToCanvas(currentSettings);
+            return;
+        }
+
+        const dt = (now - lastFrameTime) / 1000;
+        lastFrameTime = now;
+
+        const weapon = selectedWeapon;
+        if (canFireWeapon(weapon)) {
+            if (previewMouseHeld && weapon.fullAuto) {
+                attemptFire(now);
+            }
+            const decayFactor = Math.log(10) / weapon.recoveryTimeStand;
+            firePenaltyValue = weapon.standInaccuracy + (firePenaltyValue - weapon.standInaccuracy) * Math.exp(-decayFactor * dt);
+        }
+
+        const splitDist = Number(currentSettings.cl_crosshair_dynamic_splitdist);
+        const spreadOverride = computeSpreadPixels(weapon, firePausedSpeed, nativeRes.height, splitDist, firePenaltyValue);
+
+        renderCrosshairToCanvas(currentSettings, spreadOverride, firePausedSpeed);
+
+        fireTestHandle = requestAnimationFrame(tick);
+    };
+
+    fireTestHandle = requestAnimationFrame(tick);
+}
+
+function enterPreviewHover() {
+    if (!isAnimatedCrosshairStyle(currentSettings)) return;
+    if (previewHoverActive) return;
+
+    previewHoverActive = true;
+
+    if (movementAnimationHandle !== null) {
+        resumeElapsedMs = performance.now() - movementAnimationStart;
+        cancelAnimationFrame(movementAnimationHandle);
+        movementAnimationHandle = null;
+    }
+
+    firePausedSpeed = 0;
+    setMovementSpeed(firePausedSpeed);
+    firePenaltyValue = selectedWeapon ? selectedWeapon.standInaccuracy : 0;
+    lastShotTime = -Infinity;
+
+    startFireTestLoop();
+}
+
+function exitPreviewHover() {
+    if (!previewHoverActive) return;
+
+    stopFireTestMode();
+
+    if (isAnimatedCrosshairStyle(currentSettings)) {
+        startMovementAnimation(resumeElapsedMs);
+    }
+}
+
+function setupFireTest() {
+    const target = document.getElementById("crosshairImage");
+    if (!target) return;
+
+    target.addEventListener("mouseenter", enterPreviewHover);
+    target.addEventListener("mouseleave", exitPreviewHover);
+    target.addEventListener("mousedown", (e) => {
+        if (e.button !== 0 || !previewHoverActive) return;
+        previewMouseHeld = true;
+        attemptFire(performance.now());
+    });
+    target.addEventListener("mouseup", (e) => {
+        if (e.button !== 0) return;
+        previewMouseHeld = false;
+    });
+}
+
 function updateCrosshair() {
     renderForCurrentStyle();
 
@@ -1121,13 +1247,19 @@ function updateCrosshair() {
     document.getElementById("crosshairCode").value = newCode;
 }
 
+const BACKGROUND_DIR = "/static/assets/panorama/images/map_icons/screenshots/1080p/";
 const backgrounds = [
-    "/static/assets/maps/overpass.png",
-    "/static/assets/maps/cache.jpg",
-    "/static/assets/maps/inferno.png",
-    "/static/assets/maps/nuke.png",
-    "/static/assets/maps/anubis.jpg"
-];
+    "de_ancient_png.png",
+    "de_anubis_png.png",
+    "de_cache_png.png",
+    "de_dust2_png.png",
+    "de_inferno_png.png",
+    "de_mirage_png.png",
+    "de_nuke_png.png",
+    "de_overpass_png.png",
+    "de_train_png.png",
+    "de_vertigo_png.png"
+].map(name => BACKGROUND_DIR + name);
 
 let currentBackgroundIndex = 0;
 const crosshairDiv = document.getElementById("crosshairImage");
@@ -1141,9 +1273,67 @@ function updateBackground() {
     };
     testImg.onerror = function () {
         console.error("failed to load image:", imageUrl);
-        crosshairBg.style.backgroundImage = `url("/static/assets/maps/fallback.jpg")`;
+        crosshairBg.style.backgroundImage = `url("${backgrounds[0]}")`;
     };
     testImg.src = imageUrl;
+}
+
+let backgroundShuffleQueue = [];
+let backgroundHistory = [currentBackgroundIndex];
+let backgroundHistoryPos = 0;
+
+function refillBackgroundShuffleQueue(avoidIndex) {
+    const indices = backgrounds.map((_, i) => i);
+    for (let i = indices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    if (indices.length > 1 && indices[0] === avoidIndex) {
+        [indices[0], indices[1]] = [indices[1], indices[0]];
+    }
+    backgroundShuffleQueue = indices;
+}
+
+function advanceBackground() {
+    if (backgroundHistoryPos < backgroundHistory.length - 1) {
+        backgroundHistoryPos++;
+    } else {
+        if (backgroundShuffleQueue.length === 0) refillBackgroundShuffleQueue(currentBackgroundIndex);
+        backgroundHistory.push(backgroundShuffleQueue.shift());
+        backgroundHistoryPos = backgroundHistory.length - 1;
+    }
+    currentBackgroundIndex = backgroundHistory[backgroundHistoryPos];
+    updateBackground();
+}
+
+function retreatBackground() {
+    if (backgroundHistoryPos === 0) return;
+    backgroundHistoryPos--;
+    currentBackgroundIndex = backgroundHistory[backgroundHistoryPos];
+    updateBackground();
+}
+
+const BACKGROUND_CYCLE_MS = 5000;
+let backgroundCycleHandle = null;
+
+function startBackgroundCycle() {
+    if (backgroundCycleHandle !== null) return;
+    backgroundCycleHandle = setInterval(advanceBackground, BACKGROUND_CYCLE_MS);
+}
+
+function stopBackgroundCycle() {
+    if (backgroundCycleHandle !== null) {
+        clearInterval(backgroundCycleHandle);
+        backgroundCycleHandle = null;
+    }
+}
+
+function setupBackgroundCycle() {
+    const target = document.getElementById("crosshairImage");
+    if (!target) return;
+
+    target.addEventListener("mouseenter", stopBackgroundCycle);
+    target.addEventListener("mouseleave", startBackgroundCycle);
 }
 
 function updateBackgroundStretch() {
@@ -1154,13 +1344,11 @@ function updateBackgroundStretch() {
 }
 
 function prevBackground() {
-    currentBackgroundIndex = (currentBackgroundIndex - 1 + backgrounds.length) % backgrounds.length;
-    updateBackground();
+    retreatBackground();
 }
 
 function nextBackground() {
-    currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
-    updateBackground();
+    advanceBackground();
 }
 
 const SNAP_BACK_TRANSITION = "transform 0.25s ease";

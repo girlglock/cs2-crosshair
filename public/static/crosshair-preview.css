@@ -403,7 +403,7 @@ body.surface {
 .crosshair-bg {
     position: absolute;
     inset: 0;
-    background-image: url("/static/assets/maps/overpass.png");
+    background-image: url("/static/assets/panorama/images/map_icons/screenshots/1080p/de_ancient_png.png");
     background-size: cover;
     background-position: center;
     transform-origin: center;

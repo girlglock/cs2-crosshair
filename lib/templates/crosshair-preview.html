@@ -75,10 +75,18 @@
                             </div>
 
                             <div class="field-row preview-controls-row">
-                                <select id="aspectRatioSelect" title="Preview stretched aspect ratio"></select>
-                                <select id="weaponSelect" title="Weapon assumed for the Classic style's movement/spread simulation"></select>
-                                <button onclick="prevBackground()">&larr;</button>
-                                <button onclick="nextBackground()">&rarr;</button>
+                                <div class="preview-controls-side preview-controls-left">
+                                    <select id="aspectRatioSelect" title="Preview stretched aspect ratio"></select>
+                                    <select id="weaponSelect" title="Weapon assumed for the Classic style's movement/spread simulation"></select>
+                                </div>
+                                <div class="preview-controls-arrows">
+                                    <button onclick="prevBackground()">&larr;</button>
+                                    <button onclick="nextBackground()">&rarr;</button>
+                                </div>
+                                <div class="preview-controls-side preview-controls-right">
+                                    <input type="range" id="previewScaleSlider" min="0" max="3" step="1" title="Preview zoom" />
+                                    <span id="previewScaleLabel" class="range-value">1x</span>
+                                </div>
                             </div>
                         </div>
                     </fieldset>

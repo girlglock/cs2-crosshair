@@ -360,7 +360,38 @@ body.surface {
 }
 
 .preview-controls-row {
-    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.preview-controls-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.preview-controls-left {
+    justify-content: flex-end;
+}
+
+.preview-controls-right {
+    justify-content: flex-start;
+}
+
+.preview-controls-arrows {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.preview-controls-right input[type="range"] {
+    width: 80px;
+}
+
+.preview-controls-right .range-value {
+    min-width: 22px;
 }
 
 .movement-state-label {

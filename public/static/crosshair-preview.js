@@ -346,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setupControls();
     setupAspectRatioSelect();
     setupWeaponSelect();
+    setupPreviewScaleSelect();
     setupFireTest();
     setupBackgroundCycle();
     renderVersionHistory();
@@ -711,6 +712,24 @@ let nativeRes = { width: 1920, height: 1080 };
 let aspectRatioOptions = [];
 let selectedAspectRatio = null;
 
+const PREVIEW_SCALE_OPTIONS = [1, 2, 4, 8];
+let previewScale = 1;
+
+function setupPreviewScaleSelect() {
+    const slider = document.getElementById("previewScaleSlider");
+    const label = document.getElementById("previewScaleLabel");
+    if (!slider) return;
+
+    slider.value = "0";
+    if (label) label.textContent = `${previewScale}x`;
+
+    slider.addEventListener("input", function () {
+        previewScale = PREVIEW_SCALE_OPTIONS[parseInt(this.value, 10)];
+        if (label) label.textContent = `${previewScale}x`;
+        renderForCurrentStyle();
+    });
+}
+
 function detectNativeResolution() {
     const dpr = window.devicePixelRatio || 1;
     return {
@@ -932,8 +951,8 @@ function renderCrosshairToCanvas(settings, spreadOverride = null, speed = 0) {
 
     canvas.width = frame.width;
     canvas.height = frame.height;
-    canvas.style.width = frame.width + "px";
-    canvas.style.height = frame.height + "px";
+    canvas.style.width = (frame.width * previewScale) + "px";
+    canvas.style.height = (frame.height * previewScale) + "px";
     ctx.imageSmoothingEnabled = false;
     ctx.clearRect(0, 0, frame.width, frame.height);
     ctx.drawImage(frame.canvas, 0, 0);

@@ -125,10 +125,25 @@
       "type": "streamer",
       "image": "/static/assets/player_images/duwap.png"
     },
-    "im_ie": {
+    "immie573": {
       "steamid": "76561197961231625",
       "type": "streamer",
       "image": "/static/assets/player_images/none.png"
+    },
+    "upixel": {
+      "steamid": "76561198305647246",
+      "type": "social",
+      "image": "/static/assets/player_images/upixel.png"
+    },
+    "tomokomot": {
+      "steamid": "76561198360028049",
+      "type": "streamer",
+      "image": "/static/assets/player_images/tomokomot.png"
+    },
+    "ipsusu": {
+      "steamid": "76561198078177782",
+      "type": "streamer",
+      "image": "/static/assets/player_images/ipsusu.png"
     },
     "epidemic": {
       "steamid": "76561198044637366",

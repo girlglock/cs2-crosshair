@@ -1,11 +1,12 @@
 const express = require("express");
 const path = require("path");
+const { createCanvas } = require("@napi-rs/canvas");
 
 const config = require("../lib/config");
 const { getCrosshairHandler } = require("../lib/mainHandler");
 const { sanitizePath, hostValidation, securityHeaders, checkRateLimit } = require("../lib/secs");
 const { CS2CrosshairRenderer } = require("../public/static/crosshairRenderer");
-const { renderCrosshairGif } = require("../lib/gifRenderer");
+const { renderCrosshairGif, resolveEmbedWeapon, resolveHorizontalScale, EMBED_MIN_CANVAS_SIZE } = require("../lib/gifRenderer");
 
 const app = express();
 
@@ -41,9 +42,11 @@ app.get("/image/:filename", (req, res) => {
         const renderer = new CS2CrosshairRenderer();
         const settings = renderer.parseCode(crosshairCode);
         const isClassic = parseInt(settings.cl_crosshairstyle) === 2;
+        const weaponName = typeof req.query.weapon === "string" ? req.query.weapon : null;
+        const aspectLabel = typeof req.query.aspect === "string" ? req.query.aspect : null;
 
         if (isClassic) {
-            const gifBuffer = renderCrosshairGif(renderer, settings, 1080);
+            const gifBuffer = renderCrosshairGif(renderer, settings, 1080, weaponName, aspectLabel);
             res.set({
                 "Content-Type": "image/gif",
                 "Cache-Control": "public, max-age=3600"
@@ -51,7 +54,20 @@ app.get("/image/:filename", (req, res) => {
             return res.send(gifBuffer);
         }
 
-        const canvas = renderer.renderCrosshair(settings, 1080);
+        const weapon = resolveEmbedWeapon(weaponName);
+        const baseDistanceGoal = settings.cl_crosshairgap_useweaponvalue ? weapon.deployedGap : 4;
+        let canvas = renderer.renderCrosshair(settings, 1080, null, baseDistanceGoal, EMBED_MIN_CANVAS_SIZE);
+
+        const horizontalScale = resolveHorizontalScale(aspectLabel, 1080);
+        if (horizontalScale !== 1) {
+            const stretchedWidth = Math.max(1, Math.round(canvas.width * horizontalScale));
+            const stretched = createCanvas(stretchedWidth, canvas.height);
+            const stretchedCtx = stretched.getContext("2d");
+            stretchedCtx.imageSmoothingEnabled = true;
+            stretchedCtx.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, stretchedWidth, canvas.height);
+            canvas = stretched;
+        }
+
         const imageBuffer = canvas.toBuffer("image/png");
 
         res.set({

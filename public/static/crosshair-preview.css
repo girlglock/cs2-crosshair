@@ -353,6 +353,7 @@ body.surface {
     width: 100%;
     display: flex;
     flex-direction: column;
+    max-height: 230px;
 }
 
 .preview-controls-row {

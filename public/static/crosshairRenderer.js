@@ -206,11 +206,11 @@
             return Math.round(x);
         }
 
-        renderCrosshair(settings, referenceHeight = 1080, spreadOverride = null, baseDistanceGoal = 4) {
+        renderCrosshair(settings, referenceHeight = 1080, spreadOverride = null, baseDistanceGoal = 4, minCanvasSize = 8) {
             const style = parseInt(settings.cl_crosshairstyle);
 
             if (style < 2) {
-                return createBlankCanvas(8, 8);
+                return createBlankCanvas(minCanvasSize, minCanvasSize);
             }
 
             const yresScale = referenceHeight / 480;
@@ -247,9 +247,9 @@
             }
 
             const mainReach = crosshairDistance + halfThick + barSizeInner + outlineThickness;
-            const outerReach = showSplit ? (outerDistance + halfThick + barSizeInner + barSizeOuter + outlineThickness) : 0;
+            const outerReach = (showSplit && barSizeOuter > 0) ? (outerDistance + halfThick + barSizeInner + barSizeOuter + outlineThickness) : 0;
             const halfExtent = Math.max(mainReach, outerReach);
-            const canvasSize = Math.max(8, Math.ceil(Math.abs(halfExtent)) * 2 + 4);
+            const canvasSize = Math.max(minCanvasSize, Math.ceil(Math.abs(halfExtent)) * 2 + 4);
 
             const canvas = createBlankCanvas(canvasSize, canvasSize);
             const ctx = canvas.getContext("2d");

@@ -11,6 +11,18 @@ let selectedVersionIndex = 0;
 let playerColorRGB = null;
 let playerNickname = "";
 
+function updateUrlParams(updates) {
+    const url = new URL(window.location.href);
+    Object.entries(updates).forEach(([key, value]) => {
+        if (value === null || value === undefined) {
+            url.searchParams.delete(key);
+        } else {
+            url.searchParams.set(key, value);
+        }
+    });
+    history.replaceState(null, "", url.pathname + url.search + url.hash);
+}
+
 function readCrosshairData() {
     const dataEl = document.getElementById("crosshair-data");
     if (!dataEl) return {};
@@ -200,8 +212,8 @@ function hashString(str) {
     return Math.abs(hash);
 }
 
-function drawThumbnailFrame(canvas, settings, spreadOverride = null) {
-    const frame = computeCrosshairFrame(settings, spreadOverride);
+function drawThumbnailFrame(canvas, settings, spreadOverride = null, speed = 0) {
+    const frame = computeCrosshairFrame(settings, spreadOverride, speed);
     const ctx = canvas.getContext("2d");
     const size = canvas.width;
     ctx.imageSmoothingEnabled = false;
@@ -216,9 +228,9 @@ function startThumbnailAnimation(canvas, settings, generation) {
     const tick = (now) => {
         if (generation !== historyAnimationGeneration) return;
 
-        const phase = getMovementPhase(now - start, selectedWeapon.maxSpeed);
+        const phase = getMovementPhase(now - start, selectedWeapon);
         const spreadOverride = computeSpreadPixels(selectedWeapon, phase.speed, nativeRes.height, splitDist);
-        drawThumbnailFrame(canvas, settings, spreadOverride);
+        drawThumbnailFrame(canvas, settings, spreadOverride, phase.speed);
 
         requestAnimationFrame(tick);
     };
@@ -293,6 +305,7 @@ function selectVersion(index) {
     renderStats({ nickname: playerNickname, stats: version.stats });
 
     renderVersionHistory();
+    updateUrlParams({ history: index === 0 ? null : String(index) });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -311,6 +324,24 @@ document.addEventListener("DOMContentLoaded", function () {
     renderStats(data);
     versions = buildVersionList(data);
     selectedVersionIndex = 0;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const historyParam = urlParams.get("history");
+    if (historyParam !== null) {
+        const idx = parseInt(historyParam, 10);
+        if (Number.isInteger(idx) && idx >= 0 && idx < versions.length) {
+            selectedVersionIndex = idx;
+        }
+    }
+
+    if (selectedVersionIndex !== 0) {
+        const version = versions[selectedVersionIndex];
+        originalCode = version.shareCode;
+        originalSettings = renderer.parseCode(originalCode);
+        currentSettings = { ...originalSettings };
+        document.getElementById("crosshairCode").value = originalCode;
+        renderStats({ nickname: playerNickname, stats: version.stats });
+    }
 
     setupControls();
     setupAspectRatioSelect();
@@ -675,15 +706,6 @@ function updateControlsFromSettings(settings) {
 
 const MAX_PREVIEW_PX = 512;
 
-const ASPECT_RATIO_PRESETS = [
-    { label: "4:3", ratio: 4 / 3 },
-    { label: "5:4", ratio: 5 / 4 },
-    { label: "16:10", ratio: 16 / 10 },
-    { label: "16:9", ratio: 16 / 9 },
-    { label: "21:9", ratio: 21 / 9 },
-    { label: "32:9", ratio: 32 / 9 }
-];
-
 let nativeRes = { width: 1920, height: 1080 };
 let aspectRatioOptions = [];
 let selectedAspectRatio = null;
@@ -723,12 +745,21 @@ function setupAspectRatioSelect() {
         select.appendChild(option);
     });
 
-    selectedAspectRatio = aspectRatioOptions[nativeIndex];
-    select.value = String(nativeIndex);
+    let initialIndex = nativeIndex;
+    const aspectParam = new URLSearchParams(window.location.search).get("aspect");
+    if (aspectParam) {
+        const matchedIndex = aspectRatioOptions.findIndex(ar => ar.label.toLowerCase() === aspectParam.toLowerCase());
+        if (matchedIndex !== -1) initialIndex = matchedIndex;
+    }
+
+    selectedAspectRatio = aspectRatioOptions[initialIndex];
+    select.value = String(initialIndex);
     select.addEventListener("change", function () {
-        selectedAspectRatio = aspectRatioOptions[parseInt(this.value, 10)];
+        const index = parseInt(this.value, 10);
+        selectedAspectRatio = aspectRatioOptions[index];
         renderForCurrentStyle();
         updateBackgroundStretch();
+        updateUrlParams({ aspect: index === nativeIndex ? null : selectedAspectRatio.label });
     });
 }
 
@@ -867,11 +898,14 @@ function sharpenCanvas(canvas, amount = SHARPEN_AMOUNT, radius = SHARPEN_RADIUS)
     return canvas;
 }
 
-function computeCrosshairFrame(settings, spreadOverride = null) {
+function computeCrosshairFrame(settings, spreadOverride = null, speed = 0) {
     const ratio = selectedAspectRatio ? selectedAspectRatio.ratio : (nativeRes.width / nativeRes.height);
     const gameRes = { width: Math.round(nativeRes.height * ratio), height: nativeRes.height };
 
-    const baseDistanceGoal = settings.cl_crosshairgap_useweaponvalue ? selectedWeapon.deployedGap : 4;
+    let baseDistanceGoal = settings.cl_crosshairgap_useweaponvalue ? selectedWeapon.deployedGap : 4;
+    if (parseInt(settings.cl_crosshairstyle) === 2 && speed > FAST_MOVE_GAP_THRESHOLD) {
+        baseDistanceGoal *= FAST_MOVE_GAP_MULTIPLIER;
+    }
 
     const gameRendered = renderer.renderCrosshair(settings, gameRes.height, spreadOverride, baseDistanceGoal);
     const intermediateSize = gameRendered.width;
@@ -890,11 +924,11 @@ function computeCrosshairFrame(settings, spreadOverride = null) {
     return { canvas: resultCanvas, width: finalWidth, height: finalHeight };
 }
 
-function renderCrosshairToCanvas(settings, spreadOverride = null) {
+function renderCrosshairToCanvas(settings, spreadOverride = null, speed = 0) {
     const canvas = document.getElementById("crosshairCanvas");
     const ctx = canvas.getContext("2d");
 
-    const frame = computeCrosshairFrame(settings, spreadOverride);
+    const frame = computeCrosshairFrame(settings, spreadOverride, speed);
 
     canvas.width = frame.width;
     canvas.height = frame.height;
@@ -905,43 +939,11 @@ function renderCrosshairToCanvas(settings, spreadOverride = null) {
     ctx.drawImage(frame.canvas, 0, 0);
 }
 
-const CS_PLAYER_SPEED_RUN = 260;
 const CS_PLAYER_SPEED_DUCK_MODIFIER = 0.34;
 const MOVEMENT_CURVE_EXPONENT = 0.25;
+const FAST_MOVE_GAP_THRESHOLD = 100;
+const FAST_MOVE_GAP_MULTIPLIER = 1.5;
 const CROSSHAIR_FOV_DEGREES = 90;
-
-const WEAPON_PRESETS = [
-    { category: "Pistols", name: "Glock-18", moveInaccuracy: 0.018, deployedGap: 2, maxSpeed: 240 },
-    { category: "Pistols", name: "USP-S", moveInaccuracy: 0.017, deployedGap: 2, maxSpeed: 240 },
-    { category: "Pistols", name: "P2000", moveInaccuracy: 0.017, deployedGap: 2, maxSpeed: 240 },
-    { category: "Pistols", name: "P250", moveInaccuracy: 0.019, deployedGap: 2, maxSpeed: 240 },
-    { category: "Pistols", name: "Five-SeveN", moveInaccuracy: 0.018, deployedGap: 2, maxSpeed: 240 },
-    { category: "Pistols", name: "Tec-9", moveInaccuracy: 0.023, deployedGap: 3, maxSpeed: 240 },
-    { category: "Pistols", name: "CZ75-Auto", moveInaccuracy: 0.025, deployedGap: 3, maxSpeed: 240 },
-    { category: "Pistols", name: "Dual Berettas", moveInaccuracy: 0.024, deployedGap: 3, maxSpeed: 240 },
-    { category: "Pistols", name: "Desert Eagle", moveInaccuracy: 0.033, deployedGap: 3, maxSpeed: 230 },
-    { category: "Pistols", name: "R8 Revolver", moveInaccuracy: 0.030, deployedGap: 3, maxSpeed: 220 },
-    { category: "SMGs", name: "MAC-10", moveInaccuracy: 0.012, deployedGap: 3, maxSpeed: 240 },
-    { category: "SMGs", name: "MP9", moveInaccuracy: 0.011, deployedGap: 3, maxSpeed: 240 },
-    { category: "SMGs", name: "MP7", moveInaccuracy: 0.012, deployedGap: 3, maxSpeed: 220 },
-    { category: "SMGs", name: "MP5-SD", moveInaccuracy: 0.011, deployedGap: 3, maxSpeed: 235 },
-    { category: "SMGs", name: "UMP-45", moveInaccuracy: 0.013, deployedGap: 3, maxSpeed: 230 },
-    { category: "SMGs", name: "P90", moveInaccuracy: 0.015, deployedGap: 3, maxSpeed: 230 },
-    { category: "SMGs", name: "PP-Bizon", moveInaccuracy: 0.013, deployedGap: 3, maxSpeed: 240 },
-    { category: "Rifles", name: "Galil AR", moveInaccuracy: 0.035, deployedGap: 4, maxSpeed: 215 },
-    { category: "Rifles", name: "FAMAS", moveInaccuracy: 0.033, deployedGap: 4, maxSpeed: 220 },
-    { category: "Rifles", name: "AK-47", moveInaccuracy: 0.045, deployedGap: 5, maxSpeed: 215 },
-    { category: "Rifles", name: "M4A4", moveInaccuracy: 0.039, deployedGap: 4, maxSpeed: 225 },
-    { category: "Rifles", name: "M4A1-S", moveInaccuracy: 0.036, deployedGap: 4, maxSpeed: 225 },
-    { category: "Rifles", name: "SG 553", moveInaccuracy: 0.037, deployedGap: 4, maxSpeed: 210 },
-    { category: "Rifles", name: "AUG", moveInaccuracy: 0.035, deployedGap: 4, maxSpeed: 220 },
-    { category: "Heavy", name: "Nova", moveInaccuracy: 0.027, deployedGap: 4, maxSpeed: 220 },
-    { category: "Heavy", name: "XM1014", moveInaccuracy: 0.025, deployedGap: 4, maxSpeed: 215 },
-    { category: "Heavy", name: "Sawed-Off", moveInaccuracy: 0.029, deployedGap: 4, maxSpeed: 210 },
-    { category: "Heavy", name: "MAG-7", moveInaccuracy: 0.025, deployedGap: 4, maxSpeed: 225 },
-    { category: "Heavy", name: "M249", moveInaccuracy: 0.033, deployedGap: 5, maxSpeed: 195 },
-    { category: "Heavy", name: "Negev", moveInaccuracy: 0.036, deployedGap: 5, maxSpeed: 150 }
-];
 
 let selectedWeapon = WEAPON_PRESETS.find(w => w.name === "AK-47") || WEAPON_PRESETS[0];
 
@@ -962,25 +964,34 @@ function setupWeaponSelect() {
         select.appendChild(group);
     });
 
+    const weaponParam = new URLSearchParams(window.location.search).get("weapon");
+    if (weaponParam) {
+        const matched = WEAPON_PRESETS.find(w => w.name.toLowerCase() === weaponParam.toLowerCase());
+        if (matched) selectedWeapon = matched;
+    }
+
+    const defaultWeaponName = (WEAPON_PRESETS.find(w => w.name === "AK-47") || WEAPON_PRESETS[0]).name;
+
     select.value = selectedWeapon.name;
     select.addEventListener("change", function () {
         selectedWeapon = WEAPON_PRESETS.find(w => w.name === this.value) || selectedWeapon;
         renderForCurrentStyle();
+        updateUrlParams({ weapon: selectedWeapon.name === defaultWeaponName ? null : selectedWeapon.name });
     });
 }
 
 function computeSpreadPixels(weapon, speed, referenceHeight, splitDistCvar) {
-    if (!weapon || speed <= 0) {
+    if (!weapon) {
         return { distancePixels: 0, isSplit: false, cappedDistancePixels: null };
     }
 
-    const lower = CS_PLAYER_SPEED_RUN * CS_PLAYER_SPEED_DUCK_MODIFIER;
-    const upper = CS_PLAYER_SPEED_RUN * 0.95;
+    const lower = weapon.maxSpeed * CS_PLAYER_SPEED_DUCK_MODIFIER;
+    const upper = weapon.maxSpeed * 0.95;
     let scale = (speed - lower) / (upper - lower);
     scale = Math.max(0, Math.min(1, scale));
     scale = Math.pow(scale, MOVEMENT_CURVE_EXPONENT);
 
-    const accuracy = Math.min(1, scale * weapon.moveInaccuracy);
+    const accuracy = Math.min(1, weapon.standInaccuracy + scale * weapon.moveInaccuracy);
 
     const halfFovRad = (CROSSHAIR_FOV_DEGREES * Math.PI / 180) / 2;
     const rawSpread = (accuracy * 320) / Math.tan(halfFovRad);
@@ -1032,7 +1043,8 @@ function updateColorControlsAvailability() {
     picker.closest(".control-group").classList.toggle("control-disabled", !enabled);
 }
 
-function getMovementPhase(elapsedMs, maxSpeed = CS_PLAYER_SPEED_RUN) {
+function getMovementPhase(elapsedMs, weapon) {
+    const maxSpeed = weapon.maxSpeed;
     const t = elapsedMs % MOVEMENT_CYCLE_MS;
     let mark = MOVEMENT_STANDING_MS;
 
@@ -1088,13 +1100,13 @@ function renderForCurrentStyle() {
             return;
         }
 
-        const phase = getMovementPhase(now - movementAnimationStart, selectedWeapon.maxSpeed);
+        const phase = getMovementPhase(now - movementAnimationStart, selectedWeapon);
         setMovementSpeed(phase.speed);
 
         const splitDist = Number(currentSettings.cl_crosshair_dynamic_splitdist);
         const spreadOverride = computeSpreadPixels(selectedWeapon, phase.speed, nativeRes.height, splitDist);
 
-        renderCrosshairToCanvas(currentSettings, spreadOverride);
+        renderCrosshairToCanvas(currentSettings, spreadOverride, phase.speed);
 
         movementAnimationHandle = requestAnimationFrame(tick);
     };
@@ -1293,8 +1305,8 @@ async function buildClassicCrosshairGif(settings, weapon) {
 
     const splitDist = Number(settings.cl_crosshair_dynamic_splitdist);
 
-    const maxSpread = computeSpreadPixels(weapon, CS_PLAYER_SPEED_RUN, nativeRes.height, splitDist);
-    const maxFrame = computeCrosshairFrame(settings, maxSpread);
+    const maxSpread = computeSpreadPixels(weapon, weapon.maxSpeed, nativeRes.height, splitDist, false);
+    const maxFrame = computeCrosshairFrame(settings, maxSpread, weapon.maxSpeed);
     const gifWidth = maxFrame.width;
     const gifHeight = maxFrame.height;
 
@@ -1307,9 +1319,9 @@ async function buildClassicCrosshairGif(settings, weapon) {
     const gif = GIFEncoder();
 
     for (let t = 0; t < MOVEMENT_CYCLE_MS; t += GIF_FRAME_INTERVAL_MS) {
-        const phase = getMovementPhase(t, weapon.maxSpeed);
+        const phase = getMovementPhase(t, weapon);
         const spreadOverride = computeSpreadPixels(weapon, phase.speed, nativeRes.height, splitDist);
-        const frame = computeCrosshairFrame(settings, spreadOverride);
+        const frame = computeCrosshairFrame(settings, spreadOverride, phase.speed);
 
         scratchCtx.clearRect(0, 0, gifWidth, gifHeight);
         scratchCtx.drawImage(frame.canvas, (gifWidth - frame.width) / 2, (gifHeight - frame.height) / 2);

@@ -5,16 +5,25 @@ html {
 body.surface {
     margin: 0;
     padding: 20px 0;
-    background-image: url("/static/assets/icons/wallpaper.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+.page-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.page-backdrop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 * {

@@ -21,6 +21,7 @@
 </head>
 
 <body class="surface">
+    <div class="page-backdrop"><img src="/static/assets/icons/wallpaper.avif"/></div>
     <div class="window" id="mainWindow">
         <div class="title-bar">
             <div class="title-bar-text"><img src="/static/assets/icons/favicon.ico" alt="" /> silly crosshair editor</div>
@@ -45,13 +46,13 @@
                         <div id="autocompleteResults" class="autocomplete-results"></div>
                     </div>
 
-                    <button onclick="goToSearch()">Search</button>
+                    <button id="searchButton">Search</button>
                 </div>
                 <div class="field-row code-row">
                     <input type="text" readonly id="crosshairCode" value="" />
-                    <button onclick="copyCode()">Copy</button>
-                    <button onclick="downloadImage(event)">Save</button>
-                    <button onclick="shareCrosshair()">Share</button>
+                    <button id="copyButton">Copy</button>
+                    <button id="saveButton">Save</button>
+                    <button id="shareButton">Share</button>
                 </div>
                 <div class="player-stats-row"  style="margin-top: 18px;">
                     <div class="player-info" id="playerInfo"></div>
@@ -80,8 +81,8 @@
                                     <select id="weaponSelect" title="Weapon assumed for the Classic style's movement/spread simulation"></select>
                                 </div>
                                 <div class="preview-controls-arrows">
-                                    <button onclick="prevBackground()">&larr;</button>
-                                    <button onclick="nextBackground()">&rarr;</button>
+                                    <button id="prevBackgroundButton">&larr;</button>
+                                    <button id="nextBackgroundButton">&rarr;</button>
                                 </div>
                                 <div class="preview-controls-side preview-controls-right">
                                     <input type="range" id="previewScaleSlider" min="0" max="3" step="1" title="Preview zoom" />
@@ -234,7 +235,7 @@
     <script src="/static/vendor/gifenc.js"></script>
     <script src="/static/crosshairRenderer.js"></script>
     <script src="/static/weaponPresets.js"></script>
-    <script src="/static/crosshair-preview.js"></script>
+    <script type="module" src="/static/crosshair-preview.js"></script>
 </body>
 
 </html>

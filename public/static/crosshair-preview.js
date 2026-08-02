@@ -707,8 +707,6 @@ function updateControlsFromSettings(settings) {
     }
 }
 
-const MAX_PREVIEW_PX = 512;
-
 let nativeRes = { width: 1920, height: 1080 };
 let aspectRatioOptions = [];
 let selectedAspectRatio = null;
@@ -914,12 +912,11 @@ function computeCrosshairFrame(settings, spreadOverride = null, speed = 0) {
     const intermediateSize = gameRendered.width;
 
     const horizontalScale = nativeRes.width / gameRes.width;
-    const verticalScale = nativeRes.height / gameRes.height;
-    const finalWidth = Math.min(MAX_PREVIEW_PX, Math.max(8, Math.round(intermediateSize * horizontalScale)));
-    const finalHeight = Math.min(MAX_PREVIEW_PX, Math.max(8, Math.round(intermediateSize * verticalScale)));
+    const finalWidth = Math.max(8, Math.round(intermediateSize * horizontalScale));
+    const finalHeight = intermediateSize;
 
     let resultCanvas = gameRendered;
-    if (Math.abs(horizontalScale - 1) > 0.001 || Math.abs(verticalScale - 1) > 0.001) {
+    if (finalWidth !== intermediateSize) {
         resultCanvas = resizeBilinear(gameRendered, finalWidth, finalHeight);
         sharpenCanvas(resultCanvas);
     }
@@ -1357,8 +1354,8 @@ const FOLLOW_EDGE_MARGIN = 10;
 crosshairDiv.addEventListener("mousemove", (e) => {
     const canvas = document.getElementById("crosshairCanvas");
     const rect = crosshairDiv.getBoundingClientRect();
-    const maxOffsetX = Math.max(0, rect.width / 2 - FOLLOW_EDGE_MARGIN);
-    const maxOffsetY = Math.max(0, rect.height / 2 - FOLLOW_EDGE_MARGIN);
+    const maxOffsetX = Math.max(0, (rect.width - canvas.offsetWidth) / 2 - FOLLOW_EDGE_MARGIN);
+    const maxOffsetY = Math.max(0, (rect.height - canvas.offsetHeight) / 2 - FOLLOW_EDGE_MARGIN);
     const dx = Math.max(-maxOffsetX, Math.min(maxOffsetX, e.clientX - (rect.left + rect.width / 2)));
     const dy = Math.max(-maxOffsetY, Math.min(maxOffsetY, e.clientY - (rect.top + rect.height / 2)));
 

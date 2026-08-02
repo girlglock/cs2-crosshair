@@ -319,7 +319,7 @@ body.surface {
 
 .layout-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
         "header"
         "preview"
@@ -329,7 +329,7 @@ body.surface {
 
 @media (min-width: 860px) {
     .layout-grid {
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
         grid-template-areas: "header header" "preview settings";
         column-gap: 20px;
     }
@@ -341,12 +341,14 @@ body.surface {
 
 .layout-preview-group {
     grid-area: preview;
+    min-width: 0;
 }
 
 .layout-preview {
     position: relative;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .layout-preview .crosshair-preview {
@@ -354,6 +356,7 @@ body.surface {
     display: flex;
     flex-direction: column;
     max-height: 230px;
+    min-width: 0;
 }
 
 .preview-controls-row {
@@ -387,6 +390,10 @@ body.surface {
     font-weight: bold;
 }
 
+.preview-group {
+    min-width: 0;
+}
+
 .crosshair-image {
     width: 100%;
     flex: 1;
@@ -414,6 +421,7 @@ body.surface {
     position: relative;
     width: 64px;
     height: 64px;
+    flex-shrink: 0;
     image-rendering: pixelated;
 }
 

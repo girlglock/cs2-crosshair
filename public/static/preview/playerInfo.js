@@ -15,6 +15,7 @@ export function createIconLink(href, imgSrc, linkStyle) {
     a.style.cssText = linkStyle || "";
     const img = document.createElement("img");
     img.src = imgSrc;
+    img.loading = "lazy";
     img.style.cssText = iconStyle;
     a.appendChild(img);
     return a;
@@ -39,6 +40,7 @@ export function renderPlayerInfo(data, colorRGB) {
         const avatar = document.createElement("img");
         avatar.src = data.avatarUrl;
         avatar.alt = "";
+        avatar.loading = "lazy";
         avatar.style.cssText = "width: 48px; height: 48px; margin-right: 4px; vertical-align: middle;";
         span.appendChild(avatar);
     }
@@ -94,6 +96,7 @@ export function renderStats(data) {
 
     const wrIcon = document.createElement("img");
     wrIcon.src = "/static/assets/icons/wr-icon.png";
+    wrIcon.loading = "lazy";
     wrIcon.style.cssText = statIconStyle;
     line.appendChild(wrIcon);
     line.appendChild(document.createTextNode(` ${(stats.winRate * 100).toFixed(0)}% • `));
@@ -112,6 +115,7 @@ export function renderStats(data) {
 
     const hsIcon = document.createElement("img");
     hsIcon.src = "/static/assets/icons/hs-icon.png";
+    hsIcon.loading = "lazy";
     hsIcon.style.cssText = statIconStyle;
     line.appendChild(hsIcon);
     line.appendChild(document.createTextNode(` ${(stats.headshotPercentage * 100).toFixed(0)}%`));

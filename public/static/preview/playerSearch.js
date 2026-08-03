@@ -128,6 +128,7 @@ export class PlayerAutocomplete {
                 const img = document.createElement("img");
                 img.className = "autocomplete-img";
                 img.src = match.image;
+                img.loading = "lazy";
                 item.appendChild(img);
             }
 

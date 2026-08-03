@@ -28,15 +28,24 @@
         body {
             margin: 0;
             padding: 20px;
-            background-image: url("/static/assets/icons/wallpaper.avif");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             min-height: 100vh;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .page-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .page-backdrop img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
         .window {
@@ -79,6 +88,7 @@
 </head>
 
 <body>
+    <div class="page-backdrop"><img src="/static/assets/icons/wallpaper.webp" alt="" loading="lazy" /></div>
     <div class="window">
         <div class="title-bar">
             <div class="title-bar-text">GIRLGLOCK</div>
@@ -89,7 +99,7 @@
 
         <div class="window-body">
             <h2>player not found :(</h2>
-            <img class="error-icon" src="/static/assets/icons/error-icon.png" />
+            <img class="error-icon" src="/static/assets/icons/error-icon.png" loading="lazy" />
             <div class="error-details">
                 <strong>{{originalInput}}'s</strong> {{errorType}}
             </div>

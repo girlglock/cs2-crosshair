@@ -1,3 +1,53 @@
+/**
+ * @typedef {Object} CrosshairSettings
+ * @property {number} cl_crosshairalpha
+ * @property {number} cl_crosshaircolor
+ * @property {number} cl_crosshaircolor_r
+ * @property {number} cl_crosshaircolor_g
+ * @property {number} cl_crosshaircolor_b
+ * @property {boolean} cl_crosshairdot
+ * @property {number} cl_crosshairgap
+ * @property {number} cl_crosshairsize
+ * @property {number} cl_crosshairstyle
+ * @property {boolean} cl_crosshairusealpha
+ * @property {number} cl_crosshairthickness
+ * @property {boolean} cl_crosshair_drawoutline
+ * @property {number} cl_crosshair_outlinethickness
+ * @property {number} cl_crosshair_dynamic_maxdist_splitratio
+ * @property {number} cl_crosshair_dynamic_splitalpha_innermod
+ * @property {number} cl_crosshair_dynamic_splitalpha_outermod
+ * @property {number} cl_crosshair_dynamic_splitdist
+ * @property {boolean} cl_crosshair_t
+ * @property {number} cl_fixedcrosshairgap
+ * @property {boolean} cl_crosshairgap_useweaponvalue
+ * @property {boolean} cl_crosshair_recoil
+ */
+
+/**
+ * spread state for cl_crosshairstyle 2
+ * @typedef {Object} SpreadOverride
+ * @property {number} distancePixels
+ * @property {boolean} isSplit
+ * @property {number|null} cappedDistancePixels
+ */
+
+/**
+ * @typedef {[number, number, number, number, number]} CrosshairSegment [x0, y0, x1, y1, alphaMultiplier]
+ */
+
+/**
+ * @typedef {Object} CrosshairGeometry
+ * @property {number} canvasSize
+ * @property {CrosshairSegment[]} segments
+ * @property {boolean} drawOutline
+ * @property {number} outlineThickness
+ * @property {number} r
+ * @property {number} g
+ * @property {number} b
+ * @property {number} baseAlpha
+ * @property {boolean} additive
+ */
+
 (function (root, factory) {
     if (typeof module === "object" && module.exports) {
         module.exports = { CS2CrosshairRenderer: factory() };
@@ -53,6 +103,10 @@
             return (x ^ 0x80) - 0x80;
         }
 
+        /**
+         * @param {string} code
+         * @returns {CrosshairSettings}
+         */
         parseCode(code) {
             try {
                 let cleanCode = code.trim();
@@ -125,6 +179,10 @@
             }
         }
 
+        /**
+         * @param {CrosshairSettings} settings
+         * @returns {string}
+         */
         generateCode(settings) {
             try {
                 const bytes = new Array(18).fill(0);
@@ -179,6 +237,10 @@
             }
         }
 
+        /**
+         * @param {CrosshairSettings} settings
+         * @returns {[number, number, number]}
+         */
         getColor(settings) {
             const colorIndex = settings.cl_crosshaircolor;
 
@@ -206,12 +268,17 @@
             return Math.round(x);
         }
 
-        renderCrosshair(settings, referenceHeight = 1080, spreadOverride = null, baseDistanceGoal = 4, minCanvasSize = 8) {
+        /**
+         * @param {CrosshairSettings} settings
+         * @param {number} referenceHeight
+         * @param {SpreadOverride|null} spreadOverride
+         * @param {number} baseDistanceGoal
+         * @param {number} minCanvasSize
+         * @returns {CrosshairGeometry|null}
+         */
+        computeCrosshairGeometry(settings, referenceHeight, spreadOverride, baseDistanceGoal, minCanvasSize) {
             const style = parseInt(settings.cl_crosshairstyle);
-
-            if (style < 2) {
-                return createBlankCanvas(minCanvasSize, minCanvasSize);
-            }
+            if (style < 2) return null;
 
             const yresScale = referenceHeight / 480;
 
@@ -251,69 +318,104 @@
             const halfExtent = Math.max(mainReach, outerReach);
             const canvasSize = Math.max(minCanvasSize, Math.ceil(Math.abs(halfExtent)) * 2 + 4);
 
-            const canvas = createBlankCanvas(canvasSize, canvasSize);
-            const ctx = canvas.getContext("2d");
-            ctx.clearRect(0, 0, canvasSize, canvasSize);
-            ctx.imageSmoothingEnabled = false;
-
             const center = { x: Math.floor(canvasSize / 2), y: Math.floor(canvasSize / 2) };
-            const [r, g, b] = this.getColor(settings);
-            const baseAlpha = settings.cl_crosshairusealpha ? settings.cl_crosshairalpha / 255 : 1;
-
-            const drawRect = (x0, y0, x1, y1, alphaMultiplier = 1) => {
-                const left = Math.min(x0, x1);
-                const top = Math.min(y0, y1);
-                const width = Math.abs(x1 - x0);
-                const height = Math.abs(y1 - y0);
-                const a = baseAlpha * alphaMultiplier;
-
-                if (settings.cl_crosshair_drawoutline && outlineThickness > 0) {
-                    const outLeft = Math.trunc(left - outlineThickness);
-                    const outTop = Math.trunc(top - outlineThickness);
-                    const outRight = Math.trunc(left + width + outlineThickness);
-                    const outBottom = Math.trunc(top + height + outlineThickness);
-                    ctx.fillStyle = `rgba(0, 0, 0, ${a})`;
-                    ctx.fillRect(outLeft, outTop, outRight - outLeft, outBottom - outTop);
-                }
-
-                ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`;
-                ctx.fillRect(left, top, width, height);
-            };
-
             const hy0 = center.y - halfThick;
             const hy1 = hy0 + barThickness;
             const vx0 = center.x - halfThick;
             const vx1 = vx0 + barThickness;
 
+            const segments = [];
+
             if (showSplit) {
                 const oInnerLeft = center.x - outerDistance - halfThick - barSizeInner;
                 const oInnerRight = oInnerLeft + 2 * (outerDistance + barSizeInner) + barThickness;
-                drawRect(oInnerLeft - barSizeOuter, hy0, oInnerLeft, hy1, outerAlpha);
-                drawRect(oInnerRight, hy0, oInnerRight + barSizeOuter, hy1, outerAlpha);
+                segments.push([oInnerLeft - barSizeOuter, hy0, oInnerLeft, hy1, outerAlpha]);
+                segments.push([oInnerRight, hy0, oInnerRight + barSizeOuter, hy1, outerAlpha]);
 
                 const oInnerTop = center.y - outerDistance - halfThick - barSizeInner;
                 const oInnerBottom = oInnerTop + 2 * (outerDistance + barSizeInner) + barThickness;
                 if (!settings.cl_crosshair_t) {
-                    drawRect(vx0, oInnerTop - barSizeOuter, vx1, oInnerTop, outerAlpha);
+                    segments.push([vx0, oInnerTop - barSizeOuter, vx1, oInnerTop, outerAlpha]);
                 }
-                drawRect(vx0, oInnerBottom, vx1, oInnerBottom + barSizeOuter, outerAlpha);
+                segments.push([vx0, oInnerBottom, vx1, oInnerBottom + barSizeOuter, outerAlpha]);
             }
 
             const innerLeft = center.x - crosshairDistance - halfThick;
             const innerRight = innerLeft + 2 * crosshairDistance + barThickness;
-            drawRect(innerLeft - barSizeInner, hy0, innerLeft, hy1, innerAlpha);
-            drawRect(innerRight, hy0, innerRight + barSizeInner, hy1, innerAlpha);
+            segments.push([innerLeft - barSizeInner, hy0, innerLeft, hy1, innerAlpha]);
+            segments.push([innerRight, hy0, innerRight + barSizeInner, hy1, innerAlpha]);
 
             const innerTop = center.y - crosshairDistance - halfThick;
             const innerBottom = innerTop + 2 * crosshairDistance + barThickness;
             if (!settings.cl_crosshair_t) {
-                drawRect(vx0, innerTop - barSizeInner, vx1, innerTop, innerAlpha);
+                segments.push([vx0, innerTop - barSizeInner, vx1, innerTop, innerAlpha]);
             }
-            drawRect(vx0, innerBottom, vx1, innerBottom + barSizeInner, innerAlpha);
+            segments.push([vx0, innerBottom, vx1, innerBottom + barSizeInner, innerAlpha]);
 
             if (settings.cl_crosshairdot) {
-                drawRect(vx0, hy0, vx1, hy1);
+                segments.push([vx0, hy0, vx1, hy1, 1]);
             }
+
+            const [r, g, b] = this.getColor(settings);
+            const additive = !settings.cl_crosshairusealpha;
+            const FORCED_ADDITIVE_ALPHA = 200 / 255;
+            const baseAlpha = additive ? FORCED_ADDITIVE_ALPHA : (settings.cl_crosshairalpha / 255);
+
+            return {
+                canvasSize,
+                segments,
+                drawOutline: !!settings.cl_crosshair_drawoutline,
+                outlineThickness,
+                r, g, b,
+                baseAlpha,
+                additive
+            };
+        }
+
+        /**
+         * @param {CrosshairSettings} settings
+         * @param {number} [referenceHeight=1080] game res
+         * @param {SpreadOverride|null} [spreadOverride=null]
+         * @param {number} [baseDistanceGoal=4]
+         * @param {number} [minCanvasSize=8]
+         * @returns {HTMLCanvasElement}
+         */
+        renderCrosshair(settings, referenceHeight = 1080, spreadOverride = null, baseDistanceGoal = 4, minCanvasSize = 8) {
+            const geo = this.computeCrosshairGeometry(settings, referenceHeight, spreadOverride, baseDistanceGoal, minCanvasSize);
+            if (!geo) return createBlankCanvas(minCanvasSize, minCanvasSize);
+
+            const canvas = createBlankCanvas(geo.canvasSize, geo.canvasSize);
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, geo.canvasSize, geo.canvasSize);
+            ctx.imageSmoothingEnabled = false;
+
+            const drawRect = (x0, y0, x1, y1, alphaMultiplier) => {
+                const left = Math.min(x0, x1);
+                const top = Math.min(y0, y1);
+                const width = Math.abs(x1 - x0);
+                const height = Math.abs(y1 - y0);
+                const a = geo.baseAlpha * alphaMultiplier;
+
+                if (geo.drawOutline && geo.outlineThickness > 0) {
+                    const outLeft = Math.trunc(left - geo.outlineThickness);
+                    const outTop = Math.trunc(top - geo.outlineThickness);
+                    const outRight = Math.trunc(left + width + geo.outlineThickness);
+                    const outBottom = Math.trunc(top + height + geo.outlineThickness);
+                    ctx.fillStyle = `rgba(0, 0, 0, ${a})`;
+                    ctx.fillRect(outLeft, outTop, outRight - outLeft, outBottom - outTop);
+                }
+
+                ctx.fillStyle = `rgba(${geo.r}, ${geo.g}, ${geo.b}, ${a})`;
+                if (geo.additive) {
+                    ctx.globalCompositeOperation = "lighter";
+                    ctx.fillRect(left, top, width, height);
+                    ctx.globalCompositeOperation = "source-over";
+                } else {
+                    ctx.fillRect(left, top, width, height);
+                }
+            };
+
+            geo.segments.forEach(([x0, y0, x1, y1, alphaMultiplier]) => drawRect(x0, y0, x1, y1, alphaMultiplier));
 
             return canvas;
         }

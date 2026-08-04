@@ -138,7 +138,17 @@
     "tomokomot": {
       "steamid": "76561198360028049",
       "type": "streamer",
-      "image": "/static/assets/player_images/tomokomot.png"
+      "image": "/static/assets/player_images/tomokomot.jpg"
+    },
+    "rileycs_": {
+      "steamid": "76561198169734627",
+      "type": "streamer",
+      "image": "/static/assets/player_images/rileycs_.jpg"
+    },
+    "rxinbootsfps": {
+      "steamid": "76561198396683865",
+      "type": "streamer",
+      "image": "/static/assets/player_images/rxinbootsfps.jpg"
     },
     "ipsusu": {
       "steamid": "76561198078177782",

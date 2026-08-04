@@ -122,15 +122,13 @@ export class CrosshairPreviewRenderer {
     }
 
     renderToCanvas(settings, spreadOverride, baseDistanceGoal) {
-        const canvas = this.canvasEl;
-        const ctx = canvas.getContext("2d");
-
         const frame = this.computeFrame(settings, spreadOverride, baseDistanceGoal);
-
+        const canvas = this.canvasEl;
         canvas.width = frame.width;
         canvas.height = frame.height;
         canvas.style.width = (frame.width * this.previewScale) + "px";
         canvas.style.height = (frame.height * this.previewScale) + "px";
+        const ctx = canvas.getContext("2d");
         ctx.imageSmoothingEnabled = false;
         ctx.clearRect(0, 0, frame.width, frame.height);
         ctx.drawImage(frame.canvas, 0, 0);

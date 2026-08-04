@@ -268,8 +268,12 @@
                 const a = baseAlpha * alphaMultiplier;
 
                 if (settings.cl_crosshair_drawoutline && outlineThickness > 0) {
+                    const outLeft = Math.trunc(left - outlineThickness);
+                    const outTop = Math.trunc(top - outlineThickness);
+                    const outRight = Math.trunc(left + width + outlineThickness);
+                    const outBottom = Math.trunc(top + height + outlineThickness);
                     ctx.fillStyle = `rgba(0, 0, 0, ${a})`;
-                    ctx.fillRect(left - outlineThickness, top - outlineThickness, width + outlineThickness * 2, height + outlineThickness * 2);
+                    ctx.fillRect(outLeft, outTop, outRight - outLeft, outBottom - outTop);
                 }
 
                 ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`;
